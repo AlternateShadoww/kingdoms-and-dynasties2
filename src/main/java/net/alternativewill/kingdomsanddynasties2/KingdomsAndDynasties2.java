@@ -58,11 +58,7 @@ public class KingdomsAndDynasties2
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.COTTON);
-            event.accept(ModItems.COTTONSEED);
-            event.accept(ModItems.IRON_SAND);
-        }
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

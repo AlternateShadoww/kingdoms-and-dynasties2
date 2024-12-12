@@ -65,6 +65,35 @@ public class ModBlocks {
                 }
             });
 
+    public static final RegistryObject<Block> SUGI_LOG = registerBlock("sugi_log",
+            () -> new ModFlamableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> SUGI_WOOD = registerBlock("sugi_wood",
+            () -> new ModFlamableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_SUGI_LOG = registerBlock("stripped_sugi_log",
+            () -> new ModFlamableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_SUGI_WOOD = registerBlock("stripped_sugi_wood",
+            () -> new ModFlamableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(3f)));
+    public static final RegistryObject<Block> SUGI_PLANKS = registerBlock("sugi_planks",
+            () -> new PlankBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> SUGI_LEAVES = registerBlock("sugi_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+
+
     public static final RegistryObject<Block> MULLBERRY_LOG = registerBlock("mullberry_log",
             () -> new ModFlamableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> MULLBERRY_WOOD = registerBlock("mullberry_wood",

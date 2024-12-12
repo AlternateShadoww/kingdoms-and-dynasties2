@@ -27,10 +27,15 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.RED_PINE_LOG.get().asItem())
                 .add(ModBlocks.RED_PINE_WOOD.get().asItem())
                 .add(ModBlocks.STRIPPED_RED_PINE_LOG.get().asItem())
-                .add(ModBlocks.STRIPPED_RED_PINE_WOOD.get().asItem());
+                .add(ModBlocks.STRIPPED_RED_PINE_WOOD.get().asItem())
+                .add(ModBlocks.SUGI_LOG.get().asItem())
+                .add(ModBlocks.SUGI_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_SUGI_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_SUGI_LOG.get().asItem());
 
         this.tag(ItemTags.PLANKS)
                 .add(ModBlocks.MULLBERRY_PLANKS.get().asItem())
-                .add(ModBlocks.RED_PINE_PLANKS.get().asItem());
+                .add(ModBlocks.RED_PINE_PLANKS.get().asItem())
+                .add(ModBlocks.SUGI_PLANKS.get().asItem());
     }
 }

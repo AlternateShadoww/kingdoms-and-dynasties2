@@ -29,9 +29,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STRIPPED_RED_PINE_LOG.get());
                         output.accept(ModBlocks.STRIPPED_RED_PINE_WOOD.get());
                         output.accept(ModBlocks.RED_PINE_PLANKS.get());
+                        output.accept(ModBlocks.SUGI_LOG.get());
+                        output.accept(ModBlocks.SUGI_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_SUGI_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_SUGI_WOOD.get());
+                        output.accept(ModBlocks.SUGI_PLANKS.get());
 
                         output.accept(ModBlocks.RED_PINE_LEAVES.get());
                         output.accept(ModBlocks.MULLBERRY_LEAVES.get());
+                        output.accept(ModBlocks.SUGI_LEAVES.get());
 
                         output.accept(ModBlocks.IRON_SAND_BLOCK.get());
                         output.accept(ModBlocks.GRAVELLED_IRON_SAND_BLOCK.get());
@@ -40,6 +46,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.COTTON.get());
                         output.accept(ModItems.COTTONSEED.get());
                         output.accept(ModItems.IRON_SAND.get());
+                        output.accept(ModItems.SILK.get());
 
 
 

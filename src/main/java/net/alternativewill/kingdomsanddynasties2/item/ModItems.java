@@ -17,6 +17,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COTTONSEED = ITEMS.register("cottonseed",
             () -> new ItemNameBlockItem(ModBlocks.COTTON_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SILK = ITEMS.register("silk",
+            () -> new Item(new Item.Properties()));
 
 
     public static final RegistryObject<Item> IRON_SAND = ITEMS.register("iron_sand",

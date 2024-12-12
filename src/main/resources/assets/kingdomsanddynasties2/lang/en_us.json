@@ -1,6 +1,7 @@
 {
   "item.kingdomsanddynasties2.cotton": "Cotton",
   "item.kingdomsanddynasties2.cottonseed": "Cottonseed",
+  "item.kingdomsanddynasties2.silk": "Silk",
 
   "item.kingdomsanddynasties2.iron_sand": "Iron Sand",
 
@@ -21,6 +22,13 @@
   "block.kingdomsanddynasties2.stripped_red_pine_wood": "Stripped Red Pine Wood",
   "block.kingdomsanddynasties2.red_pine_planks": "Red Pine Planks",
   "block.kingdomsanddynasties2.red_pine_leaves": "Red Pine Leaves",
+
+  "block.kingdomsanddynasties2.sugi_log": "Sugi Log",
+  "block.kingdomsanddynasties2.sugi_wood": "Sugi Wood",
+  "block.kingdomsanddynasties2.stripped_sugi_log": "Stripped Sugi Log",
+  "block.kingdomsanddynasties2.stripped_sugi_wood": "Stripped Sugi Wood",
+  "block.kingdomsanddynasties2.sugi_planks": "Sugi Planks",
+  "block.kingdomsanddynasties2.sugi_leaves": "Sugi Leaves",
 
   "item.kingdomsanddynasties2.patterned_scroll": "Patterned Scroll",
 

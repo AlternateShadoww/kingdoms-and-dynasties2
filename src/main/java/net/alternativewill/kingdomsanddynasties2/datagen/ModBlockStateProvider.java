@@ -76,6 +76,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RED_PINE_PLANKS);
 
         leavesBlock(ModBlocks.RED_PINE_LEAVES);
+
+        logBlock(((RotatedPillarBlock) ModBlocks.SUGI_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.SUGI_WOOD.get()), blockTexture(ModBlocks.SUGI_LOG.get()), blockTexture(ModBlocks.SUGI_LOG.get()));
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SUGI_LOG.get()), blockTexture(ModBlocks.STRIPPED_SUGI_LOG.get()),
+                new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "block/stripped_sugi_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SUGI_WOOD.get()), blockTexture(ModBlocks.STRIPPED_SUGI_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_SUGI_LOG.get()));
+
+        blockItem(ModBlocks.SUGI_LOG);
+        blockItem(ModBlocks.SUGI_WOOD);
+        blockItem(ModBlocks.STRIPPED_SUGI_LOG);
+        blockItem(ModBlocks.STRIPPED_SUGI_WOOD);
+
+        blockWithItem(ModBlocks.SUGI_PLANKS);
+
+        leavesBlock(ModBlocks.SUGI_LEAVES);
     }
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(),
