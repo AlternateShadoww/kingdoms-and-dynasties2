@@ -1,0 +1,28 @@
+{
+  "item.kingdomsanddynasties2.cotton": "Cotton",
+  "item.kingdomsanddynasties2.cottonseed": "Cottonseed",
+
+  "item.kingdomsanddynasties2.iron_sand": "Iron Sand",
+
+  "block.kingdomsanddynasties2.iron_sand_block": "Iron Sand Block",
+  "block.kingdomsanddynasties2.gravelled_iron_sand_block": "Gravelled Iron Sand Block",
+  "block.kingdomsanddynasties2.mossy_iron_sand_block": "Mossy Iron Sand Block",
+
+  "block.kingdomsanddynasties2.mullberry_log": "Mullberry Log",
+  "block.kingdomsanddynasties2.mullberry_wood": "Mullberry Wood",
+  "block.kingdomsanddynasties2.stripped_mullberry_log": "Stripped Mullberry Log",
+  "block.kingdomsanddynasties2.stripped_mullberry_wood": "Stripped Mullberry Wood",
+  "block.kingdomsanddynasties2.mullberry_planks": "Mullberry Planks",
+  "block.kingdomsanddynasties2.mullberry_leaves": "Mullberry Leaves",
+
+  "block.kingdomsanddynasties2.red_pine_log": "Red Pine Log",
+  "block.kingdomsanddynasties2.red_pine_wood": "Red Pine Wood",
+  "block.kingdomsanddynasties2.stripped_red_pine_log": "Stripped Red Pine Log",
+  "block.kingdomsanddynasties2.stripped_red_pine_wood": "Stripped Red Pine Wood",
+  "block.kingdomsanddynasties2.red_pine_planks": "Red Pine Planks",
+  "block.kingdomsanddynasties2.red_pine_leaves": "Red Pine Leaves",
+
+  "item.kingdomsanddynasties2.patterned_scroll": "Patterned Scroll",
+
+  "creativetab.kingdomsanddynasty_tab": "Kingdoms & Dynasties 2"
+}
