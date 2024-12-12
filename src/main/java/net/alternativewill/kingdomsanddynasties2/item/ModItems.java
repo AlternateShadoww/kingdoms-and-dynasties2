@@ -23,6 +23,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> IRON_SAND = ITEMS.register("iron_sand",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_TAMAHAGANE = ITEMS.register("raw_tamahagane",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TAMAHAGANE_INGOT = ITEMS.register("tamahagane_ingot",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> PATTERNED_SCROLL = ITEMS.register("patterned_scroll",
             () -> new Item(new Item.Properties()));
