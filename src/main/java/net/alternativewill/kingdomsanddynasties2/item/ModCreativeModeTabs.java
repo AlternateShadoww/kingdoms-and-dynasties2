@@ -45,8 +45,10 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.COTTON.get());
                         output.accept(ModItems.COTTONSEED.get());
-                        output.accept(ModItems.IRON_SAND.get());
                         output.accept(ModItems.SILK.get());
+                        output.accept(ModItems.IRON_SAND.get());
+                        output.accept(ModItems.RAW_TAMAHAGANE.get());
+                        output.accept(ModItems.TAMAHAGANE_INGOT.get());
 
 
 
