@@ -24,7 +24,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        makeCottonCrop(((CropBlock) ModBlocks.COTTON_CROP.get()), "cotton_stage_", "cotton_stage_");
+        makeCottonCrop(((CropBlock) ModBlocks.COTTON_CROP.get()), "wheat_stage", "wheat_stage");
     }
     public void makeCottonCrop(CropBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> cottonStates(state, block, modelName, textureName);
@@ -93,6 +93,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SUGI_PLANKS);
 
         leavesBlock(ModBlocks.SUGI_LEAVES);
+
     }
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(),

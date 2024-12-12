@@ -17,10 +17,11 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.IPlantable;
 
 public class CottonCropBlock extends CropBlock {
-    public static final int FIRST_STAGE_MAX_AGE = 4;
+    public static final int FIRST_STAGE_MAX_AGE = 7;
     public static final int SECOND_STAGE_MAX_AGE = 1;
 
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
@@ -30,9 +31,11 @@ public class CottonCropBlock extends CropBlock {
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 10.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D),
-            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D),};
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
 
-    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 5);
+    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 8);
 
     public CottonCropBlock(Properties pProperties) {
         super(pProperties);
@@ -42,7 +45,6 @@ public class CottonCropBlock extends CropBlock {
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         return SHAPE_BY_AGE[this.getAge(pState)];
     }
-
 
     public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
         if (!pLevel.isAreaLoaded(pPos, 1)) return;
@@ -75,7 +77,7 @@ public class CottonCropBlock extends CropBlock {
     @Override
     public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
         return super.canSurvive(pState, pLevel, pPos) || (pLevel.getBlockState(pPos.below(1)).is(this) &&
-                pLevel.getBlockState(pPos.below(1)).getValue(AGE) == 4);
+                pLevel.getBlockState(pPos.below(1)).getValue(AGE) == 7);
     }
 
     @Override
@@ -89,7 +91,7 @@ public class CottonCropBlock extends CropBlock {
         if(this.getAge(pState) == FIRST_STAGE_MAX_AGE && pLevel.getBlockState(pPos.above(1)).is(Blocks.AIR)) {
             pLevel.setBlock(pPos.above(1), this.getStateForAge(nextAge), 2);
         } else {
-            pLevel.setBlock(pPos, this.getStateForAge(nextAge -1), -2);
+            pLevel.setBlock(pPos, this.getStateForAge(nextAge - SECOND_STAGE_MAX_AGE), 2);
         }
     }
 
@@ -111,8 +113,15 @@ public class CottonCropBlock extends CropBlock {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         pBuilder.add(AGE);
-
-
-
+    }
+    @Override
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
+        super.onRemove(state, level, pos, newState, isMoving);
+        if (!state.is(this) || state.getValue(AGE) != this.getMaxAge()) return;
+        BlockPos currentPos = pos;
+        while (level.getBlockState(currentPos.below()).is(this)) {
+            currentPos = currentPos.below();
+            level.destroyBlock(currentPos, true); // Break the block and drop its items
+        }
     }
 }
