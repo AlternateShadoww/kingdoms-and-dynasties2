@@ -27,6 +27,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        //ONLY BLOCKS UNTIL FURTHER NOTICE
+        this.dropSelf(ModBlocks.IRON_SAND_BLOCK.get());
+        this.dropSelf(ModBlocks.GRAVELLED_IRON_SAND_BLOCK.get());
+        this.dropSelf(ModBlocks.MOSSY_IRON_SAND_BLOCK.get());
 
         this.dropSelf(ModBlocks.MULLBERRY_LOG.get());
         this.dropSelf(ModBlocks.MULLBERRY_WOOD.get());
@@ -54,6 +58,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.RED_PINE_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.IRON_SAND_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to Sapling!
+
+        //ONLY CROPS UNTIL FURTHER NOTICE
+        LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.COTTON_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CottonCropBlock.AGE, 7))
+                .or(LootItemBlockStatePropertyCondition
+                        .hasBlockStateProperties(ModBlocks.COTTON_CROP.get())
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CottonCropBlock.AGE, 8)));
+
+
+        this.add(ModBlocks.COTTON_CROP.get(), createCropDrops(ModBlocks.COTTON_CROP.get(), ModItems.COTTON.get(),
+                ModItems.COTTONSEED.get(), lootitemcondition$builder2));
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {
