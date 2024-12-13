@@ -11,7 +11,6 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -22,25 +21,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         super(output, KingdomsAndDynasties2.MOD_ID, exFileHelper);
     }
 
-    @Override
-    protected void registerStatesAndModels() {
-        makeCottonCrop(((CropBlock) ModBlocks.COTTON_CROP.get()), "wheat_stage", "wheat_stage");
-    }
-    public void makeCottonCrop(CropBlock block, String modelName, String textureName) {
-        Function<BlockState, ConfiguredModel[]> function = state -> cottonStates(state, block, modelName, textureName);
-
-        getVariantBuilder(block).forAllStates(function);
-    }
-
-    private ConfiguredModel[] cottonStates(BlockState state, CropBlock block, String modelName, String textureName) {
-        ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CottonCropBlock) block).getAgeProperty()),
-                new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "block/" + textureName + state.getValue(((CottonCropBlock) block).getAgeProperty()))).renderType("cutout"));
-
-        return models;
-    }
-
-    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
+    private void ItemBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
 
         logBlock(((RotatedPillarBlock) ModBlocks.MULLBERRY_LOG.get()));
@@ -56,7 +37,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_MULLBERRY_LOG);
         blockItem(ModBlocks.STRIPPED_MULLBERRY_WOOD);
 
-        blockWithItem(ModBlocks.MULLBERRY_PLANKS);
+        ItemBlock(ModBlocks.MULLBERRY_PLANKS);
 
         leavesBlock(ModBlocks.MULLBERRY_LEAVES);
 
@@ -73,7 +54,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_RED_PINE_LOG);
         blockItem(ModBlocks.STRIPPED_RED_PINE_WOOD);
 
-        blockWithItem(ModBlocks.RED_PINE_PLANKS);
+        ItemBlock(ModBlocks.RED_PINE_PLANKS);
 
         leavesBlock(ModBlocks.RED_PINE_LEAVES);
 
@@ -90,11 +71,30 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_SUGI_LOG);
         blockItem(ModBlocks.STRIPPED_SUGI_WOOD);
 
-        blockWithItem(ModBlocks.SUGI_PLANKS);
+        ItemBlock(ModBlocks.SUGI_PLANKS);
 
         leavesBlock(ModBlocks.SUGI_LEAVES);
 
     }
+
+    @Override
+    protected void registerStatesAndModels() {
+        makeCottonCrop(((CropBlock) ModBlocks.COTTON_CROP.get()), "cotton_crop", "wheat_stage");
+    }
+    public void makeCottonCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> cottonStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] cottonStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CottonCropBlock) block).getAgeProperty()),
+                new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "block/" + textureName + state.getValue(((CottonCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(),
                 models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
