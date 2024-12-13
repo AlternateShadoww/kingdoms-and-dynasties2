@@ -18,6 +18,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.IRON_SAND_BLOCK.get())
+                .add(ModBlocks.GRAVELLED_IRON_SAND_BLOCK.get())
+                .add(ModBlocks.MOSSY_IRON_SAND_BLOCK.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.MULLBERRY_LOG.get())
                 .add(ModBlocks.MULLBERRY_WOOD.get())
                 .add(ModBlocks.STRIPPED_MULLBERRY_LOG.get())

@@ -1,5 +1,6 @@
 package net.alternativewill.kingdomsanddynasties2.datagen;
 import net.alternativewill.kingdomsanddynasties2.KingdomsAndDynasties2;
+import net.alternativewill.kingdomsanddynasties2.block.ModBlocks;
 import net.alternativewill.kingdomsanddynasties2.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
@@ -41,11 +42,83 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        //BASE ITEMS
+        simpleItem(ModItems.SILK);
+        simpleItem(ModItems.PATTERNED_SCROLL);
+        simpleItem(ModItems.IRON_SAND);
         simpleItem(ModItems.COTTON);
         simpleItem(ModItems.COTTONSEED);
+
+        //BLOCK ITEMS
+        evenSimplerBlockItem(ModBlocks.IRON_SAND_BLOCK);
+        evenSimplerBlockItem(ModBlocks.GRAVELLED_IRON_SAND_BLOCK);
+        evenSimplerBlockItem(ModBlocks.MOSSY_IRON_SAND_BLOCK);
+        evenSimplerBlockItem(ModBlocks.RED_PINE_LOG);
+        evenSimplerBlockItem(ModBlocks.RED_PINE_WOOD);
+        evenSimplerBlockItem(ModBlocks.STRIPPED_RED_PINE_LOG);
+        evenSimplerBlockItem(ModBlocks.STRIPPED_RED_PINE_WOOD);
+        evenSimplerBlockItem(ModBlocks.RED_PINE_PLANKS);
+        evenSimplerBlockItem(ModBlocks.RED_PINE_LEAVES);
+        evenSimplerBlockItem(ModBlocks.SUGI_LOG);
+        evenSimplerBlockItem(ModBlocks.SUGI_WOOD);
+        evenSimplerBlockItem(ModBlocks.STRIPPED_SUGI_LOG);
+        evenSimplerBlockItem(ModBlocks.STRIPPED_SUGI_WOOD);
+        evenSimplerBlockItem(ModBlocks.SUGI_PLANKS);
+        evenSimplerBlockItem(ModBlocks.SUGI_LEAVES);
+        evenSimplerBlockItem(ModBlocks.MULLBERRY_LOG);
+        evenSimplerBlockItem(ModBlocks.MULLBERRY_WOOD);
+        evenSimplerBlockItem(ModBlocks.STRIPPED_MULLBERRY_LOG);
+        evenSimplerBlockItem(ModBlocks.STRIPPED_MULLBERRY_WOOD);
+        evenSimplerBlockItem(ModBlocks.MULLBERRY_PLANKS);
+        evenSimplerBlockItem(ModBlocks.MULLBERRY_LEAVES);
+
+        //INGOT ITEMS
+        simpleItem(ModItems.TAMAHAGANE_INGOT);
+
+        //ORE ITEMS
+        simpleItem(ModItems.RAW_TAMAHAGANE);
+
     }
 
+
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(KingdomsAndDynasties2.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    public void evenSimplerBlockItem(RegistryObject<Block> block) {
+        this.withExistingParent(KingdomsAndDynasties2.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
+                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
+    }
+
+    public void trapdoorItem(RegistryObject<Block> block) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
+                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_bottom"));
+    }
+
+    public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(KingdomsAndDynasties2.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(KingdomsAndDynasties2.MOD_ID,"item/" + item.getId().getPath()));
