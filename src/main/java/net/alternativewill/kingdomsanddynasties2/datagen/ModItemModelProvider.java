@@ -74,9 +74,17 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //INGOT ITEMS
         simpleItem(ModItems.TAMAHAGANE_INGOT);
+        simpleItem(ModItems.TAMAHAGANE_NUGGET);
 
         //ORE ITEMS
         simpleItem(ModItems.RAW_TAMAHAGANE);
+
+        //ARMOR ITEMS
+        simpleItem(ModItems.OYOROI_HELMET);
+        simpleItem(ModItems.OYOROI_CHESTPLATE);
+        simpleItem(ModItems.OYOROI_LEGGINGS);
+        simpleItem(ModItems.OYOROI_BOOTS);
+
 
     }
 

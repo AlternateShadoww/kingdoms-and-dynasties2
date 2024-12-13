@@ -6,6 +6,7 @@
   "item.kingdomsanddynasties2.iron_sand": "Iron Sand",
   "item.kingdomsanddynasties2.raw_tamahagane": "Raw Tamahagane",
   "item.kingdomsanddynasties2.tamahagane_ingot": "Tanmahagane Ingot",
+  "item.kingdomsanddynasties2.tamahagane_nugget": "Tanmahagane Nugget",
 
   "block.kingdomsanddynasties2.iron_sand_block": "Iron Sand Block",
   "block.kingdomsanddynasties2.gravelled_iron_sand_block": "Gravelled Iron Sand Block",
@@ -31,6 +32,11 @@
   "block.kingdomsanddynasties2.stripped_sugi_wood": "Stripped Sugi Wood",
   "block.kingdomsanddynasties2.sugi_planks": "Sugi Planks",
   "block.kingdomsanddynasties2.sugi_leaves": "Sugi Leaves",
+
+  "item.kingdomsanddynasties2.oyoroi_kabuto": "Ō-yoroi Kabuto",
+  "item.kingdomsanddynasties2.oyoroi_do": "Ō-yoroi Dō",
+  "item.kingdomsanddynasties2.oyoroi_haidate": "Ō-yoroi Haidate",
+  "item.kingdomsanddynasties2.oyoroi_geta": "Ō-yoroi Geta",
 
   "item.kingdomsanddynasties2.patterned_scroll": "Patterned Scroll",
 

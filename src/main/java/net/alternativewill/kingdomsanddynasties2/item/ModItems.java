@@ -2,6 +2,8 @@ package net.alternativewill.kingdomsanddynasties2.item;
 
 import net.alternativewill.kingdomsanddynasties2.KingdomsAndDynasties2;
 import net.alternativewill.kingdomsanddynasties2.block.ModBlocks;
+import net.alternativewill.kingdomsanddynasties2.item.custom.OyoroiArmorItem;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,9 +29,20 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TAMAHAGANE_INGOT = ITEMS.register("tamahagane_ingot",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TAMAHAGANE_NUGGET = ITEMS.register("tamahagane_nugget",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> PATTERNED_SCROLL = ITEMS.register("patterned_scroll",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> OYOROI_HELMET = ITEMS.register("oyoroi_kabuto",
+            () -> new OyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> OYOROI_CHESTPLATE = ITEMS.register("oyoroi_do",
+            () -> new OyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> OYOROI_LEGGINGS = ITEMS.register("oyoroi_haidate",
+            () -> new OyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> OYOROI_BOOTS = ITEMS.register("oyoroi_geta",
+            () -> new OyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

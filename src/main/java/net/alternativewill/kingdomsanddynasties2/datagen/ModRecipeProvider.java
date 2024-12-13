@@ -1,6 +1,8 @@
 package net.alternativewill.kingdomsanddynasties2.datagen;
 
 import net.alternativewill.kingdomsanddynasties2.KingdomsAndDynasties2;
+import net.alternativewill.kingdomsanddynasties2.block.ModBlocks;
+import net.alternativewill.kingdomsanddynasties2.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
@@ -8,6 +10,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.minecraftforge.fml.common.Mod;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -22,6 +25,26 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
 
+        //WOOD RECIPES
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MULLBERRY_WOOD.get(), 3)
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.MULLBERRY_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.MULLBERRY_LOG.get()), has(ModBlocks.MULLBERRY_LOG.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MULLBERRY_PLANKS.get(), 4)
+                .requires(ModBlocks.MULLBERRY_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.MULLBERRY_LOG.get()), has(ModBlocks.MULLBERRY_LOG.get()))
+                .save(pWriter);
+
+        //INGOT RECIPES
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TAMAHAGANE_INGOT.get())
+                .requires(ModItems.TAMAHAGANE_NUGGET.get(), 9)
+                .unlockedBy(getHasName(ModItems.TAMAHAGANE_NUGGET.get()), has(ModItems.TAMAHAGANE_NUGGET.get()))
+                .save(pWriter);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
