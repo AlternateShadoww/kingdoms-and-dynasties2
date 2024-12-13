@@ -5,6 +5,7 @@ import net.alternativewill.kingdomsanddynasties2.block.custom.CottonCropBlock;
 import net.alternativewill.kingdomsanddynasties2.block.custom.ModFlamableRotatedPillarBlock;
 import net.alternativewill.kingdomsanddynasties2.block.custom.PlankBlock;
 import net.alternativewill.kingdomsanddynasties2.item.ModItems;
+import net.alternativewill.kingdomsanddynasties2.worldgen.tree.MullberryTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
@@ -93,8 +94,8 @@ public class ModBlocks {
                     return 30;
                 }
             });
-
-
+    public static final RegistryObject<Block> MULLBERRY_SAPLING = registerBlock("mullberry_sapling",
+            () -> new SaplingBlock(new MullberryTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> MULLBERRY_LOG = registerBlock("mullberry_log",
             () -> new ModFlamableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> MULLBERRY_WOOD = registerBlock("mullberry_wood",

@@ -37,9 +37,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_MULLBERRY_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_MULLBERRY_WOOD.get());
         this.dropSelf(ModBlocks.MULLBERRY_PLANKS.get());
+        this.dropSelf(ModBlocks.MULLBERRY_SAPLING.get());
 
         this.add(ModBlocks.MULLBERRY_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.IRON_SAND_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to Sapling!
+                createLeavesDrops(block, ModBlocks.MULLBERRY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to Sapling!
 
         this.dropSelf(ModBlocks.SUGI_LOG.get());
         this.dropSelf(ModBlocks.SUGI_WOOD.get());
