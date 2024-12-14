@@ -4,8 +4,10 @@ import com.mojang.logging.LogUtils;
 import net.alternativewill.kingdomsanddynasties2.block.ModBlocks;
 import net.alternativewill.kingdomsanddynasties2.item.ModCreativeModeTabs;
 import net.alternativewill.kingdomsanddynasties2.item.ModItems;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -75,8 +77,8 @@ public class KingdomsAndDynasties2
     public static class ClientModEvents
     {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            Sheets.addWoodType(WoodType.BAMBOO);
         }
     }
 }
