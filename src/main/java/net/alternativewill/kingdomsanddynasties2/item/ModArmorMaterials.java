@@ -20,7 +20,24 @@ public enum ModArmorMaterials implements ArmorMaterial {
         p_266655_.put(ArmorItem.Type.HELMET, 3);
     }), 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
         return Ingredient.of(ModItems.TAMAHAGANE_INGOT.get());
+
+    }),
+    GIHAKAMA("gihakama", 25, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266655_) -> {
+        p_266655_.put(ArmorItem.Type.LEGGINGS, 2);
+        p_266655_.put(ArmorItem.Type.CHESTPLATE, 4);
+    }), 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0F, 0F, () -> {
+        return Ingredient.of(ModItems.COTTON.get());
+
+    }),
+    MENYOROI("gihakama", 25, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266655_) -> {
+        p_266655_.put(ArmorItem.Type.HELMET, 2);
+    }), 15, SoundEvents.ARMOR_EQUIP_IRON, 0F, 0F, () -> {
+        return Ingredient.of(ModItems.TAMAHAGANE_INGOT.get());
+
+
+
     });
+
 
     public static final StringRepresentable.EnumCodec<ArmorMaterials> CODEC = StringRepresentable.fromEnum(ArmorMaterials::values);
     private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (p_266653_) -> {

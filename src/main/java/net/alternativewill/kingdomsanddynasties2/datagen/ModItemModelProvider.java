@@ -123,11 +123,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //ORE ITEMS
         simpleItem(ModItems.RAW_TAMAHAGANE);
-        simpleItem(ModItems.KATANA_SHEATH);
-        simpleItem(ModItems.TANTO_SHEATH);
-        simpleItem(ModItems.WAKIZASHI_SHEATH);
-        simpleItem(ModItems.TACHI_SHEATH);
-        simpleItem(ModItems.ODACHI_SHEATH);
 
         //ARMOR ITEMS
         simpleItem(ModItems.OYOROI_HELMET);
@@ -135,7 +130,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.OYOROI_LEGGINGS);
         simpleItem(ModItems.OYOROI_BOOTS);
 
+        simpleItem(ModItems.MENPO);
+
+        simpleItem(ModItems.GI);
+        simpleItem(ModItems.HAKAMA);
+
         //TOOLS & WEAPONS
+        simpleItem(ModItems.KATANA_SHEATH);
+        simpleItem(ModItems.TANTO_SHEATH);
+        simpleItem(ModItems.WAKIZASHI_SHEATH);
+        simpleItem(ModItems.TACHI_SHEATH);
+        simpleItem(ModItems.ODACHI_SHEATH);
+
         handheldItem(ModItems.KATANA);
         handheldItem(ModItems.TANTO);
         handheldItem(ModItems.WAKIZASHI);
@@ -151,6 +157,10 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .translation(0, 1, 0) // Move the item slightly upward
                 .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
                 .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 7, 0) // Move the item slightly upward
+                .scale(1.2F, 1.2F, 1).end()
                 .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
                 .rotation(45,91,-2)
                 .translation(0,8,2f)
@@ -174,24 +184,28 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .transforms()
                 .transform(ItemDisplayContext.FIXED)
                 .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
-                .translation(-1, 1, 0) // Move the item slightly upward
-                .scale(3F, 3, 1.5F) // Scale the item up to 1.5x
+                .translation(-4, 4, 0) // Move the item slightly upward
+                .scale(2.5F, 2.5F, 1.5F) // Scale the item up to 1.5x
                 .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(-4, 12, 0) // Move the item slightly upward
+                .scale(2.4F, 2.4F, 1).end()
                 .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
                 .rotation(45,91,-2)
-                .translation(0,18,2f)
+                .translation(0,17,1.2f)
                 .scale(2.4F, 2.4F, 1).end()
                 .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
                 .rotation(45,-89,2)
-                .translation(0,18,2f)
+                .translation(0,17,1.2f)
                 .scale(2.4F , 2.4F, 1).end()
                 .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
                 .rotation(45,91,-2)
-                .translation(0,18,2f)
+                .translation(0,17,1.2f)
                 .scale(2.4F, 2.4F, 1).end()
                 .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
                 .rotation(45,-89,2)
-                .translation(0,18,2f)
+                .translation(0,17,1.2f)
                 .scale(2.4F, 2.4F, 1).end();
 
         getBuilder("tanto")
@@ -200,9 +214,13 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .transforms()
                 .transform(ItemDisplayContext.FIXED)
                 .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
-                .translation(0, 1, 0) // Move the item slightly upward
+                .translation(-5, 5, 0) // Move the item slightly upward
                 .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
                 .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(-5, 5, 0) // Move the item slightly upward
+                .scale(1.2F, 1.2F, 1).end()
                 .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
                 .rotation(45,91,-2)
                 .translation(0,8,2f)
@@ -219,6 +237,66 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .rotation(45,-89,2)
                 .translation(0,8,2f)
                 .scale(1.2F, 1.2F, 1).end();
+
+        getBuilder("wakizashi")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/wakizashi"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(-4, 4, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(-4, 4, 0) // Move the item slightly upward
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(45,91,-2)
+                .translation(0,8,2f)
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(45,-89,2)
+                .translation(0,8,2f)
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(45,91,-2)
+                .translation(0,8,2f)
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(45,-89,2)
+                .translation(0,8,2f)
+                .scale(1.2F, 1.2F, 1).end();
+
+        getBuilder("tachi")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/tachi"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(-8, 5, 0) // Move the item slightly upward
+                .scale(2.5F, 2.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(-8, 12, 0) // Move the item slightly upward
+                .scale(2.4F, 2.4F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(45,91,-2)
+                .translation(0,18.2f,1.2f)
+                .scale(2.4F, 2.4F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(45,-89,2)
+                .translation(0,18.2f,2f)
+                .scale(2.4F , 2.4F, 1).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(45,91,-2)
+                .translation(0,18.2f,2f)
+                .scale(2.4F, 2.4F, 1).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(45,-89,2)
+                .translation(0,18.2f,2f)
+                .scale(2.4F, 2.4F, 1).end();
     }
 
 

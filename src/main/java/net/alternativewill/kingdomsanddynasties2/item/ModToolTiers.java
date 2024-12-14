@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ModToolTiers {
     public static final Tier TAMAHAGANE = TierSortingRegistry.registerTier(
-            new ForgeTier(3, 1000, 5f, 3f, 10,
+            new ForgeTier(3, 1000, 0.2f, 1f, 10,
                     ModTags.Blocks.NEEDS_TAMAHAGANE_TOOL, () -> Ingredient.of(ModItems.TAMAHAGANE_INGOT.get())),
             new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "tamahagane"), List.of(Tiers.DIAMOND), List.of());
 }

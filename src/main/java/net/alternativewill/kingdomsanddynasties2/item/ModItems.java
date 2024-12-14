@@ -2,6 +2,8 @@ package net.alternativewill.kingdomsanddynasties2.item;
 
 import net.alternativewill.kingdomsanddynasties2.KingdomsAndDynasties2;
 import net.alternativewill.kingdomsanddynasties2.block.ModBlocks;
+import net.alternativewill.kingdomsanddynasties2.item.custom.GihakamaItem;
+import net.alternativewill.kingdomsanddynasties2.item.custom.MenpoItem;
 import net.alternativewill.kingdomsanddynasties2.item.custom.OyoroiArmorItem;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
@@ -45,16 +47,25 @@ public class ModItems {
     public static final RegistryObject<Item> OYOROI_BOOTS = ITEMS.register("oyoroi_geta",
             () -> new OyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.BOOTS, new Item.Properties()));
 
+    public static final RegistryObject<Item> MENPO = ITEMS.register("menpo",
+            () -> new MenpoItem(ModArmorMaterials.MENYOROI, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> GI = ITEMS.register("gi",
+            () -> new GihakamaItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> HAKAMA = ITEMS.register("hakama",
+            () -> new GihakamaItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+
+
     public static final RegistryObject<Item> KATANA = ITEMS.register("katana",
-            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 4,2, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 5,-2, new Item.Properties()));
     public static final RegistryObject<Item> TANTO = ITEMS.register("tanto",
-            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 4,2, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 1,-1.3f, new Item.Properties()));
     public static final RegistryObject<Item> WAKIZASHI = ITEMS.register("wakizashi",
-            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 4,2, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 2,-1.6f, new Item.Properties()));
     public static final RegistryObject<Item> TACHI = ITEMS.register("tachi",
-            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 4,2, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 6,-2.7f, new Item.Properties()));
     public static final RegistryObject<Item> ODACHI = ITEMS.register("odachi",
-            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 4,1, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 7,-3, new Item.Properties()));
 
     public static final RegistryObject<Item> KATANA_SHEATH = ITEMS.register("katana_sheath",
             () -> new Item(new Item.Properties()));

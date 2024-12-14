@@ -82,10 +82,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TAMAHAGANE_NUGGET.get());
 
                         //ARMORS
+                        output.accept(ModItems.GI.get());
+                        output.accept(ModItems.HAKAMA.get());
+
                         output.accept(ModItems.OYOROI_HELMET.get());
                         output.accept(ModItems.OYOROI_CHESTPLATE.get());
                         output.accept(ModItems.OYOROI_LEGGINGS.get());
                         output.accept(ModItems.OYOROI_BOOTS.get());
+
+                        output.accept(ModItems.MENPO.get());
 
                         output.accept(ModItems.KATANA.get());
                         output.accept(ModItems.TANTO.get());
