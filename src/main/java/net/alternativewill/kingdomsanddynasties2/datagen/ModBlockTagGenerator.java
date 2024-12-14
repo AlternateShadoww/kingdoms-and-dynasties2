@@ -1,6 +1,7 @@
 package net.alternativewill.kingdomsanddynasties2.datagen;
 import net.alternativewill.kingdomsanddynasties2.KingdomsAndDynasties2;
 import net.alternativewill.kingdomsanddynasties2.block.ModBlocks;
+import net.alternativewill.kingdomsanddynasties2.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -43,6 +44,22 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.MULLBERRY_PLANKS.get())
                 .add(ModBlocks.RED_PINE_PLANKS.get())
                 .add(ModBlocks.SUGI_PLANKS.get());
+
+        this.tag(BlockTags.FENCES)
+                .add(ModBlocks.MULLBERRY_FENCE.get())
+                .add(ModBlocks.RED_PINE_FENCE.get())
+                .add(ModBlocks.SUGI_FENCE.get());
+
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.MULLBERRY_FENCE_GATE.get())
+                .add(ModBlocks.RED_PINE_FENCE_GATE.get())
+                .add(ModBlocks.SUGI_FENCE_GATE.get());
+
+
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.MULLBERRY_WALL.get())
+                .add(ModBlocks.RED_PINE_WALL.get())
+                .add(ModBlocks.SUGI_WALL.get());
     }
 
 }

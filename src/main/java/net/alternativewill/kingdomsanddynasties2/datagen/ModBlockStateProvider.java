@@ -11,6 +11,7 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -20,12 +21,55 @@ public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, KingdomsAndDynasties2.MOD_ID, exFileHelper);
     }
-
     @Override
     protected void registerStatesAndModels() {
         registerTreeBlocks();
         registerCrops();
         registerGeneralBlocks();
+        
+        // Stair blocks
+        stairsBlock(((StairBlock) ModBlocks.SUGI_STAIRS.get()), blockTexture(ModBlocks.SUGI_PLANKS.get()));
+        stairsBlock(((StairBlock) ModBlocks.RED_PINE_STAIRS.get()), blockTexture(ModBlocks.RED_PINE_PLANKS.get()));
+        stairsBlock(((StairBlock) ModBlocks.MULLBERRY_STAIRS.get()), blockTexture(ModBlocks.MULLBERRY_PLANKS.get()));
+
+        // Slab blocks
+        slabBlock(((SlabBlock) ModBlocks.SUGI_SLAB.get()), blockTexture(ModBlocks.SUGI_PLANKS.get()), blockTexture(ModBlocks.SUGI_PLANKS.get()));
+        slabBlock(((SlabBlock) ModBlocks.RED_PINE_SLAB.get()), blockTexture(ModBlocks.RED_PINE_PLANKS.get()), blockTexture(ModBlocks.RED_PINE_PLANKS.get()));
+        slabBlock(((SlabBlock) ModBlocks.MULLBERRY_SLAB.get()), blockTexture(ModBlocks.MULLBERRY_PLANKS.get()), blockTexture(ModBlocks.MULLBERRY_PLANKS.get()));
+
+        // Button blocks
+        buttonBlock(((ButtonBlock) ModBlocks.SUGI_BUTTON.get()), blockTexture(ModBlocks.SUGI_PLANKS.get()));
+        buttonBlock(((ButtonBlock) ModBlocks.RED_PINE_BUTTON.get()), blockTexture(ModBlocks.RED_PINE_PLANKS.get()));
+        buttonBlock(((ButtonBlock) ModBlocks.MULLBERRY_BUTTON.get()), blockTexture(ModBlocks.MULLBERRY_PLANKS.get()));
+
+        // Pressure Plate blocks
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.SUGI_PRESSURE_PLATE.get()), blockTexture(ModBlocks.SUGI_PLANKS.get()));
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.RED_PINE_PRESSURE_PLATE.get()), blockTexture(ModBlocks.RED_PINE_PLANKS.get()));
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.MULLBERRY_PRESSURE_PLATE.get()), blockTexture(ModBlocks.MULLBERRY_PLANKS.get()));
+
+        // Fence blocks
+        fenceBlock(((FenceBlock) ModBlocks.SUGI_FENCE.get()), blockTexture(ModBlocks.SUGI_PLANKS.get()));
+        fenceBlock(((FenceBlock) ModBlocks.RED_PINE_FENCE.get()), blockTexture(ModBlocks.RED_PINE_PLANKS.get()));
+        fenceBlock(((FenceBlock) ModBlocks.MULLBERRY_FENCE.get()), blockTexture(ModBlocks.MULLBERRY_PLANKS.get()));
+
+        // Fence Gate blocks
+        fenceGateBlock(((FenceGateBlock) ModBlocks.SUGI_FENCE_GATE.get()), blockTexture(ModBlocks.SUGI_PLANKS.get()));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.RED_PINE_FENCE_GATE.get()), blockTexture(ModBlocks.RED_PINE_PLANKS.get()));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.MULLBERRY_FENCE_GATE.get()), blockTexture(ModBlocks.MULLBERRY_PLANKS.get()));
+
+        // Wall blocks
+        wallBlock(((WallBlock) ModBlocks.SUGI_WALL.get()), blockTexture(ModBlocks.SUGI_LOG.get()));
+        wallBlock(((WallBlock) ModBlocks.RED_PINE_WALL.get()), blockTexture(ModBlocks.RED_PINE_LOG.get()));
+        wallBlock(((WallBlock) ModBlocks.MULLBERRY_WALL.get()), blockTexture(ModBlocks.MULLBERRY_LOG.get()));
+
+        // Door blocks
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.SUGI_DOOR.get()), modLoc("block/sugi_door_bottom"), modLoc("block/sugi_door_top"), "cutout");
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.RED_PINE_DOOR.get()), modLoc("block/red_pine_door_top"), modLoc("block/red_pine_door_top"), "cutout");
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.MULLBERRY_DOOR.get()), modLoc("block/mullberry_door_bottom"), modLoc("block/mullberry_door_top"), "cutout");
+
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.SUGI_TRAPDOOR.get()), modLoc("block/sugi_trapdoor"), true, "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.RED_PINE_TRAPDOOR.get()), modLoc("block/red_pine_trapdoor"), true, "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.MULLBERRY_TRAPDOOR.get()), modLoc("block/mullberry_trapdoor"), true, "cutout");
     }
 
     private void registerGeneralBlocks() {
@@ -39,7 +83,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // Blocks with special rendering or custom textures
         registerSpecialBlocks();
     }
-
+    @SafeVarargs
     private void registerSimpleBlocks(RegistryObject<Block>... blocks) {
         for (RegistryObject<Block> block : blocks) {
             simpleBlockWithItem(block.get(), cubeAll(block.get()));

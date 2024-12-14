@@ -25,18 +25,40 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
 
-        //WOOD RECIPES
+        //LOG TO PLANKS | WOOD TO PLANKS
 
+            //LOG  ---- WILL PROBABLY NEED TO USE TAGS FOR THE WOOD RECIPE BECAUSE EACH THING CAN ONLY HAVE ONE "RECIPE" HERE
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MULLBERRY_PLANKS.get(), 4)
+                .requires(ModBlocks.MULLBERRY_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.MULLBERRY_LOG.get()), has(ModBlocks.MULLBERRY_LOG.get()))
+                .save(pWriter);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.RED_PINE_PLANKS.get(), 4)
+                .requires(ModBlocks.RED_PINE_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.RED_PINE_LOG.get()), has(ModBlocks.RED_PINE_LOG.get()))
+                .save(pWriter);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.SUGI_PLANKS.get(), 4)
+                .requires(ModBlocks.SUGI_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.SUGI_LOG.get()), has(ModBlocks.SUGI_LOG.get()))
+                .save(pWriter);
+
+        //LOG TO WOOD
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MULLBERRY_WOOD.get(), 3)
                 .pattern("SS")
                 .pattern("SS")
                 .define('S', ModBlocks.MULLBERRY_LOG.get())
                 .unlockedBy(getHasName(ModBlocks.MULLBERRY_LOG.get()), has(ModBlocks.MULLBERRY_LOG.get()))
                 .save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MULLBERRY_PLANKS.get(), 4)
-                .requires(ModBlocks.MULLBERRY_LOG.get())
-                .unlockedBy(getHasName(ModBlocks.MULLBERRY_LOG.get()), has(ModBlocks.MULLBERRY_LOG.get()))
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_PINE_WOOD.get(), 3)
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.RED_PINE_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.RED_PINE_LOG.get()), has(ModBlocks.RED_PINE_LOG.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SUGI_WOOD.get(), 3)
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.SUGI_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.SUGI_LOG.get()), has(ModBlocks.SUGI_LOG.get()))
                 .save(pWriter);
 
         //INGOT RECIPES

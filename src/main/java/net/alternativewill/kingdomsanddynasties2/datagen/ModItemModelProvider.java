@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
@@ -72,12 +73,61 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.MULLBERRY_PLANKS);
         evenSimplerBlockItem(ModBlocks.MULLBERRY_LEAVES);
 
+        //STAIRS
+        evenSimplerBlockItem(ModBlocks.SUGI_STAIRS);
+        evenSimplerBlockItem(ModBlocks.RED_PINE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.MULLBERRY_STAIRS);
+
+        //SLABS
+        evenSimplerBlockItem(ModBlocks.SUGI_SLAB);
+        evenSimplerBlockItem(ModBlocks.RED_PINE_SLAB);
+        evenSimplerBlockItem(ModBlocks.MULLBERRY_SLAB);
+
+        //BUTTONS
+        buttonItem(ModBlocks.SUGI_BUTTON, ModBlocks.SUGI_PLANKS);
+        buttonItem(ModBlocks.RED_PINE_BUTTON, ModBlocks.RED_PINE_PLANKS);
+        buttonItem(ModBlocks.MULLBERRY_BUTTON, ModBlocks.MULLBERRY_PLANKS);
+
+        //PRESSUREPLATES
+        evenSimplerBlockItem(ModBlocks.SUGI_PRESSURE_PLATE);
+        evenSimplerBlockItem(ModBlocks.RED_PINE_PRESSURE_PLATE);
+        evenSimplerBlockItem(ModBlocks.MULLBERRY_PRESSURE_PLATE);
+        //FENCES
+        fenceItem(ModBlocks.SUGI_FENCE, ModBlocks.SUGI_PLANKS);
+        fenceItem(ModBlocks.RED_PINE_FENCE, ModBlocks.RED_PINE_PLANKS);
+        fenceItem(ModBlocks.MULLBERRY_FENCE, ModBlocks.MULLBERRY_PLANKS);
+
+        //FENCE GATES
+        evenSimplerBlockItem(ModBlocks.SUGI_FENCE_GATE);
+        evenSimplerBlockItem(ModBlocks.RED_PINE_FENCE_GATE);
+        evenSimplerBlockItem(ModBlocks.MULLBERRY_FENCE_GATE);
+
+        //WALLS
+        wallItem(ModBlocks.SUGI_WALL, ModBlocks.SUGI_LOG);
+        wallItem(ModBlocks.RED_PINE_WALL, ModBlocks.RED_PINE_LOG);
+        wallItem(ModBlocks.MULLBERRY_WALL, ModBlocks.MULLBERRY_LOG);
+
+        //DOORS
+        simpleBlockItem(ModBlocks.SUGI_DOOR);
+        simpleBlockItem(ModBlocks.RED_PINE_DOOR);
+        simpleBlockItem(ModBlocks.MULLBERRY_DOOR);
+
+        //TRAPDOORS
+        trapdoorItem(ModBlocks.SUGI_TRAPDOOR);
+        trapdoorItem(ModBlocks.RED_PINE_TRAPDOOR);
+        trapdoorItem(ModBlocks.MULLBERRY_TRAPDOOR);
+
         //INGOT ITEMS
         simpleItem(ModItems.TAMAHAGANE_INGOT);
         simpleItem(ModItems.TAMAHAGANE_NUGGET);
 
         //ORE ITEMS
         simpleItem(ModItems.RAW_TAMAHAGANE);
+        simpleItem(ModItems.KATANA_SHEATH);
+        simpleItem(ModItems.TANTO_SHEATH);
+        simpleItem(ModItems.WAKIZASHI_SHEATH);
+        simpleItem(ModItems.TACHI_SHEATH);
+        simpleItem(ModItems.ODACHI_SHEATH);
 
         //ARMOR ITEMS
         simpleItem(ModItems.OYOROI_HELMET);
@@ -85,7 +135,90 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.OYOROI_LEGGINGS);
         simpleItem(ModItems.OYOROI_BOOTS);
 
+        //TOOLS & WEAPONS
+        handheldItem(ModItems.KATANA);
+        handheldItem(ModItems.TANTO);
+        handheldItem(ModItems.WAKIZASHI);
+        handheldItem(ModItems.TACHI);
+        handheldItem(ModItems.ODACHI);
 
+        getBuilder("katana")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/katana"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 1, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(45,91,-2)
+                .translation(0,8,2f)
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(45,-89,2)
+                .translation(0,8,2f)
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(45,91,-2)
+                .translation(0,8,2f)
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(45,-89,2)
+                .translation(0,8,2f)
+                .scale(1.2F, 1.2F, 1).end();
+
+        getBuilder("odachi")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/odachi"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(-1, 1, 0) // Move the item slightly upward
+                .scale(3F, 3, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(45,91,-2)
+                .translation(0,18,2f)
+                .scale(2.4F, 2.4F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(45,-89,2)
+                .translation(0,18,2f)
+                .scale(2.4F , 2.4F, 1).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(45,91,-2)
+                .translation(0,18,2f)
+                .scale(2.4F, 2.4F, 1).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(45,-89,2)
+                .translation(0,18,2f)
+                .scale(2.4F, 2.4F, 1).end();
+
+        getBuilder("tanto")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/tanto"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 1, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(45,91,-2)
+                .translation(0,8,2f)
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(45,-89,2)
+                .translation(0,8,2f)
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(45,91,-2)
+                .translation(0,8,2f)
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(45,-89,2)
+                .translation(0,8,2f)
+                .scale(1.2F, 1.2F, 1).end();
     }
 
 

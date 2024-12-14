@@ -16,7 +16,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, KingdomsAndDynasties2.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> KINGDOMSANDDYNASTYTAB = CREATIVE_MODE_TABS.register("kingdoms_and_dynasties_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.PATTERNED_SCROLL.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.OYOROI_HELMET .get()))
                     .title(Component.translatable("creativetab.kingdomsanddynasty_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         //WOOD
@@ -25,16 +25,43 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STRIPPED_MULLBERRY_LOG.get());
                         output.accept(ModBlocks.STRIPPED_MULLBERRY_WOOD.get());
                         output.accept(ModBlocks.MULLBERRY_PLANKS.get());
+                        output.accept(ModBlocks.MULLBERRY_STAIRS.get());
+                        output.accept(ModBlocks.MULLBERRY_SLAB.get());
+                        output.accept(ModBlocks.MULLBERRY_BUTTON.get());
+                        output.accept(ModBlocks.MULLBERRY_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.MULLBERRY_FENCE.get());
+                        output.accept(ModBlocks.MULLBERRY_FENCE_GATE.get());
+                        output.accept(ModBlocks.MULLBERRY_WALL.get());
+                        output.accept(ModBlocks.MULLBERRY_DOOR.get());
+                        output.accept(ModBlocks.MULLBERRY_TRAPDOOR.get());
                         output.accept(ModBlocks.RED_PINE_LOG.get());
                         output.accept(ModBlocks.RED_PINE_WOOD.get());
                         output.accept(ModBlocks.STRIPPED_RED_PINE_LOG.get());
                         output.accept(ModBlocks.STRIPPED_RED_PINE_WOOD.get());
                         output.accept(ModBlocks.RED_PINE_PLANKS.get());
+                        output.accept(ModBlocks.RED_PINE_STAIRS.get());
+                        output.accept(ModBlocks.RED_PINE_SLAB.get());
+                        output.accept(ModBlocks.RED_PINE_BUTTON.get());
+                        output.accept(ModBlocks.RED_PINE_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.RED_PINE_FENCE.get());
+                        output.accept(ModBlocks.RED_PINE_FENCE_GATE.get());
+                        output.accept(ModBlocks.RED_PINE_WALL.get());
+                        output.accept(ModBlocks.RED_PINE_DOOR.get());
+                        output.accept(ModBlocks.RED_PINE_TRAPDOOR.get());
                         output.accept(ModBlocks.SUGI_LOG.get());
                         output.accept(ModBlocks.SUGI_WOOD.get());
                         output.accept(ModBlocks.STRIPPED_SUGI_LOG.get());
                         output.accept(ModBlocks.STRIPPED_SUGI_WOOD.get());
                         output.accept(ModBlocks.SUGI_PLANKS.get());
+                        output.accept(ModBlocks.SUGI_STAIRS.get());
+                        output.accept(ModBlocks.SUGI_SLAB.get());
+                        output.accept(ModBlocks.SUGI_BUTTON.get());
+                        output.accept(ModBlocks.SUGI_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.SUGI_FENCE.get());
+                        output.accept(ModBlocks.SUGI_FENCE_GATE.get());
+                        output.accept(ModBlocks.SUGI_WALL.get());
+                        output.accept(ModBlocks.SUGI_DOOR.get());
+                        output.accept(ModBlocks.SUGI_TRAPDOOR.get());
                         //FOILAGE
                         output.accept(ModBlocks.RED_PINE_LEAVES.get());
                         output.accept(ModBlocks.MULLBERRY_LEAVES.get());
@@ -59,6 +86,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.OYOROI_CHESTPLATE.get());
                         output.accept(ModItems.OYOROI_LEGGINGS.get());
                         output.accept(ModItems.OYOROI_BOOTS.get());
+
+                        output.accept(ModItems.KATANA.get());
+                        output.accept(ModItems.TANTO.get());
+                        output.accept(ModItems.WAKIZASHI.get());
+                        output.accept(ModItems.TACHI.get());
+                        output.accept(ModItems.ODACHI.get());
 
                         output.accept(ModItems.PATTERNED_SCROLL.get());
                     })

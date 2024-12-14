@@ -31,12 +31,24 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.IRON_SAND_BLOCK.get());
         this.dropSelf(ModBlocks.GRAVELLED_IRON_SAND_BLOCK.get());
         this.dropSelf(ModBlocks.MOSSY_IRON_SAND_BLOCK.get());
-
+        
         this.dropSelf(ModBlocks.MULLBERRY_LOG.get());
         this.dropSelf(ModBlocks.MULLBERRY_WOOD.get());
         this.dropSelf(ModBlocks.STRIPPED_MULLBERRY_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_MULLBERRY_WOOD.get());
         this.dropSelf(ModBlocks.MULLBERRY_PLANKS.get());
+        this.dropSelf(ModBlocks.MULLBERRY_STAIRS.get());
+        this.dropSelf(ModBlocks.MULLBERRY_BUTTON.get());
+        this.dropSelf(ModBlocks.MULLBERRY_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.MULLBERRY_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.MULLBERRY_FENCE.get());
+        this.dropSelf(ModBlocks.MULLBERRY_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.MULLBERRY_WALL.get());
+
+        this.add(ModBlocks.MULLBERRY_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.MULLBERRY_SLAB.get()));
+        this.add(ModBlocks.MULLBERRY_DOOR.get(),
+                block -> createDoorTable(ModBlocks.MULLBERRY_DOOR.get()));
 
         this.add(ModBlocks.MULLBERRY_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.IRON_SAND_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to Sapling!
@@ -46,6 +58,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_SUGI_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_SUGI_WOOD.get());
         this.dropSelf(ModBlocks.SUGI_PLANKS.get());
+        this.dropSelf(ModBlocks.SUGI_STAIRS.get());
+        this.dropSelf(ModBlocks.SUGI_BUTTON.get());
+        this.dropSelf(ModBlocks.SUGI_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.SUGI_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.SUGI_FENCE.get());
+        this.dropSelf(ModBlocks.SUGI_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.SUGI_WALL.get());
+
+        this.add(ModBlocks.SUGI_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.SUGI_SLAB.get()));
+        this.add(ModBlocks.SUGI_DOOR.get(),
+                block -> createDoorTable(ModBlocks.SUGI_DOOR.get()));
 
         this.add(ModBlocks.SUGI_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.IRON_SAND_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to Sapling!
@@ -55,6 +79,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_RED_PINE_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_RED_PINE_WOOD.get());
         this.dropSelf(ModBlocks.RED_PINE_PLANKS.get());
+        this.dropSelf(ModBlocks.RED_PINE_STAIRS.get());
+        this.dropSelf(ModBlocks.RED_PINE_BUTTON.get());
+        this.dropSelf(ModBlocks.RED_PINE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.RED_PINE_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.RED_PINE_FENCE.get());
+        this.dropSelf(ModBlocks.RED_PINE_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.RED_PINE_WALL.get());
+
+        this.add(ModBlocks.RED_PINE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.RED_PINE_SLAB.get()));
+        this.add(ModBlocks.RED_PINE_DOOR.get(),
+                block -> createDoorTable(ModBlocks.RED_PINE_DOOR.get()));
 
         this.add(ModBlocks.RED_PINE_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.IRON_SAND_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to Sapling!

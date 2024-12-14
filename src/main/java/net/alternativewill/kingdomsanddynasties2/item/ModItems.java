@@ -6,6 +6,7 @@ import net.alternativewill.kingdomsanddynasties2.item.custom.OyoroiArmorItem;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -43,6 +44,28 @@ public class ModItems {
             () -> new OyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> OYOROI_BOOTS = ITEMS.register("oyoroi_geta",
             () -> new OyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    public static final RegistryObject<Item> KATANA = ITEMS.register("katana",
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 4,2, new Item.Properties()));
+    public static final RegistryObject<Item> TANTO = ITEMS.register("tanto",
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 4,2, new Item.Properties()));
+    public static final RegistryObject<Item> WAKIZASHI = ITEMS.register("wakizashi",
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 4,2, new Item.Properties()));
+    public static final RegistryObject<Item> TACHI = ITEMS.register("tachi",
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 4,2, new Item.Properties()));
+    public static final RegistryObject<Item> ODACHI = ITEMS.register("odachi",
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 4,1, new Item.Properties()));
+
+    public static final RegistryObject<Item> KATANA_SHEATH = ITEMS.register("katana_sheath",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TANTO_SHEATH = ITEMS.register("tanto_sheath",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> WAKIZASHI_SHEATH = ITEMS.register("wakizashi_sheath",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TACHI_SHEATH = ITEMS.register("tachi_sheath",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ODACHI_SHEATH = ITEMS.register("odachi_sheath",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
