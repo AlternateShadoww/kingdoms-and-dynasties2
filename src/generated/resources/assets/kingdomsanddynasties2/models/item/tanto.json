@@ -1,0 +1,93 @@
+{
+  "parent": "minecraft:item/handheld",
+  "display": {
+    "firstperson_lefthand": {
+      "rotation": [
+        45,
+        -89,
+        2
+      ],
+      "scale": [
+        1.2,
+        1.2,
+        1
+      ],
+      "translation": [
+        0,
+        8,
+        2
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        45,
+        91,
+        -2
+      ],
+      "scale": [
+        1.2,
+        1.2,
+        1
+      ],
+      "translation": [
+        0,
+        8,
+        2
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        180,
+        360,
+        180
+      ],
+      "scale": [
+        1.5,
+        1.5,
+        1.5
+      ],
+      "translation": [
+        0,
+        1,
+        0
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        45,
+        -89,
+        2
+      ],
+      "scale": [
+        1.2,
+        1.2,
+        1
+      ],
+      "translation": [
+        0,
+        8,
+        2
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        45,
+        91,
+        -2
+      ],
+      "scale": [
+        1.2,
+        1.2,
+        1
+      ],
+      "translation": [
+        0,
+        8,
+        2
+      ]
+    }
+  },
+  "textures": {
+    "layer0": "kingdomsanddynasties2:item/tanto"
+  }
+}

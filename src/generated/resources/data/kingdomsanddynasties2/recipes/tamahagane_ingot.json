@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "kingdomsanddynasties2:tamahagane_nugget"
+    },
+    {
+      "item": "kingdomsanddynasties2:tamahagane_nugget"
+    },
+    {
+      "item": "kingdomsanddynasties2:tamahagane_nugget"
+    },
+    {
+      "item": "kingdomsanddynasties2:tamahagane_nugget"
+    },
+    {
+      "item": "kingdomsanddynasties2:tamahagane_nugget"
+    },
+    {
+      "item": "kingdomsanddynasties2:tamahagane_nugget"
+    },
+    {
+      "item": "kingdomsanddynasties2:tamahagane_nugget"
+    },
+    {
+      "item": "kingdomsanddynasties2:tamahagane_nugget"
+    },
+    {
+      "item": "kingdomsanddynasties2:tamahagane_nugget"
+    }
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:tamahagane_ingot"
+  }
+}

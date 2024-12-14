@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "kingdomsanddynasties2:block/mullberry_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "kingdomsanddynasties2:block/mullberry_log"
+    },
+    "axis=z": {
+      "model": "kingdomsanddynasties2:block/mullberry_log_horizontal",
+      "x": 90
+    }
+  }
+}

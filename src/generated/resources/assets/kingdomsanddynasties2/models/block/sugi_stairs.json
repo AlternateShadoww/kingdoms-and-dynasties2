@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "kingdomsanddynasties2:block/sugi_planks",
+    "side": "kingdomsanddynasties2:block/sugi_planks",
+    "top": "kingdomsanddynasties2:block/sugi_planks"
+  }
+}

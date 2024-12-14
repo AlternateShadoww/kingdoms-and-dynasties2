@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "kingdomsanddynasties2:block/mullberry_planks"
+  }
+}

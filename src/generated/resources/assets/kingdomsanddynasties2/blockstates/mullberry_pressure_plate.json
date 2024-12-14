@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "kingdomsanddynasties2:block/mullberry_pressure_plate"
+    },
+    "powered=true": {
+      "model": "kingdomsanddynasties2:block/mullberry_pressure_plate_down"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "kingdomsanddynasties2:block/mullberry_slab"
+    },
+    "type=double": {
+      "model": "kingdomsanddynasties2:block/mullberry_planks"
+    },
+    "type=top": {
+      "model": "kingdomsanddynasties2:block/mullberry_slab_top"
+    }
+  }
+}

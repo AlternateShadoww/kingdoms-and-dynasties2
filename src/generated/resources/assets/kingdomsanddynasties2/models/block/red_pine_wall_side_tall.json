@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side_tall",
+  "textures": {
+    "wall": "kingdomsanddynasties2:block/red_pine_log"
+  }
+}
