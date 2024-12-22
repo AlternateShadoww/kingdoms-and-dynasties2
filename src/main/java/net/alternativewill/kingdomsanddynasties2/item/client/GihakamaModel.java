@@ -13,7 +13,7 @@ public class GihakamaModel extends GeoModel<GihakamaItem> {
 
     @Override
     public ResourceLocation getTextureResource(GihakamaItem gihakamaItem) {
-        return new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "textures/armor/hakama_gi_texture_overlay.png");
+        return new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "textures/armor/hakamatexture.png");
     }
 
     @Override

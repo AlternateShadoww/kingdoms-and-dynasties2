@@ -54,6 +54,6 @@ public class GihakamaRenderer extends DyeableGeoArmorRenderer<GihakamaItem> {
         // This method will retrieve the dye color from the armor item.
 
         // For now, returning RED as a placeholder.
-        return DyeColor.RED;
+        return DyeColor.WHITE;
 }
 }

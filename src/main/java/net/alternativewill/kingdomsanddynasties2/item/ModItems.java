@@ -2,9 +2,7 @@ package net.alternativewill.kingdomsanddynasties2.item;
 
 import net.alternativewill.kingdomsanddynasties2.KingdomsAndDynasties2;
 import net.alternativewill.kingdomsanddynasties2.block.ModBlocks;
-import net.alternativewill.kingdomsanddynasties2.item.custom.GihakamaItem;
-import net.alternativewill.kingdomsanddynasties2.item.custom.MenpoItem;
-import net.alternativewill.kingdomsanddynasties2.item.custom.OyoroiArmorItem;
+import net.alternativewill.kingdomsanddynasties2.item.custom.*;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
@@ -38,6 +36,10 @@ public class ModItems {
     public static final RegistryObject<Item> PATTERNED_SCROLL = ITEMS.register("patterned_scroll",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> ZUNARI_HELMET = ITEMS.register("zunari_kabuto",
+            () -> new ZunariKabutoItem(ModArmorMaterials.OYOROI, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> EBOSHI_HELMET = ITEMS.register("eboshi_kabuto",
+            () -> new EboshiKabutoItem(ModArmorMaterials.OYOROI, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> OYOROI_HELMET = ITEMS.register("oyoroi_kabuto",
             () -> new OyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> OYOROI_CHESTPLATE = ITEMS.register("oyoroi_do",
