@@ -4,10 +4,12 @@ import net.alternativewill.kingdomsanddynasties2.KingdomsAndDynasties2;
 import net.alternativewill.kingdomsanddynasties2.block.ModBlocks;
 import net.alternativewill.kingdomsanddynasties2.util.ModTags;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.ForgeTier;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.TierSortingRegistry;
 
 import java.util.List;
@@ -17,4 +19,9 @@ public class ModToolTiers {
             new ForgeTier(3, 1000, 0.2f, 1f, 10,
                     ModTags.Blocks.NEEDS_TAMAHAGANE_TOOL, () -> Ingredient.of(ModItems.TAMAHAGANE_INGOT.get())),
             new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "tamahagane"), List.of(Tiers.DIAMOND), List.of());
+
+    public static final Tier BAMBOO = TierSortingRegistry.registerTier(
+            new ForgeTier(3, 450, 0.2f, 1f, 10,
+                    Tags.Blocks.NEEDS_WOOD_TOOL, () -> Ingredient.of(Items.BAMBOO)),
+            new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "bamboo"), List.of(Tiers.WOOD), List.of());
 }

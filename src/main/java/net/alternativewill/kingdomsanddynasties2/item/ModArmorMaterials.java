@@ -29,12 +29,16 @@ public enum ModArmorMaterials implements ArmorMaterial {
         return Ingredient.of(ModItems.COTTON.get());
 
     }),
-    MENYOROI("gihakama", 25, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266655_) -> {
+    MENYOROI("menyoroi", 25, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266655_) -> {
         p_266655_.put(ArmorItem.Type.HELMET, 2);
     }), 15, SoundEvents.ARMOR_EQUIP_IRON, 0F, 0F, () -> {
         return Ingredient.of(ModItems.TAMAHAGANE_INGOT.get());
 
-
+    }),
+    BAMBOO("bamboo", 25, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266655_) -> {
+        p_266655_.put(ArmorItem.Type.HELMET, 2);
+    }), 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0F, 0F, () -> {
+        return Ingredient.of(Items.BAMBOO);
 
     });
 
