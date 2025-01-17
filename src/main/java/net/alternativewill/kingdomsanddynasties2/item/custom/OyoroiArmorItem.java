@@ -70,7 +70,8 @@ public class OyoroiArmorItem extends DyeableArmorItem implements GeoItem {
 
     @Override
     public void setColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, OyoroiArmorItem.CRAFTING_TABLE_PART, color, STANDARD_CRAFTING_TABLE_COLOR);
+        CompoundTag displayTag = stack.getOrCreateTagElement("display");
+        displayTag.putInt(CRAFTING_TABLE_PART, color);
     }
 
     public void setPrimaryColor(@NotNull ItemStack stack, int color) {
