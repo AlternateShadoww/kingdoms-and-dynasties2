@@ -101,6 +101,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ODACHI.get());
 
                         output.accept(ModItems.PATTERNED_SCROLL.get());
+
+                        output.accept(ModItems.YOROI_STAND_ITEM.get());
                     })
                     .build());
 

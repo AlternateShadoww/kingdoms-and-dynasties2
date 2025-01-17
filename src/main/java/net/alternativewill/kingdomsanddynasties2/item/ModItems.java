@@ -2,15 +2,16 @@ package net.alternativewill.kingdomsanddynasties2.item;
 
 import net.alternativewill.kingdomsanddynasties2.KingdomsAndDynasties2;
 import net.alternativewill.kingdomsanddynasties2.block.ModBlocks;
+import net.alternativewill.kingdomsanddynasties2.entity.ModEntities;
 import net.alternativewill.kingdomsanddynasties2.item.custom.*;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import static net.minecraft.world.item.Items.registerItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -34,7 +35,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> PATTERNED_SCROLL = ITEMS.register("patterned_scroll",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> YOROI_STAND_ITEM = ITEMS.register("yoroi_stand",
+            () -> new YoroiStandItem(new Item.Properties().stacksTo(16)));
 
     public static final RegistryObject<Item> ZUNARI_HELMET = ITEMS.register("zunari_kabuto",
             () -> new ZunariKabutoItem(ModArmorMaterials.OYOROI, ArmorItem.Type.HELMET, new Item.Properties()));

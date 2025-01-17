@@ -1,4 +1,4 @@
-// 1.20.1	2024-12-14T01:33:26.6200717	Item Models: kingdomsanddynasties2
+// 1.20.1	2024-12-23T19:21:02.4408222	Item Models: kingdomsanddynasties2
 d7ae6069e945c7a853ddc5c147e1a2eeaf693e02 assets/kingdomsanddynasties2/models/item/cotton.json
 4cdd7fb6640ca0fc9bfa30489515a6196c682b2a assets/kingdomsanddynasties2/models/item/cottonseed.json
 0161d4709f519c9e563312d07ccd7334628da3c3 assets/kingdomsanddynasties2/models/item/gi.json
@@ -72,3 +72,4 @@ e68e13af3364c65bcab832b5044b0e4c8da1e834 assets/kingdomsanddynasties2/models/ite
 aa62cdc018e21a54ce63555f25e5eed80bb65d27 assets/kingdomsanddynasties2/models/item/tanto_sheath.json
 0f53499cb4fc293d2f33d373986d17f6c5862a33 assets/kingdomsanddynasties2/models/item/wakizashi.json
 2847e6a806958ebefddaf426261201de91b56468 assets/kingdomsanddynasties2/models/item/wakizashi_sheath.json
+16deff8cf874c7d485eed4295388a7f1a7613d62 assets/kingdomsanddynasties2/models/item/yoroi_stand.json
