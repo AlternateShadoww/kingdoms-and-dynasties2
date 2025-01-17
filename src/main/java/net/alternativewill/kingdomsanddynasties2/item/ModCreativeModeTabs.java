@@ -82,6 +82,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TAMAHAGANE_NUGGET.get());
 
                         //ARMORS
+                        output.accept(ModItems.JINGASA.get());
+                        output.accept(ModItems.JINGASA2.get());
+                        output.accept(ModItems.JINGASA3.get());
+                        output.accept(ModItems.JINGASA4.get());
+
                         output.accept(ModItems.GI.get());
                         output.accept(ModItems.HAKAMA.get());
 
@@ -100,6 +105,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TACHI.get());
                         output.accept(ModItems.ODACHI.get());
 
+                        output.accept(ModItems.TAIKO.get());
                         output.accept(ModItems.PATTERNED_SCROLL.get());
                     })
                     .build());

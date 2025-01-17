@@ -33,6 +33,9 @@ public class ModItems {
     public static final RegistryObject<Item> TAMAHAGANE_NUGGET = ITEMS.register("tamahagane_nugget",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> TAIKO = ITEMS.register("taiko",
+            () -> new TaikoItem(new Item.Properties()));
+
     public static final RegistryObject<Item> PATTERNED_SCROLL = ITEMS.register("patterned_scroll",
             () -> new Item(new Item.Properties()));
 
@@ -57,6 +60,14 @@ public class ModItems {
     public static final RegistryObject<Item> HAKAMA = ITEMS.register("hakama",
             () -> new GihakamaItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
+    public static final RegistryObject<Item> JINGASA = ITEMS.register("jingasa_1",
+            () -> new JingasaItem(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> JINGASA2 = ITEMS.register("jingasa_2",
+            () -> new Jingasa2Item(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> JINGASA3 = ITEMS.register("jingasa_3",
+            () -> new Jingasa3Item(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> JINGASA4 = ITEMS.register("jingasa_4",
+            () -> new Jingasa4Item(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> KATANA = ITEMS.register("katana",
             () -> new SwordItem(ModToolTiers.TAMAHAGANE, 5,-2, new Item.Properties()));
