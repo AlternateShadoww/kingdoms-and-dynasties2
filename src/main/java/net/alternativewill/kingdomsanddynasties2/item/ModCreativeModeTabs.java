@@ -107,6 +107,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.TAIKO.get());
                         output.accept(ModItems.PATTERNED_SCROLL.get());
+
+                        output.accept(ModItems.YOROI_STAND_ITEM.get());
                     })
                     .build());
 
