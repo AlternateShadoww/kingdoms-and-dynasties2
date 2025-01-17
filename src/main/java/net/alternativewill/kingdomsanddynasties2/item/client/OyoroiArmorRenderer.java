@@ -14,7 +14,7 @@ public class OyoroiArmorRenderer extends DyeableGeoArmorRenderer<OyoroiArmorItem
     public static final String SECONDARY_PART = "_secondary";
     public static final String GOLD_PART = "_gold";
     public static final String SILVER_PART = "_silver";
-    public static final String CRAFTING_TABLE_PART = "_crafting_table";
+    public static final String CRAFTING_TABLE_PART = "_craftingtable";
 
     public OyoroiArmorRenderer() {
         super(new OyoroiArmorModel());
