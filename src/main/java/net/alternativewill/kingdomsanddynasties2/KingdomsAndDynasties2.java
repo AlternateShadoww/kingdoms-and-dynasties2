@@ -2,21 +2,25 @@ package net.alternativewill.kingdomsanddynasties2;
 
 import com.mojang.logging.LogUtils;
 import net.alternativewill.kingdomsanddynasties2.block.ModBlocks;
+import net.alternativewill.kingdomsanddynasties2.entity.ModEntities;
+import net.alternativewill.kingdomsanddynasties2.entity.custom.YoroiStandEntity;
+import net.alternativewill.kingdomsanddynasties2.entity.client.YoroiStandRenderer;
 import net.alternativewill.kingdomsanddynasties2.item.ModCreativeModeTabs;
 import net.alternativewill.kingdomsanddynasties2.item.ModItems;
+import net.alternativewill.kingdomsanddynasties2.network.ModNetworking;
+import net.alternativewill.kingdomsanddynasties2.world.inventory.ModMenus;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -42,6 +46,11 @@ public class KingdomsAndDynasties2
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
+        ModNetworking.register();
+
+
+        ModMenus.REGISTRY.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -79,6 +88,16 @@ public class KingdomsAndDynasties2
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             Sheets.addWoodType(WoodType.BAMBOO);
+        }
+
+        @SubscribeEvent
+        public static void registerRenderers(final EntityRenderersEvent.RegisterRenderers event) {
+            event.registerEntityRenderer(ModEntities.YOROI_STAND.get(), YoroiStandRenderer::new);
+        }
+
+        @SubscribeEvent
+        public static void registerAttributes(EntityAttributeCreationEvent event) {
+            event.put(ModEntities.YOROI_STAND.get(), YoroiStandEntity.createAttributes().build());
         }
     }
 }

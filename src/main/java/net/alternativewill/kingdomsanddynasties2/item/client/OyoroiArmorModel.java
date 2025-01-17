@@ -4,6 +4,7 @@ import net.alternativewill.kingdomsanddynasties2.KingdomsAndDynasties2;
 import net.alternativewill.kingdomsanddynasties2.item.custom.OyoroiArmorItem;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.GeoModel;
+import software.bernie.geckolib.renderer.GeoRenderer;
 
 public class OyoroiArmorModel extends GeoModel<OyoroiArmorItem> {
     @Override
@@ -13,7 +14,7 @@ public class OyoroiArmorModel extends GeoModel<OyoroiArmorItem> {
 
     @Override
     public ResourceLocation getTextureResource(OyoroiArmorItem oyoroiArmorItem) {
-        return new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "textures/armor/oyoroi.texture.png");
+        return new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "textures/armor/oyoroi_texture.png");
     }
 
     @Override
