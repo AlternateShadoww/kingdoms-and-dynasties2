@@ -35,6 +35,9 @@ public class UndoColorPacket {
                     if (armorStack.getItem() instanceof OyoroiArmorItem yoroiArmorItem) {
                         yoroiArmorItem.undoColor(armorStack, packet.colorIndex);
                     }
+                    if (armorStack.getItem() instanceof DomaruArmorItem DomaruArmorItem) {
+                        DomaruArmorItem.undoColor(armorStack, packet.colorIndex);
+                    }
                     if (armorStack.getItem() instanceof EboshiKabutoItem EboshiKabutoItem) {
                         EboshiKabutoItem.undoColor(armorStack, packet.colorIndex);
                     }
