@@ -43,6 +43,10 @@ public class ModItems {
     public static final RegistryObject<Item> YOROI_STAND_ITEM = ITEMS.register("yoroi_stand",
             () -> new YoroiStandItem(new Item.Properties().stacksTo(16)));
 
+    public static final RegistryObject<Item> SUJI_HELMET = ITEMS.register("suji_kabuto",
+            () -> new SujiKabutoItem(ModArmorMaterials.OYOROI, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> TOPPAINARI_HELMET = ITEMS.register("toppainari_kabuto",
+            () -> new ToppainariKabutoItem(ModArmorMaterials.OYOROI, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> ZUNARI_HELMET = ITEMS.register("zunari_kabuto",
             () -> new ZunariKabutoItem(ModArmorMaterials.OYOROI, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> EBOSHI_HELMET = ITEMS.register("eboshi_kabuto",
@@ -55,6 +59,12 @@ public class ModItems {
             () -> new OyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> OYOROI_BOOTS = ITEMS.register("oyoroi_geta",
             () -> new OyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> DOMARU_CHESTPLATE = ITEMS.register("do-maru_do",
+            () -> new DomaruArmorItem(ModArmorMaterials.DOMARU, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> DOMARU_LEGGINGS = ITEMS.register("do-maru_haidate",
+            () -> new DomaruArmorItem(ModArmorMaterials.DOMARU, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> DOMARU_BOOTS = ITEMS.register("do-maru_geta",
+            () -> new DomaruArmorItem(ModArmorMaterials.DOMARU, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final RegistryObject<Item> MENPO = ITEMS.register("menpo",
             () -> new MenpoItem(ModArmorMaterials.MENYOROI, ArmorItem.Type.HELMET, new Item.Properties()));
@@ -64,6 +74,8 @@ public class ModItems {
     public static final RegistryObject<Item> HAKAMA = ITEMS.register("hakama",
             () -> new GihakamaItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
+    public static final RegistryObject<Item> EBOSHIHAT = ITEMS.register("eboshi",
+            () -> new EboshiHatItem(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> JINGASA = ITEMS.register("jingasa_1",
             () -> new JingasaItem(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> JINGASA2 = ITEMS.register("jingasa_2",
@@ -74,7 +86,7 @@ public class ModItems {
             () -> new Jingasa4Item(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> KATANA = ITEMS.register("katana",
-            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 5,-2, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 5,-2.4f, new Item.Properties()));
     public static final RegistryObject<Item> TANTO = ITEMS.register("tanto",
             () -> new SwordItem(ModToolTiers.TAMAHAGANE, 1,-1.3f, new Item.Properties()));
     public static final RegistryObject<Item> WAKIZASHI = ITEMS.register("wakizashi",

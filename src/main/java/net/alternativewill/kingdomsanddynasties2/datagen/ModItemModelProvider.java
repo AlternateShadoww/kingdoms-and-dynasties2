@@ -126,6 +126,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RAW_TAMAHAGANE);
 
         //ARMOR ITEMS
+        simpleItem(ModItems.EBOSHIHAT);
+        simpleItem(ModItems.ZUNARI_HELMET);
+        simpleItem(ModItems.TOPPAINARI_HELMET);
+        simpleItem(ModItems.EBOSHI_HELMET);
+        simpleItem(ModItems.SUJI_HELMET);
         simpleItem(ModItems.OYOROI_HELMET);
         simpleItem(ModItems.OYOROI_CHESTPLATE);
         simpleItem(ModItems.OYOROI_LEGGINGS);
@@ -254,11 +259,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .scale(1.2F, 1.2F, 1).end()
                 .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
                 .rotation(45,91,-2)
-                .translation(0,8,2f)
+                .translation(0,9.5f,2f)
                 .scale(1.2F, 1.2F, 1).end()
                 .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
                 .rotation(45,-89,2)
-                .translation(0,8,2f)
+                .translation(0,9.5f,2f)
                 .scale(1.2F, 1.2F, 1).end()
                 .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
                 .rotation(45,91,-2)

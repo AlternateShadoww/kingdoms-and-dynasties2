@@ -1,6 +1,6 @@
 package net.alternativewill.kingdomsanddynasties2.network.screen;
 
-import net.alternativewill.kingdomsanddynasties2.item.custom.OyoroiArmorItem;
+import net.alternativewill.kingdomsanddynasties2.item.custom.*;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkEvent;
@@ -34,6 +34,40 @@ public class CleanArmorPacket {
                         yoroiArmorItem.wipeColors(slot, OyoroiArmorItem.SILVER_PART, OyoroiArmorItem.STANDARD_SILVER_COLOR, player);
                         yoroiArmorItem.wipeColors(slot, OyoroiArmorItem.CRAFTING_TABLE_PART, OyoroiArmorItem.STANDARD_CRAFTING_TABLE_COLOR, player);
                     }
+                    if (slot.getItem() instanceof EboshiKabutoItem EboshiKabutoItem) {
+                        EboshiKabutoItem.clearColor(slot);
+                        EboshiKabutoItem.wipeColors(slot, EboshiKabutoItem.PRIMARY_PART, EboshiKabutoItem.STANDARD_PRIMARY_COLOR, player);
+                        EboshiKabutoItem.wipeColors(slot, EboshiKabutoItem.SECONDARY_PART, EboshiKabutoItem.STANDARD_SECONDARY_COLOR, player);
+                        EboshiKabutoItem.wipeColors(slot, EboshiKabutoItem.GOLD_PART, EboshiKabutoItem.STANDARD_GOLD_COLOR, player);
+                        EboshiKabutoItem.wipeColors(slot, EboshiKabutoItem.SILVER_PART, EboshiKabutoItem.STANDARD_SILVER_COLOR, player);
+                        EboshiKabutoItem.wipeColors(slot, EboshiKabutoItem.CRAFTING_TABLE_PART, EboshiKabutoItem.STANDARD_CRAFTING_TABLE_COLOR, player);
+                    }
+                    if (slot.getItem() instanceof ZunariKabutoItem ZunariKabutoItem) {
+                        ZunariKabutoItem.clearColor(slot);
+                        ZunariKabutoItem.wipeColors(slot, ZunariKabutoItem.PRIMARY_PART, ZunariKabutoItem.STANDARD_PRIMARY_COLOR, player);
+                        ZunariKabutoItem.wipeColors(slot, ZunariKabutoItem.SECONDARY_PART, ZunariKabutoItem.STANDARD_SECONDARY_COLOR, player);
+                        ZunariKabutoItem.wipeColors(slot, ZunariKabutoItem.GOLD_PART, ZunariKabutoItem.STANDARD_GOLD_COLOR, player);
+                        ZunariKabutoItem.wipeColors(slot, ZunariKabutoItem.SILVER_PART, ZunariKabutoItem.STANDARD_SILVER_COLOR, player);
+                        ZunariKabutoItem.wipeColors(slot, ZunariKabutoItem.CRAFTING_TABLE_PART, ZunariKabutoItem.STANDARD_CRAFTING_TABLE_COLOR, player);
+                    }
+                    if (slot.getItem() instanceof ToppainariKabutoItem ToppainariKabutoItem) {
+                        ToppainariKabutoItem.clearColor(slot);
+                        ToppainariKabutoItem.wipeColors(slot, ToppainariKabutoItem.PRIMARY_PART, ToppainariKabutoItem.STANDARD_PRIMARY_COLOR, player);
+                        ToppainariKabutoItem.wipeColors(slot, ToppainariKabutoItem.SECONDARY_PART, ToppainariKabutoItem.STANDARD_SECONDARY_COLOR, player);
+                        ToppainariKabutoItem.wipeColors(slot, ToppainariKabutoItem.GOLD_PART, ToppainariKabutoItem.STANDARD_GOLD_COLOR, player);
+                        ToppainariKabutoItem.wipeColors(slot, ToppainariKabutoItem.SILVER_PART, ToppainariKabutoItem.STANDARD_SILVER_COLOR, player);
+                        ToppainariKabutoItem.wipeColors(slot, ToppainariKabutoItem.CRAFTING_TABLE_PART, ToppainariKabutoItem.STANDARD_CRAFTING_TABLE_COLOR, player);
+                    }
+                    if (slot.getItem() instanceof SujiKabutoItem SujiKabutoItem) {
+                        SujiKabutoItem.clearColor(slot);
+                        SujiKabutoItem.wipeColors(slot, SujiKabutoItem.PRIMARY_PART, SujiKabutoItem.STANDARD_PRIMARY_COLOR, player);
+                        SujiKabutoItem.wipeColors(slot, SujiKabutoItem.SECONDARY_PART, SujiKabutoItem.STANDARD_SECONDARY_COLOR, player);
+                        SujiKabutoItem.wipeColors(slot, SujiKabutoItem.GOLD_PART, SujiKabutoItem.STANDARD_GOLD_COLOR, player);
+                        SujiKabutoItem.wipeColors(slot, SujiKabutoItem.SILVER_PART, SujiKabutoItem.STANDARD_SILVER_COLOR, player);
+                        SujiKabutoItem.wipeColors(slot, SujiKabutoItem.CRAFTING_TABLE_PART, SujiKabutoItem.STANDARD_CRAFTING_TABLE_COLOR, player);
+                    }
+
+
                 });
             }
         });

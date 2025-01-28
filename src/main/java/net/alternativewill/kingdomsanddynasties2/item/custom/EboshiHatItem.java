@@ -1,14 +1,12 @@
 package net.alternativewill.kingdomsanddynasties2.item.custom;
 
-import net.alternativewill.kingdomsanddynasties2.item.client.ZunariKabutoRenderer;
-import net.alternativewill.kingdomsanddynasties2.item.client.OyoroiArmorRenderer;
+import net.alternativewill.kingdomsanddynasties2.item.client.EboshiHatRenderer;
 import net.alternativewill.kingdomsanddynasties2.util.ColorCombiner;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.DyeableArmorItem;
 import net.minecraft.world.item.ItemStack;
@@ -26,7 +24,7 @@ import software.bernie.geckolib.core.object.PlayState;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class ZunariKabutoItem extends DyeableArmorItem implements GeoItem {
+public class EboshiHatItem extends DyeableArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
     // Standard Colors
@@ -43,20 +41,20 @@ public class ZunariKabutoItem extends DyeableArmorItem implements GeoItem {
     public static final String SILVER_PART = "silver";
     public static final String CRAFTING_TABLE_PART = "color";
 
-    public ZunariKabutoItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
+    public EboshiHatItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
     }
 
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
         consumer.accept(new IClientItemExtensions() {
-            private ZunariKabutoRenderer renderer;
+            private EboshiHatRenderer renderer;
 
             @Override
             public @NotNull HumanoidModel<?> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack,
                                                                    EquipmentSlot equipmentSlot, HumanoidModel<?> original) {
                 if (this.renderer == null)
-                    this.renderer = new ZunariKabutoRenderer();
+                    this.renderer = new EboshiHatRenderer();
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
                 return this.renderer;
@@ -76,40 +74,40 @@ public class ZunariKabutoItem extends DyeableArmorItem implements GeoItem {
     }
 
     public void setPrimaryColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, ZunariKabutoItem.PRIMARY_PART, color, STANDARD_PRIMARY_COLOR);
+        setColorTag(stack, EboshiHatItem.PRIMARY_PART, color, STANDARD_PRIMARY_COLOR);
     }
 
     public void setSecondaryColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, ZunariKabutoItem.SECONDARY_PART, color, STANDARD_SECONDARY_COLOR);
+        setColorTag(stack, EboshiHatItem.SECONDARY_PART, color, STANDARD_SECONDARY_COLOR);
     }
 
     public void setGoldColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, ZunariKabutoItem.GOLD_PART, color, STANDARD_GOLD_COLOR);
+        setColorTag(stack, EboshiHatItem.GOLD_PART, color, STANDARD_GOLD_COLOR);
     }
 
     public void setSilverColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, ZunariKabutoItem.SILVER_PART, color, STANDARD_SILVER_COLOR);
+        setColorTag(stack, EboshiHatItem.SILVER_PART, color, STANDARD_SILVER_COLOR);
     }
 
     public int getPrimaryColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, ZunariKabutoItem.PRIMARY_PART, STANDARD_PRIMARY_COLOR);
+        return getColorTag(stack, EboshiHatItem.PRIMARY_PART, STANDARD_PRIMARY_COLOR);
     }
 
     public int getSecondaryColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, ZunariKabutoItem.SECONDARY_PART, STANDARD_SECONDARY_COLOR);
+        return getColorTag(stack, EboshiHatItem.SECONDARY_PART, STANDARD_SECONDARY_COLOR);
     }
 
     public int getGoldColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, ZunariKabutoItem.GOLD_PART, STANDARD_GOLD_COLOR);
+        return getColorTag(stack, EboshiHatItem.GOLD_PART, STANDARD_GOLD_COLOR);
     }
 
     public int getSilverColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, ZunariKabutoItem.SILVER_PART, STANDARD_SILVER_COLOR);
+        return getColorTag(stack, EboshiHatItem.SILVER_PART, STANDARD_SILVER_COLOR);
     }
 
     @Override
     public int getColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, ZunariKabutoItem.CRAFTING_TABLE_PART, STANDARD_CRAFTING_TABLE_COLOR);
+        return getColorTag(stack, EboshiHatItem.CRAFTING_TABLE_PART, STANDARD_CRAFTING_TABLE_COLOR);
     }
 
     public int getCraftingTableColor(ItemStack stack) {
@@ -171,19 +169,19 @@ public class ZunariKabutoItem extends DyeableArmorItem implements GeoItem {
     }
 
     public void undoColor(ItemStack stack, int buttonIndex) {
-        if (stack.getItem() instanceof ZunariKabutoItem ZunariKabutoItem) {
+        if (stack.getItem() instanceof EboshiHatItem EboshiHatItem) {
             switch (buttonIndex) {
                 case 0: // Primary color
-                    ZunariKabutoItem.undoColorTag(stack, PRIMARY_PART, STANDARD_PRIMARY_COLOR);
+                    EboshiHatItem.undoColorTag(stack, PRIMARY_PART, STANDARD_PRIMARY_COLOR);
                     break;
                 case 1: // Secondary color
-                    ZunariKabutoItem.undoColorTag(stack, SECONDARY_PART, STANDARD_SECONDARY_COLOR);
+                    EboshiHatItem.undoColorTag(stack, SECONDARY_PART, STANDARD_SECONDARY_COLOR);
                     break;
                 case 2: // Gold part
-                    ZunariKabutoItem.undoColorTag(stack, GOLD_PART, STANDARD_GOLD_COLOR);
+                    EboshiHatItem.undoColorTag(stack, GOLD_PART, STANDARD_GOLD_COLOR);
                     break;
                 case 3: // Silver part
-                    ZunariKabutoItem.undoColorTag(stack, SILVER_PART, STANDARD_SILVER_COLOR);
+                    EboshiHatItem.undoColorTag(stack, SILVER_PART, STANDARD_SILVER_COLOR);
                     break;
                 default:
                     break;

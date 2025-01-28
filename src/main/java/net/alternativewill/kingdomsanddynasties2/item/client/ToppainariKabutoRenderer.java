@@ -1,7 +1,7 @@
 package net.alternativewill.kingdomsanddynasties2.item.client;
 
-import net.alternativewill.kingdomsanddynasties2.item.custom.EboshiKabutoItem;
 import net.alternativewill.kingdomsanddynasties2.item.custom.OyoroiArmorItem;
+import net.alternativewill.kingdomsanddynasties2.item.custom.ToppainariKabutoItem;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
@@ -9,7 +9,7 @@ import software.bernie.geckolib.cache.object.GeoBone;
 import software.bernie.geckolib.core.object.Color;
 import software.bernie.geckolib.renderer.DyeableGeoArmorRenderer;
 
-public class EboshiKabutoRenderer extends DyeableGeoArmorRenderer<EboshiKabutoItem> {
+public class ToppainariKabutoRenderer extends DyeableGeoArmorRenderer<ToppainariKabutoItem> {
 
     public static final String PRIMARY_PART = "_primary";
     public static final String SECONDARY_PART = "_secondary";
@@ -17,8 +17,8 @@ public class EboshiKabutoRenderer extends DyeableGeoArmorRenderer<EboshiKabutoIt
     public static final String SILVER_PART = "_silver";
     public static final String CRAFTING_TABLE_PART = "_craftingtable";
 
-    public EboshiKabutoRenderer() {
-        super(new EboshiKabutoModel());
+    public ToppainariKabutoRenderer() {
+        super(new ToppainariKabutoModel());
     }
 
     @Override
@@ -34,7 +34,7 @@ public class EboshiKabutoRenderer extends DyeableGeoArmorRenderer<EboshiKabutoIt
     protected @NotNull Color getColorForBone(GeoBone geoBone) {
         ItemStack itemStack = this.currentStack;
 
-        if (itemStack.getItem() instanceof EboshiKabutoItem armorItem) {
+        if (itemStack.getItem() instanceof ToppainariKabutoItem armorItem) {
             int primaryColor = armorItem.getPrimaryColor(itemStack);
             int secondaryColor = armorItem.getSecondaryColor(itemStack);
             int goldColor = armorItem.getGoldColor(itemStack);
@@ -43,20 +43,20 @@ public class EboshiKabutoRenderer extends DyeableGeoArmorRenderer<EboshiKabutoIt
 
             String boneName = geoBone.getName();
 
-            if (boneName.endsWith(EboshiKabutoRenderer.PRIMARY_PART)) {
-                return applyDyeToBone(geoBone, primaryColor, EboshiKabutoRenderer.PRIMARY_PART);
-            } else if (boneName.endsWith(EboshiKabutoRenderer.SECONDARY_PART)) {
-                return applyDyeToBone(geoBone, secondaryColor, EboshiKabutoRenderer.SECONDARY_PART);
-            } else if (boneName.endsWith(EboshiKabutoRenderer.GOLD_PART)) {
-                return applyDyeToBone(geoBone, goldColor, EboshiKabutoRenderer.GOLD_PART);
-            } else if (boneName.endsWith(EboshiKabutoRenderer.SILVER_PART)) {
-                return applyDyeToBone(geoBone, silverColor, EboshiKabutoRenderer.SILVER_PART);
-            } else if (boneName.endsWith(EboshiKabutoRenderer.CRAFTING_TABLE_PART)) {
-                return applyDyeToBone(geoBone, craftingTableColor, EboshiKabutoRenderer.CRAFTING_TABLE_PART);
+            if (boneName.endsWith(ToppainariKabutoRenderer.PRIMARY_PART)) {
+                return applyDyeToBone(geoBone, primaryColor, ToppainariKabutoRenderer.PRIMARY_PART);
+            } else if (boneName.endsWith(ToppainariKabutoRenderer.SECONDARY_PART)) {
+                return applyDyeToBone(geoBone, secondaryColor, ToppainariKabutoRenderer.SECONDARY_PART);
+            } else if (boneName.endsWith(ToppainariKabutoRenderer.GOLD_PART)) {
+                return applyDyeToBone(geoBone, goldColor, ToppainariKabutoRenderer.GOLD_PART);
+            } else if (boneName.endsWith(ToppainariKabutoRenderer.SILVER_PART)) {
+                return applyDyeToBone(geoBone, silverColor, ToppainariKabutoRenderer.SILVER_PART);
+            } else if (boneName.endsWith(ToppainariKabutoRenderer.CRAFTING_TABLE_PART)) {
+                return applyDyeToBone(geoBone, craftingTableColor, ToppainariKabutoRenderer.CRAFTING_TABLE_PART);
             }
         }
 
-        return Color.ofOpaque(EboshiKabutoItem.STANDARD_COLOR);
+        return Color.ofOpaque(ToppainariKabutoItem.STANDARD_COLOR);
     }
 
     public Color applyDyeToBone(GeoBone geoBone, int color, String boneEndsWith) {

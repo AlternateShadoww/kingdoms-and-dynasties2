@@ -1,14 +1,16 @@
 package net.alternativewill.kingdomsanddynasties2.item.custom;
 
 import net.alternativewill.kingdomsanddynasties2.item.client.EboshiKabutoRenderer;
-import net.alternativewill.kingdomsanddynasties2.item.client.GihakamaRenderer;
+import net.alternativewill.kingdomsanddynasties2.item.client.OyoroiArmorRenderer;
+import net.alternativewill.kingdomsanddynasties2.util.ColorCombiner;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.DyeableArmorItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import org.jetbrains.annotations.NotNull;
@@ -21,10 +23,25 @@ import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.object.PlayState;
 
+import java.util.List;
 import java.util.function.Consumer;
 
-public class EboshiKabutoItem extends ArmorItem implements GeoItem {
-    private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
+public class EboshiKabutoItem extends DyeableArmorItem implements GeoItem {
+    private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
+
+    // Standard Colors
+    public static final int STANDARD_CRAFTING_TABLE_COLOR = 16777215;
+    public static final int STANDARD_PRIMARY_COLOR = 16777215;
+    public static final int STANDARD_SECONDARY_COLOR = 16777215;
+    public static final int STANDARD_GOLD_COLOR = 16777215;
+    public static final int STANDARD_SILVER_COLOR = 16777215;
+    public static final int STANDARD_COLOR = 16777215;
+
+    public static final String PRIMARY_PART = "primary";
+    public static final String SECONDARY_PART = "secondary";
+    public static final String GOLD_PART = "gold";
+    public static final String SILVER_PART = "silver";
+    public static final String CRAFTING_TABLE_PART = "color";
 
     public EboshiKabutoItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
@@ -52,6 +69,97 @@ public class EboshiKabutoItem extends ArmorItem implements GeoItem {
         return PlayState.CONTINUE;
     }
 
+    @Override
+    public void setColor(@NotNull ItemStack stack, int color) {
+        CompoundTag displayTag = stack.getOrCreateTagElement("display");
+        displayTag.putInt(CRAFTING_TABLE_PART, color);
+    }
+
+    public void setPrimaryColor(@NotNull ItemStack stack, int color) {
+        setColorTag(stack, EboshiKabutoItem.PRIMARY_PART, color, STANDARD_PRIMARY_COLOR);
+    }
+
+    public void setSecondaryColor(@NotNull ItemStack stack, int color) {
+        setColorTag(stack, EboshiKabutoItem.SECONDARY_PART, color, STANDARD_SECONDARY_COLOR);
+    }
+
+    public void setGoldColor(@NotNull ItemStack stack, int color) {
+        setColorTag(stack, EboshiKabutoItem.GOLD_PART, color, STANDARD_GOLD_COLOR);
+    }
+
+    public void setSilverColor(@NotNull ItemStack stack, int color) {
+        setColorTag(stack, EboshiKabutoItem.SILVER_PART, color, STANDARD_SILVER_COLOR);
+    }
+
+    public int getPrimaryColor(@NotNull ItemStack stack) {
+        return getColorTag(stack, EboshiKabutoItem.PRIMARY_PART, STANDARD_PRIMARY_COLOR);
+    }
+
+    public int getSecondaryColor(@NotNull ItemStack stack) {
+        return getColorTag(stack, EboshiKabutoItem.SECONDARY_PART, STANDARD_SECONDARY_COLOR);
+    }
+
+    public int getGoldColor(@NotNull ItemStack stack) {
+        return getColorTag(stack, EboshiKabutoItem.GOLD_PART, STANDARD_GOLD_COLOR);
+    }
+
+    public int getSilverColor(@NotNull ItemStack stack) {
+        return getColorTag(stack, EboshiKabutoItem.SILVER_PART, STANDARD_SILVER_COLOR);
+    }
+
+    @Override
+    public int getColor(@NotNull ItemStack stack) {
+        return getColorTag(stack, EboshiKabutoItem.CRAFTING_TABLE_PART, STANDARD_CRAFTING_TABLE_COLOR);
+    }
+
+    public int getCraftingTableColor(ItemStack stack) {
+        return getColor(stack);
+    }
+
+    public void wipeColors(@NotNull ItemStack stack, String tag, int color, Player player) {
+        CompoundTag displayTag = stack.getOrCreateTagElement("display");
+
+        if (displayTag.contains(tag)) {
+            displayTag.remove(tag);
+
+            stack.getOrCreateTagElement("display").putInt(tag, color);
+
+            player.getInventory().armor.set(player.getInventory().armor.indexOf(stack), stack);
+
+            player.getInventory().setChanged();
+        } else {
+            System.out.println("Tag " + tag + " not found in displayTag from stack: " + stack);
+        }
+    }
+
+
+    private void setColorTag(@NotNull ItemStack stack, String tag, int color, int defaultColor) {
+        CompoundTag displayTag = stack.getOrCreateTagElement("display");
+        int currentColor = displayTag.getInt(tag) == 0 ? defaultColor : displayTag.getInt(tag);
+        if (currentColor != color) {
+            int blendedColor = ColorCombiner.combineColors(List.of(currentColor, color));
+            displayTag.putInt(tag, blendedColor);
+        }
+    }
+
+    private void undoColorTag(@NotNull ItemStack stack, String tag, int defaultColor) {
+        CompoundTag displayTag = stack.getOrCreateTagElement("display");
+
+        if (displayTag.contains("previous_" + tag)) {
+            int previousColor = displayTag.getInt("previous_" + tag);
+            displayTag.putInt(tag, previousColor);
+            displayTag.remove("previous_" + tag);
+        } else {
+            displayTag.putInt(tag, defaultColor);
+        }
+    }
+
+
+
+    private int getColorTag(@NotNull ItemStack stack, String tag, int defaultColor) {
+        CompoundTag compoundTag = stack.getTagElement("display");
+        return compoundTag != null && compoundTag.contains(tag, 99) ? compoundTag.getInt(tag) : defaultColor;
+    }
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
@@ -60,5 +168,26 @@ public class EboshiKabutoItem extends ArmorItem implements GeoItem {
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return cache;
+    }
+
+    public void undoColor(ItemStack stack, int buttonIndex) {
+        if (stack.getItem() instanceof EboshiKabutoItem EboshiKabutoItem) {
+            switch (buttonIndex) {
+                case 0: // Primary color
+                    EboshiKabutoItem.undoColorTag(stack, PRIMARY_PART, STANDARD_PRIMARY_COLOR);
+                    break;
+                case 1: // Secondary color
+                    EboshiKabutoItem.undoColorTag(stack, SECONDARY_PART, STANDARD_SECONDARY_COLOR);
+                    break;
+                case 2: // Gold part
+                    EboshiKabutoItem.undoColorTag(stack, GOLD_PART, STANDARD_GOLD_COLOR);
+                    break;
+                case 3: // Silver part
+                    EboshiKabutoItem.undoColorTag(stack, SILVER_PART, STANDARD_SILVER_COLOR);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

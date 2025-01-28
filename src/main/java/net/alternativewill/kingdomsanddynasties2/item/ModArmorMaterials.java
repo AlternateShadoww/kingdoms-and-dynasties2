@@ -22,6 +22,15 @@ public enum ModArmorMaterials implements ArmorMaterial {
         return Ingredient.of(ModItems.TAMAHAGANE_INGOT.get());
 
     }),
+    DOMARU("domaru", 25, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266655_) -> {
+        p_266655_.put(ArmorItem.Type.BOOTS, 2);
+        p_266655_.put(ArmorItem.Type.LEGGINGS, 5);
+        p_266655_.put(ArmorItem.Type.CHESTPLATE, 7);
+        p_266655_.put(ArmorItem.Type.HELMET, 2);
+    }), 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
+        return Ingredient.of(ModItems.TAMAHAGANE_INGOT.get());
+
+    }),
     GIHAKAMA("gihakama", 25, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266655_) -> {
         p_266655_.put(ArmorItem.Type.LEGGINGS, 2);
         p_266655_.put(ArmorItem.Type.CHESTPLATE, 4);

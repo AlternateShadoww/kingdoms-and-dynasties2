@@ -62,12 +62,19 @@
   "block.kingdomsanddynasties2.sugi_trapdoor": "Sugi Trapdoor",
   "block.kingdomsanddynasties2.sugi_leaves": "Sugi Leaves",
 
+  "item.kingdomsanddynasties2.suji_kabuto": "Suji Kabuto",
+  "item.kingdomsanddynasties2.toppainari_kabuto": "Toppainari Kabuto",
   "item.kingdomsanddynasties2.zunari_kabuto": "Zunari Kabuto",
   "item.kingdomsanddynasties2.eboshi_kabuto": "Eboshi Kabuto",
-  "item.kingdomsanddynasties2.oyoroi_kabuto": "Ō-yoroi Kabuto",
+  "item.kingdomsanddynasties2.oyoroi_kabuto": "Heian Kabuto",
   "item.kingdomsanddynasties2.oyoroi_do": "Ō-yoroi Dō",
   "item.kingdomsanddynasties2.oyoroi_haidate": "Ō-yoroi Haidate",
   "item.kingdomsanddynasties2.oyoroi_geta": "Ō-yoroi Geta",
+
+  "item.kingdomsanddynasties2.do-maru_kabuto": "Dō-maru Kabuto",
+  "item.kingdomsanddynasties2.do-maru_do": "Dō-maru Dō",
+  "item.kingdomsanddynasties2.do-maru_haidate": "Dō-maru Haidate",
+  "item.kingdomsanddynasties2.do-maru_geta": "Dō-maru Geta",
 
   "item.kingdomsanddynasties2.menpo": "Menpo",
 
@@ -78,6 +85,8 @@
   "item.kingdomsanddynasties2.jingasa_2": "Jingasa",
   "item.kingdomsanddynasties2.jingasa_3": "Jingasa",
   "item.kingdomsanddynasties2.jingasa_4": "Jingasa",
+
+  "item.kingdomsanddynasties2.eboshi": "Eboshi",
 
   "item.kingdomsanddynasties2.taiko": "Taiko",
 

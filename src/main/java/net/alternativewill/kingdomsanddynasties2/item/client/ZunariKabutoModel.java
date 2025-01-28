@@ -14,7 +14,7 @@ public class ZunariKabutoModel extends GeoModel<ZunariKabutoItem> {
 
     @Override
     public ResourceLocation getTextureResource(ZunariKabutoItem zunariKabutoItem) {
-        return new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "textures/armor/zunari_kabuto.texture.png");
+        return new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "textures/armor/zunari_kabuto_texture.png");
     }
 
     @Override

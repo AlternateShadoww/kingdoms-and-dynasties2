@@ -1,6 +1,6 @@
 package net.alternativewill.kingdomsanddynasties2.item.client;
 
-import net.alternativewill.kingdomsanddynasties2.item.custom.EboshiKabutoItem;
+import net.alternativewill.kingdomsanddynasties2.item.custom.SujiKabutoItem;
 import net.alternativewill.kingdomsanddynasties2.item.custom.OyoroiArmorItem;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
@@ -9,7 +9,7 @@ import software.bernie.geckolib.cache.object.GeoBone;
 import software.bernie.geckolib.core.object.Color;
 import software.bernie.geckolib.renderer.DyeableGeoArmorRenderer;
 
-public class EboshiKabutoRenderer extends DyeableGeoArmorRenderer<EboshiKabutoItem> {
+public class SujiKabutoRenderer extends DyeableGeoArmorRenderer<SujiKabutoItem> {
 
     public static final String PRIMARY_PART = "_primary";
     public static final String SECONDARY_PART = "_secondary";
@@ -17,8 +17,8 @@ public class EboshiKabutoRenderer extends DyeableGeoArmorRenderer<EboshiKabutoIt
     public static final String SILVER_PART = "_silver";
     public static final String CRAFTING_TABLE_PART = "_craftingtable";
 
-    public EboshiKabutoRenderer() {
-        super(new EboshiKabutoModel());
+    public SujiKabutoRenderer() {
+        super(new SujiKabutoModel());
     }
 
     @Override
@@ -34,7 +34,7 @@ public class EboshiKabutoRenderer extends DyeableGeoArmorRenderer<EboshiKabutoIt
     protected @NotNull Color getColorForBone(GeoBone geoBone) {
         ItemStack itemStack = this.currentStack;
 
-        if (itemStack.getItem() instanceof EboshiKabutoItem armorItem) {
+        if (itemStack.getItem() instanceof SujiKabutoItem armorItem) {
             int primaryColor = armorItem.getPrimaryColor(itemStack);
             int secondaryColor = armorItem.getSecondaryColor(itemStack);
             int goldColor = armorItem.getGoldColor(itemStack);
@@ -43,20 +43,20 @@ public class EboshiKabutoRenderer extends DyeableGeoArmorRenderer<EboshiKabutoIt
 
             String boneName = geoBone.getName();
 
-            if (boneName.endsWith(EboshiKabutoRenderer.PRIMARY_PART)) {
-                return applyDyeToBone(geoBone, primaryColor, EboshiKabutoRenderer.PRIMARY_PART);
-            } else if (boneName.endsWith(EboshiKabutoRenderer.SECONDARY_PART)) {
-                return applyDyeToBone(geoBone, secondaryColor, EboshiKabutoRenderer.SECONDARY_PART);
-            } else if (boneName.endsWith(EboshiKabutoRenderer.GOLD_PART)) {
-                return applyDyeToBone(geoBone, goldColor, EboshiKabutoRenderer.GOLD_PART);
-            } else if (boneName.endsWith(EboshiKabutoRenderer.SILVER_PART)) {
-                return applyDyeToBone(geoBone, silverColor, EboshiKabutoRenderer.SILVER_PART);
-            } else if (boneName.endsWith(EboshiKabutoRenderer.CRAFTING_TABLE_PART)) {
-                return applyDyeToBone(geoBone, craftingTableColor, EboshiKabutoRenderer.CRAFTING_TABLE_PART);
+            if (boneName.endsWith(SujiKabutoRenderer.PRIMARY_PART)) {
+                return applyDyeToBone(geoBone, primaryColor, SujiKabutoRenderer.PRIMARY_PART);
+            } else if (boneName.endsWith(SujiKabutoRenderer.SECONDARY_PART)) {
+                return applyDyeToBone(geoBone, secondaryColor, SujiKabutoRenderer.SECONDARY_PART);
+            } else if (boneName.endsWith(SujiKabutoRenderer.GOLD_PART)) {
+                return applyDyeToBone(geoBone, goldColor, SujiKabutoRenderer.GOLD_PART);
+            } else if (boneName.endsWith(SujiKabutoRenderer.SILVER_PART)) {
+                return applyDyeToBone(geoBone, silverColor, SujiKabutoRenderer.SILVER_PART);
+            } else if (boneName.endsWith(SujiKabutoRenderer.CRAFTING_TABLE_PART)) {
+                return applyDyeToBone(geoBone, craftingTableColor, SujiKabutoRenderer.CRAFTING_TABLE_PART);
             }
         }
 
-        return Color.ofOpaque(EboshiKabutoItem.STANDARD_COLOR);
+        return Color.ofOpaque(SujiKabutoItem.STANDARD_COLOR);
     }
 
     public Color applyDyeToBone(GeoBone geoBone, int color, String boneEndsWith) {

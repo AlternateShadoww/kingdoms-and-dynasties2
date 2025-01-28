@@ -87,15 +87,23 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.JINGASA3.get());
                         output.accept(ModItems.JINGASA4.get());
 
+                        output.accept(ModItems.EBOSHIHAT.get());
+
                         output.accept(ModItems.GI.get());
                         output.accept(ModItems.HAKAMA.get());
 
+                        output.accept(ModItems.SUJI_HELMET.get());
+                        output.accept(ModItems.TOPPAINARI_HELMET.get());
                         output.accept(ModItems.ZUNARI_HELMET.get());
                         output.accept(ModItems.EBOSHI_HELMET.get());
                         output.accept(ModItems.OYOROI_HELMET.get());
                         output.accept(ModItems.OYOROI_CHESTPLATE.get());
                         output.accept(ModItems.OYOROI_LEGGINGS.get());
                         output.accept(ModItems.OYOROI_BOOTS.get());
+
+                        output.accept(ModItems.DOMARU_CHESTPLATE.get());
+                        output.accept(ModItems.DOMARU_LEGGINGS.get());
+                        output.accept(ModItems.DOMARU_BOOTS.get());
 
                         output.accept(ModItems.MENPO.get());
 

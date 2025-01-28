@@ -1,6 +1,6 @@
 package net.alternativewill.kingdomsanddynasties2.network.screen;
 
-import net.alternativewill.kingdomsanddynasties2.item.custom.OyoroiArmorItem;
+import net.alternativewill.kingdomsanddynasties2.item.custom.*;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkEvent;
@@ -34,6 +34,18 @@ public class UndoColorPacket {
 
                     if (armorStack.getItem() instanceof OyoroiArmorItem yoroiArmorItem) {
                         yoroiArmorItem.undoColor(armorStack, packet.colorIndex);
+                    }
+                    if (armorStack.getItem() instanceof EboshiKabutoItem EboshiKabutoItem) {
+                        EboshiKabutoItem.undoColor(armorStack, packet.colorIndex);
+                    }
+                    if (armorStack.getItem() instanceof ZunariKabutoItem ZunariKabutoItem) {
+                        ZunariKabutoItem.undoColor(armorStack, packet.colorIndex);
+                    }
+                    if (armorStack.getItem() instanceof ToppainariKabutoItem ToppainariKabutoItem) {
+                        ToppainariKabutoItem.undoColor(armorStack, packet.colorIndex);
+                    }
+                    if (armorStack.getItem() instanceof SujiKabutoItem SujiKabutoItem) {
+                        SujiKabutoItem.undoColor(armorStack, packet.colorIndex);
                     }
                 }
             }

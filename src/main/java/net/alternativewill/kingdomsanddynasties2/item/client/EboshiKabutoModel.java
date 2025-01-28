@@ -14,7 +14,7 @@ public class EboshiKabutoModel extends GeoModel<EboshiKabutoItem> {
 
     @Override
     public ResourceLocation getTextureResource(EboshiKabutoItem eboshiKabutoItem) {
-        return new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "textures/armor/eboshi_kabuto.texture.png");
+        return new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "textures/armor/eboshi_kabuto_texture.png");
     }
 
     @Override
