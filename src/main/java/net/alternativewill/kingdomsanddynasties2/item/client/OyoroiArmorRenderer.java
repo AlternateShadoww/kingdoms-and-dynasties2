@@ -59,10 +59,6 @@ public class OyoroiArmorRenderer extends DyeableGeoArmorRenderer<OyoroiArmorItem
     }
 
     public Color applyDyeToBone(GeoBone geoBone, int color, String boneEndsWith) {
-        GeoBone parentBone = geoBone.getParent();
-        if (parentBone == null || !parentBone.getName().endsWith(boneEndsWith)) {
-            return Color.ofOpaque(color);
-        }
-        return Color.ofOpaque(OyoroiArmorItem.STANDARD_COLOR);
+        return Color.ofOpaque(color);
     }
 }
