@@ -1,6 +1,7 @@
 package net.alternativewill.kingdomsanddynasties2.item.custom;
 
-import net.alternativewill.kingdomsanddynasties2.item.client.GihakamaRenderer;
+import net.alternativewill.kingdomsanddynasties2.item.client.HaraateArmorRenderer;
+import net.alternativewill.kingdomsanddynasties2.item.client.HaraateHakamaArmorRenderer;
 import net.alternativewill.kingdomsanddynasties2.item.client.OyoroiArmorRenderer;
 import net.alternativewill.kingdomsanddynasties2.util.ColorCombiner;
 import net.minecraft.client.model.HumanoidModel;
@@ -8,7 +9,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.DyeableArmorItem;
 import net.minecraft.world.item.ItemStack;
@@ -26,30 +26,37 @@ import software.bernie.geckolib.core.object.PlayState;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class GihakamaItem extends DyeableArmorItem implements GeoItem {
+public class HaraateArmorItem extends DyeableArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
     // Standard Colors
+    public static final int STANDARD_CRAFTING_TABLE_COLOR = 16777215;
     public static final int STANDARD_PRIMARY_COLOR = 16777215;
-    public static final int STANDARD_SECONDARY_COLOR = 11119255;
+    public static final int STANDARD_SECONDARY_COLOR = 16777215;
+    public static final int STANDARD_GOLD_COLOR = 16777215;
+    public static final int STANDARD_SILVER_COLOR = 16777215;
+    public static final int STANDARD_COLOR = 16777215;
 
     public static final String PRIMARY_PART = "primary";
     public static final String SECONDARY_PART = "secondary";
+    public static final String GOLD_PART = "gold";
+    public static final String SILVER_PART = "silver";
+    public static final String CRAFTING_TABLE_PART = "color";
 
-    public GihakamaItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
+    public HaraateArmorItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
     }
 
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
         consumer.accept(new IClientItemExtensions() {
-            private GihakamaRenderer renderer;
+            private HaraateArmorRenderer renderer;
 
             @Override
             public @NotNull HumanoidModel<?> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack,
                                                                    EquipmentSlot equipmentSlot, HumanoidModel<?> original) {
                 if (this.renderer == null)
-                    this.renderer = new GihakamaRenderer();
+                    this.renderer = new HaraateArmorRenderer();
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
                 return this.renderer;
@@ -65,25 +72,45 @@ public class GihakamaItem extends DyeableArmorItem implements GeoItem {
     @Override
     public void setColor(@NotNull ItemStack stack, int color) {
         CompoundTag displayTag = stack.getOrCreateTagElement("display");
+        displayTag.putInt(CRAFTING_TABLE_PART, color);
     }
 
     public void setPrimaryColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, GihakamaItem.PRIMARY_PART, color, STANDARD_PRIMARY_COLOR);
+        setColorTag(stack, HaraateArmorItem.PRIMARY_PART, color, STANDARD_PRIMARY_COLOR);
     }
 
     public void setSecondaryColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, GihakamaItem.SECONDARY_PART, color, STANDARD_SECONDARY_COLOR);
+        setColorTag(stack, HaraateArmorItem.SECONDARY_PART, color, STANDARD_SECONDARY_COLOR);
     }
 
+    public void setGoldColor(@NotNull ItemStack stack, int color) {
+        setColorTag(stack, HaraateArmorItem.GOLD_PART, color, STANDARD_GOLD_COLOR);
+    }
+
+    public void setSilverColor(@NotNull ItemStack stack, int color) {
+        setColorTag(stack, HaraateArmorItem.SILVER_PART, color, STANDARD_SILVER_COLOR);
+    }
 
     public int getPrimaryColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, GihakamaItem.PRIMARY_PART, STANDARD_PRIMARY_COLOR);
+        return getColorTag(stack, HaraateArmorItem.PRIMARY_PART, STANDARD_PRIMARY_COLOR);
     }
 
     public int getSecondaryColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, GihakamaItem.SECONDARY_PART, STANDARD_SECONDARY_COLOR);
+        return getColorTag(stack, HaraateArmorItem.SECONDARY_PART, STANDARD_SECONDARY_COLOR);
     }
 
+    public int getGoldColor(@NotNull ItemStack stack) {
+        return getColorTag(stack, HaraateArmorItem.GOLD_PART, STANDARD_GOLD_COLOR);
+    }
+
+    public int getSilverColor(@NotNull ItemStack stack) {
+        return getColorTag(stack, HaraateArmorItem.SILVER_PART, STANDARD_SILVER_COLOR);
+    }
+
+    @Override
+    public int getColor(@NotNull ItemStack stack) {
+        return getColorTag(stack, HaraateArmorItem.CRAFTING_TABLE_PART, STANDARD_CRAFTING_TABLE_COLOR);
+    }
 
     public int getCraftingTableColor(ItemStack stack) {
         return getColor(stack);
@@ -144,13 +171,19 @@ public class GihakamaItem extends DyeableArmorItem implements GeoItem {
     }
 
     public void undoColor(ItemStack stack, int buttonIndex) {
-        if (stack.getItem() instanceof GihakamaItem GihakamaItem) {
+        if (stack.getItem() instanceof HaraateArmorItem HaraateArmorItem) {
             switch (buttonIndex) {
                 case 0: // Primary color
-                    GihakamaItem.undoColorTag(stack, PRIMARY_PART, STANDARD_PRIMARY_COLOR);
+                    HaraateArmorItem.undoColorTag(stack, PRIMARY_PART, STANDARD_PRIMARY_COLOR);
                     break;
                 case 1: // Secondary color
-                    GihakamaItem.undoColorTag(stack, SECONDARY_PART, STANDARD_SECONDARY_COLOR);
+                    HaraateArmorItem.undoColorTag(stack, SECONDARY_PART, STANDARD_SECONDARY_COLOR);
+                    break;
+                case 2: // Gold part
+                    HaraateArmorItem.undoColorTag(stack, GOLD_PART, STANDARD_GOLD_COLOR);
+                    break;
+                case 3: // Silver part
+                    HaraateArmorItem.undoColorTag(stack, SILVER_PART, STANDARD_SILVER_COLOR);
                     break;
                 default:
                     break;

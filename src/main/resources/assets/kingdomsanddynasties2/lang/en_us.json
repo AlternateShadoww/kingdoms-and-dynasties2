@@ -77,14 +77,21 @@
   "item.kingdomsanddynasties2.do-maru_geta": "Dō-maru Geta",
 
   "item.kingdomsanddynasties2.menpo": "Menpo",
+  "item.kingdomsanddynasties2.tengu_mask": "Tengu Mask",
 
   "item.kingdomsanddynasties2.gi": "Gi",
   "item.kingdomsanddynasties2.hakama": "Hakama",
+
+  "item.kingdomsanddynasties2.hara-ate_gi": "Hara-ate Dō",
+  "item.kingdomsanddynasties2.hara-ate_haidate": "Hara-ate Haidate",
+  "item.kingdomsanddynasties2.hara-ate_gi": "Hara-ate Dō & Gi",
+  "item.kingdomsanddynasties2.hara-ate_hakama": "Hara-ate Haidate & Hakama",
 
   "item.kingdomsanddynasties2.jingasa_1": "Jingasa",
   "item.kingdomsanddynasties2.jingasa_2": "Jingasa",
   "item.kingdomsanddynasties2.jingasa_3": "Jingasa",
   "item.kingdomsanddynasties2.jingasa_4": "Jingasa",
+  "item.kingdomsanddynasties2.jingasa_5": "Roningasa",
 
   "item.kingdomsanddynasties2.eboshi": "Eboshi",
 
@@ -106,5 +113,6 @@
 
   "entity.kingdomsanddynasties2.yoroi_stand": "Yoroi Stand",
 
-  "creativetab.kingdomsanddynasty_tab": "Kingdoms & Dynasties 2"
+  "creativetab.kingdomsanddynasty_tab": "Kingdoms & Dynasties 2",
+  "creativetab.kingdomsanddynasty_armory": "Kingdoms & Dynasties Armory"
 }

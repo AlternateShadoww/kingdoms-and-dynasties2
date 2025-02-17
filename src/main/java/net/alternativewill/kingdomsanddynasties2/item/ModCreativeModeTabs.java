@@ -16,7 +16,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, KingdomsAndDynasties2.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> KINGDOMSANDDYNASTYTAB = CREATIVE_MODE_TABS.register("kingdoms_and_dynasties_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.OYOROI_HELMET .get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.SUGI_PLANKS.get()))
                     .title(Component.translatable("creativetab.kingdomsanddynasty_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         //WOOD
@@ -81,11 +81,21 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TAMAHAGANE_INGOT.get());
                         output.accept(ModItems.TAMAHAGANE_NUGGET.get());
 
+                        output.accept(ModItems.PATTERNED_SCROLL.get());
+
+                        output.accept(ModItems.YOROI_STAND_ITEM.get());
+                    })
+                    .build());
+    public static final RegistryObject<CreativeModeTab> KINGDOMSANDDYNASTYARMORS = CREATIVE_MODE_TABS.register("kingdoms_and_dynasties_armory",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.OYOROI_HELMET .get()))
+                    .title(Component.translatable("creativetab.kingdomsanddynasty_armory"))
+                    .displayItems((itemDisplayParameters, output) -> {
                         //ARMORS
                         output.accept(ModItems.JINGASA.get());
                         output.accept(ModItems.JINGASA2.get());
                         output.accept(ModItems.JINGASA3.get());
                         output.accept(ModItems.JINGASA4.get());
+                        output.accept(ModItems.JINGASA5.get());
 
                         output.accept(ModItems.EBOSHIHAT.get());
 
@@ -104,8 +114,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.DOMARU_CHESTPLATE.get());
                         output.accept(ModItems.DOMARU_LEGGINGS.get());
                         output.accept(ModItems.DOMARU_BOOTS.get());
+                        
+                        output.accept(ModItems.HARAATE_CHESTPLATE.get());
+                        output.accept(ModItems.HARAATE_LEGGINGS.get());
+                        output.accept(ModItems.HARAATEHAKAMA_CHESTPLATE.get());
+                        output.accept(ModItems.HARAATEHAKAMA_LEGGINGS.get());
 
                         output.accept(ModItems.MENPO.get());
+                        output.accept(ModItems.TENGUMASK.get());
 
                         output.accept(ModItems.KATANA.get());
                         output.accept(ModItems.TANTO.get());
@@ -113,13 +129,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TACHI.get());
                         output.accept(ModItems.ODACHI.get());
 
-                        output.accept(ModItems.TAIKO.get());
-                        output.accept(ModItems.PATTERNED_SCROLL.get());
-
-                        output.accept(ModItems.YOROI_STAND_ITEM.get());
                     })
                     .build());
-
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);

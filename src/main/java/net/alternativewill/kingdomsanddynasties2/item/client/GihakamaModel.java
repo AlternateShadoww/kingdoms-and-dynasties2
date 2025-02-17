@@ -8,17 +8,17 @@ import software.bernie.geckolib.model.GeoModel;
 public class GihakamaModel extends GeoModel<GihakamaItem> {
     @Override
     public ResourceLocation getModelResource(GihakamaItem gihakamaItem) {
-        return new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "geo/gihakama.geo.json");
+        return new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "geo/hakamagi.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(GihakamaItem gihakamaItem) {
-        return new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "textures/armor/hakamatexture.png");
+        return new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "textures/armor/hakamagi.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(GihakamaItem gihakamaItem) {
-        return new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "animations/gihakama.animation.json");
+        return new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "animations/oyoroi.animation.json");
     }
 
 }

@@ -50,7 +50,7 @@
 					]
 				},
 				{
-					"name": "bone3",
+					"name": "bone_secondary",
 					"parent": "eboshi_secondary",
 					"pivot": [3.5, 31.5, 4.5],
 					"rotation": [-90, -80, 90],
@@ -74,7 +74,7 @@
 					]
 				},
 				{
-					"name": "bone4",
+					"name": "bone_gold",
 					"parent": "eboshi_gold",
 					"pivot": [3.5, 31.5, 4.5],
 					"rotation": [-90, -80, 90],

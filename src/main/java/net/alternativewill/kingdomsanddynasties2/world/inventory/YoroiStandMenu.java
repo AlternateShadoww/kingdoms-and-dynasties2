@@ -322,11 +322,101 @@ public class YoroiStandMenu extends AbstractContainerMenu implements Supplier<Ma
                     dyeStack = ItemStack.EMPTY;
                     System.out.println("Dye stack is now empty.");
                 }
+            }
+            if (armorStack.getItem() instanceof GihakamaItem GihakamaItem) {
+                System.out.println("Found GihakamaItem in slot: " + armorSlotIndex);
+                switch (dyeIndex) {
+                    case 0: // Primary color
+                        GihakamaItem.setPrimaryColor(armorStack, dyeColor);
+                        System.out.println("Set primary color to: " + dyeColor);
+                        break;
+                    case 2: // Secondary color
+                        GihakamaItem.setSecondaryColor(armorStack, dyeColor);
+                        System.out.println("Set secondary color to: " + dyeColor);
+                        break;
+                    default:
+                        System.out.println("Invalid dye index: " + dyeIndex);
+                        break;
+                }
 
+
+                dyeStack.shrink(1);
+                System.out.println("Dye stack shrunk, new count: " + dyeStack.getCount());
+                if (dyeStack.getCount() == 0) {
+                    dyeStack = ItemStack.EMPTY;
+                    System.out.println("Dye stack is now empty.");
+                }
+            }
+            if (armorStack.getItem() instanceof HaraateHakamaArmorItem HaraateHakamaArmorItem) {
+                System.out.println("Found HaraateHakamaArmorItem in slot: " + armorSlotIndex);
+                switch (dyeIndex) {
+                    case 0: // Primary color
+                        HaraateHakamaArmorItem.setPrimaryColor(armorStack, dyeColor);
+                        System.out.println("Set primary color to: " + dyeColor);
+                        break;
+                    case 2: // Secondary color
+                        HaraateHakamaArmorItem.setSecondaryColor(armorStack, dyeColor);
+                        System.out.println("Set secondary color to: " + dyeColor);
+                        break;
+                    case 4: // Gold Part
+                        HaraateHakamaArmorItem.setGoldColor(armorStack, dyeColor);
+                        System.out.println("Set gold color to: " + dyeColor);
+                        break;
+                    case 6: // Silver Part
+                        HaraateHakamaArmorItem.setSilverColor(armorStack, dyeColor);
+                        System.out.println("Set silver color to: " + dyeColor);
+                        break;
+                    default:
+                        System.out.println("Invalid dye index: " + dyeIndex);
+                        break;
+                }
+
+
+                dyeStack.shrink(1);
+                System.out.println("Dye stack shrunk, new count: " + dyeStack.getCount());
+                if (dyeStack.getCount() == 0) {
+                    dyeStack = ItemStack.EMPTY;
+                    System.out.println("Dye stack is now empty.");
+                }
+            }
+            if (armorStack.getItem() instanceof HaraateArmorItem HaraateArmorItem) {
+                System.out.println("Found HaraateHakamaArmorItem in slot: " + armorSlotIndex);
+                switch (dyeIndex) {
+                    case 0: // Primary color
+                        HaraateArmorItem.setPrimaryColor(armorStack, dyeColor);
+                        System.out.println("Set primary color to: " + dyeColor);
+                        break;
+                    case 2: // Secondary color
+                        HaraateArmorItem.setSecondaryColor(armorStack, dyeColor);
+                        System.out.println("Set secondary color to: " + dyeColor);
+                        break;
+                    case 4: // Gold Part
+                        HaraateArmorItem.setGoldColor(armorStack, dyeColor);
+                        System.out.println("Set gold color to: " + dyeColor);
+                        break;
+                    case 6: // Silver Part
+                        HaraateArmorItem.setSilverColor(armorStack, dyeColor);
+                        System.out.println("Set silver color to: " + dyeColor);
+                        break;
+                    default:
+                        System.out.println("Invalid dye index: " + dyeIndex);
+                        break;
+                }
+
+
+                dyeStack.shrink(1);
+                System.out.println("Dye stack shrunk, new count: " + dyeStack.getCount());
+                if (dyeStack.getCount() == 0) {
+                    dyeStack = ItemStack.EMPTY;
+                    System.out.println("Dye stack is now empty.");
+                }
             }
 
 
-        }
+
+
+
+            }
     } else {
         System.out.println("Item is not a DyeItem.");
     }

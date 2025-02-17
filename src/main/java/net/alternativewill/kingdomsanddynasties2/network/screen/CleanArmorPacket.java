@@ -74,6 +74,27 @@ public class CleanArmorPacket {
                         SujiKabutoItem.wipeColors(slot, SujiKabutoItem.SILVER_PART, SujiKabutoItem.STANDARD_SILVER_COLOR, player);
                         SujiKabutoItem.wipeColors(slot, SujiKabutoItem.CRAFTING_TABLE_PART, SujiKabutoItem.STANDARD_CRAFTING_TABLE_COLOR, player);
                     }
+                    if (slot.getItem() instanceof GihakamaItem GihakamaItem) {
+                        GihakamaItem.clearColor(slot);
+                        GihakamaItem.wipeColors(slot, GihakamaItem.PRIMARY_PART, GihakamaItem.STANDARD_PRIMARY_COLOR, player);
+                        GihakamaItem.wipeColors(slot, GihakamaItem.SECONDARY_PART, GihakamaItem.STANDARD_SECONDARY_COLOR, player);
+                     }
+                    if (slot.getItem() instanceof HaraateHakamaArmorItem HaraateHakamaArmorItem) {
+                        HaraateHakamaArmorItem.clearColor(slot);
+                        HaraateHakamaArmorItem.wipeColors(slot, HaraateHakamaArmorItem.PRIMARY_PART, HaraateHakamaArmorItem.STANDARD_PRIMARY_COLOR, player);
+                        HaraateHakamaArmorItem.wipeColors(slot, HaraateHakamaArmorItem.SECONDARY_PART, HaraateHakamaArmorItem.STANDARD_SECONDARY_COLOR, player);
+                        HaraateHakamaArmorItem.wipeColors(slot, HaraateHakamaArmorItem.GOLD_PART, HaraateHakamaArmorItem.STANDARD_GOLD_COLOR, player);
+                        HaraateHakamaArmorItem.wipeColors(slot, HaraateHakamaArmorItem.SILVER_PART, HaraateHakamaArmorItem.STANDARD_SILVER_COLOR, player);
+                        HaraateHakamaArmorItem.wipeColors(slot, HaraateHakamaArmorItem.CRAFTING_TABLE_PART, HaraateHakamaArmorItem.STANDARD_CRAFTING_TABLE_COLOR, player);
+                    }
+                    if (slot.getItem() instanceof HaraateArmorItem HaraateArmorItem) {
+                        HaraateArmorItem.clearColor(slot);
+                        HaraateArmorItem.wipeColors(slot, HaraateArmorItem.PRIMARY_PART, HaraateArmorItem.STANDARD_PRIMARY_COLOR, player);
+                        HaraateArmorItem.wipeColors(slot, HaraateArmorItem.SECONDARY_PART, HaraateArmorItem.STANDARD_SECONDARY_COLOR, player);
+                        HaraateArmorItem.wipeColors(slot, HaraateArmorItem.GOLD_PART, HaraateArmorItem.STANDARD_GOLD_COLOR, player);
+                        HaraateArmorItem.wipeColors(slot, HaraateArmorItem.SILVER_PART, HaraateArmorItem.STANDARD_SILVER_COLOR, player);
+                        HaraateArmorItem.wipeColors(slot, HaraateArmorItem.CRAFTING_TABLE_PART, HaraateArmorItem.STANDARD_CRAFTING_TABLE_COLOR, player);
+                    }
 
 
                 });
