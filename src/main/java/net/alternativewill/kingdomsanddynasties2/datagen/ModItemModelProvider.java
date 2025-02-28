@@ -131,10 +131,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.TOPPAINARI_HELMET);
         simpleItem(ModItems.EBOSHI_HELMET);
         simpleItem(ModItems.SUJI_HELMET);
-        simpleItem(ModItems.OYOROI_HELMET);
-        simpleItem(ModItems.OYOROI_CHESTPLATE);
-        simpleItem(ModItems.OYOROI_LEGGINGS);
-        simpleItem(ModItems.OYOROI_BOOTS);
 
         simpleItem(ModItems.MENPO);
 

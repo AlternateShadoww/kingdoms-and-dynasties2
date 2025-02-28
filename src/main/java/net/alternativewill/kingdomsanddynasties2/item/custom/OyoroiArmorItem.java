@@ -1,8 +1,11 @@
 package net.alternativewill.kingdomsanddynasties2.item.custom;
 
 import net.alternativewill.kingdomsanddynasties2.item.client.OyoroiArmorRenderer;
+import net.alternativewill.kingdomsanddynasties2.item.client.OyoroiItemRenderer;
+import net.alternativewill.kingdomsanddynasties2.item.client.RendererInstances;
 import net.alternativewill.kingdomsanddynasties2.util.ColorCombiner;
 import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -24,6 +27,7 @@ import software.bernie.geckolib.core.object.PlayState;
 
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public class OyoroiArmorItem extends DyeableArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
@@ -59,6 +63,11 @@ public class OyoroiArmorItem extends DyeableArmorItem implements GeoItem {
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
                 return this.renderer;
+            }
+
+            @Override
+            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                return RendererInstances.OYOROI_ITEM_RENDERER;
             }
         });
     }
@@ -152,6 +161,7 @@ public class OyoroiArmorItem extends DyeableArmorItem implements GeoItem {
             displayTag.putInt(tag, defaultColor);
         }
     }
+
 
 
 

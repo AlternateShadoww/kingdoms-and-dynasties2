@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "kingdomsanddynasties2:item/oyoroi_kabuto"
+    "layer0": "kingdomsanddynasties2:item/suji_kabuto"
   }
 }
