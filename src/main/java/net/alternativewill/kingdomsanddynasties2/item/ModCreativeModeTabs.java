@@ -102,6 +102,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.GI.get());
                         output.accept(ModItems.HAKAMA.get());
 
+                        output.accept(ModItems.KABUTO.get());
+
+
+                        output.accept(ModItems.HOSHI_HELMET.get());
                         output.accept(ModItems.SUJI_HELMET.get());
                         output.accept(ModItems.TOPPAINARI_HELMET.get());
                         output.accept(ModItems.ZUNARI_HELMET.get());

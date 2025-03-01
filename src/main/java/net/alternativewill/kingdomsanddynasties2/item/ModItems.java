@@ -43,6 +43,10 @@ public class ModItems {
     public static final RegistryObject<Item> YOROI_STAND_ITEM = ITEMS.register("yoroi_stand",
             () -> new YoroiStandItem(new Item.Properties().stacksTo(16)));
 
+    public static final RegistryObject<Item> KABUTO = ITEMS.register("kabuto",
+            () -> new KabutoItem(ModArmorMaterials.BAREARMOR, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> HOSHI_HELMET = ITEMS.register("hoshi_kabuto",
+            () -> new HoshiKabutoItem(ModArmorMaterials.OYOROI, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> SUJI_HELMET = ITEMS.register("suji_kabuto",
             () -> new SujiKabutoItem(ModArmorMaterials.OYOROI, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> TOPPAINARI_HELMET = ITEMS.register("toppainari_kabuto",
