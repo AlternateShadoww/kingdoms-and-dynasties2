@@ -1,4 +1,3 @@
-// 1.20.1	2025-03-01T04:08:44.403565	Item Models: kingdomsanddynasties2
 d7ae6069e945c7a853ddc5c147e1a2eeaf693e02 assets/kingdomsanddynasties2/models/item/cotton.json
 4cdd7fb6640ca0fc9bfa30489515a6196c682b2a assets/kingdomsanddynasties2/models/item/cottonseed.json
 ed888a8d80f26eb1e6e1a3e863ead8da7688f276 assets/kingdomsanddynasties2/models/item/eboshi.json
@@ -28,10 +27,6 @@ eea36d5cd3c0ede81002c60b3b8ec57bb73280a8 assets/kingdomsanddynasties2/models/ite
 09107fe60786a9dedb72ba95fc0c0b0710898b30 assets/kingdomsanddynasties2/models/item/mullberry_wood.json
 d7ff75ab5bd85d438465af22bc27af1a8a941cf9 assets/kingdomsanddynasties2/models/item/odachi.json
 c2c3c369dee3882fd05fbedf07615209af92dff2 assets/kingdomsanddynasties2/models/item/odachi_sheath.json
-46d06a906486fb1264e36a42f77cc4b45c575f83 assets/kingdomsanddynasties2/models/item/oyoroi_do.json
-ac6be6b7bb2069d6b56250853f1167a6314b3893 assets/kingdomsanddynasties2/models/item/oyoroi_geta.json
-8f1d33b9711c6e9572a9981b1cbaeac9bb356194 assets/kingdomsanddynasties2/models/item/oyoroi_haidate.json
-cf7588bc90e2d58947d85d9a4a6eacdbbf50d212 assets/kingdomsanddynasties2/models/item/oyoroi_kabuto.json
 1a998ca69a16f7a3f9b3a5c5e9931191764c3642 assets/kingdomsanddynasties2/models/item/patterned_scroll.json
 ade18f0690b7977305834d7732999e139101ec41 assets/kingdomsanddynasties2/models/item/raw_tamahagane.json
 667614f6a6e0d0cf2760d2c711aadb36e6fe0027 assets/kingdomsanddynasties2/models/item/red_pine_button.json
