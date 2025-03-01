@@ -3,10 +3,15 @@
   "item.kingdomsanddynasties2.cottonseed": "Cottonseed",
   "item.kingdomsanddynasties2.silk": "Silk",
 
+  "item.kingdomsanddynasties2.yoroi_stand": "Yoroi Stand",
+
   "item.kingdomsanddynasties2.iron_sand": "Iron Sand",
   "item.kingdomsanddynasties2.raw_tamahagane": "Raw Tamahagane",
-  "item.kingdomsanddynasties2.tamahagane_ingot": "Tanmahagane Ingot",
-  "item.kingdomsanddynasties2.tamahagane_nugget": "Tanmahagane Nugget",
+  "item.kingdomsanddynasties2.tamahagane_ingot": "Tamahagane Ingot",
+  "item.kingdomsanddynasties2.tamahagane_nugget": "Tamahagane Nugget",
+  "item.kingdomsanddynasties2.tamahagane_plate": "Tamahagane Plate",
+  "item.kingdomsanddynasties2.sode": "Sode",
+  "item.kingdomsanddynasties2.kabuto": "Kabuto",
 
   "block.kingdomsanddynasties2.iron_sand_block": "Iron Sand Block",
   "block.kingdomsanddynasties2.gravelled_iron_sand_block": "Gravelled Iron Sand Block",
@@ -83,7 +88,10 @@
   "item.kingdomsanddynasties2.gi": "Gi",
   "item.kingdomsanddynasties2.hakama": "Hakama",
 
-  "item.kingdomsanddynasties2.hara-ate_gi": "Hara-ate Dō",
+  "item.kingdomsanddynasties2.kariginu": "Kariginu",
+  "item.kingdomsanddynasties2.kariginu_sashinuki": "Kariginu Sashinuki",
+
+  "item.kingdomsanddynasties2.hara-ate_do": "Hara-ate Dō",
   "item.kingdomsanddynasties2.hara-ate_haidate": "Hara-ate Haidate",
   "item.kingdomsanddynasties2.hara-ate_gi": "Hara-ate Dō & Gi",
   "item.kingdomsanddynasties2.hara-ate_hakama": "Hara-ate Haidate & Hakama",

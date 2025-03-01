@@ -103,6 +103,13 @@ public class CleanArmorPacket {
                         HoshiKabutoItem.wipeColors(slot, HoshiKabutoItem.SILVER_PART, HoshiKabutoItem.STANDARD_SILVER_COLOR, player);
                         HoshiKabutoItem.wipeColors(slot, HoshiKabutoItem.CRAFTING_TABLE_PART, HoshiKabutoItem.STANDARD_CRAFTING_TABLE_COLOR, player);
                     }
+                    if (slot.getItem() instanceof KariginuItem KariginuItem) {
+                        KariginuItem.clearColor(slot);
+                        KariginuItem.wipeColors(slot, KariginuItem.PRIMARY_PART, KariginuItem.STANDARD_PRIMARY_COLOR, player);
+                        KariginuItem.wipeColors(slot, KariginuItem.SECONDARY_PART, KariginuItem.STANDARD_SECONDARY_COLOR, player);
+                        KariginuItem.wipeColors(slot, KariginuItem.GOLD_PART, KariginuItem.STANDARD_GOLD_COLOR, player);
+                        KariginuItem.wipeColors(slot, KariginuItem.SILVER_PART, KariginuItem.STANDARD_SILVER_COLOR, player);
+                    }
 
 
                 });

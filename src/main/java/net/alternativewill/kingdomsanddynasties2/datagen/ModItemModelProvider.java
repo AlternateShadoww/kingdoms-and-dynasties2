@@ -121,6 +121,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         //INGOT ITEMS
         simpleItem(ModItems.TAMAHAGANE_INGOT);
         simpleItem(ModItems.TAMAHAGANE_NUGGET);
+        simpleItem(ModItems.TAMAHAGANE_PLATE);
+
+        //ARMOR CRAFTING ITEMS
+        simpleItem(ModItems.KABUTO);
+        simpleItem(ModItems.SODE);
 
         //ORE ITEMS
         simpleItem(ModItems.RAW_TAMAHAGANE);
