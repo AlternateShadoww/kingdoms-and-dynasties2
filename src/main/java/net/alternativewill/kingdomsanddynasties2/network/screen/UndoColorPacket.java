@@ -59,6 +59,12 @@ public class UndoColorPacket {
                     if (armorStack.getItem() instanceof HaraateArmorItem HaraateArmorItem) {
                         HaraateArmorItem.undoColor(armorStack, packet.colorIndex);
                     }
+                    if (armorStack.getItem() instanceof HoshiKabutoItem HoshiKabutoItem) {
+                        HoshiKabutoItem.undoColor(armorStack, packet.colorIndex);
+                    }
+                    if (armorStack.getItem() instanceof KariginuItem KariginuItem) {
+                        KariginuItem.undoColor(armorStack, packet.colorIndex);
+                    }
                 }
             }
         });

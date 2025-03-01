@@ -1,10 +1,8 @@
 package net.alternativewill.kingdomsanddynasties2.item.custom;
 
-import net.alternativewill.kingdomsanddynasties2.item.client.OyoroiArmorRenderer;
-import net.alternativewill.kingdomsanddynasties2.item.client.RendererInstances;
+import net.alternativewill.kingdomsanddynasties2.item.client.HoshiKabutoRenderer;
 import net.alternativewill.kingdomsanddynasties2.util.ColorCombiner;
 import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -23,17 +21,19 @@ import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.object.PlayState;
 
+
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 
-public class OyoroiArmorItem extends DyeableArmorItem implements GeoItem {
+public class HoshiKabutoItem extends DyeableArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
     // Standard Colors
     public static final int STANDARD_CRAFTING_TABLE_COLOR = 16777215;
-    public static final int STANDARD_PRIMARY_COLOR = 11579568;
+    public static final int STANDARD_PRIMARY_COLOR = 16777215;
     public static final int STANDARD_SECONDARY_COLOR = 16777215;
-    public static final int STANDARD_GOLD_COLOR = 15124606;
+    public static final int STANDARD_GOLD_COLOR = 16777215;
     public static final int STANDARD_SILVER_COLOR = 16777215;
     public static final int STANDARD_COLOR = 16777215;
 
@@ -43,28 +43,23 @@ public class OyoroiArmorItem extends DyeableArmorItem implements GeoItem {
     public static final String SILVER_PART = "silver";
     public static final String CRAFTING_TABLE_PART = "color";
 
-    public OyoroiArmorItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
+    public HoshiKabutoItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
     }
 
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
         consumer.accept(new IClientItemExtensions() {
-            private OyoroiArmorRenderer renderer;
+            private HoshiKabutoRenderer renderer;
 
             @Override
             public @NotNull HumanoidModel<?> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack,
                                                                    EquipmentSlot equipmentSlot, HumanoidModel<?> original) {
                 if (this.renderer == null)
-                    this.renderer = new OyoroiArmorRenderer();
+                    this.renderer = new HoshiKabutoRenderer();
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
                 return this.renderer;
-            }
-
-            @Override
-            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
-                return RendererInstances.OYOROI_ITEM_RENDERER;
             }
         });
     }
@@ -81,40 +76,40 @@ public class OyoroiArmorItem extends DyeableArmorItem implements GeoItem {
     }
 
     public void setPrimaryColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, OyoroiArmorItem.PRIMARY_PART, color, STANDARD_PRIMARY_COLOR);
+        setColorTag(stack, HoshiKabutoItem.PRIMARY_PART, color, STANDARD_PRIMARY_COLOR);
     }
 
     public void setSecondaryColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, OyoroiArmorItem.SECONDARY_PART, color, STANDARD_SECONDARY_COLOR);
+        setColorTag(stack, HoshiKabutoItem.SECONDARY_PART, color, STANDARD_SECONDARY_COLOR);
     }
 
     public void setGoldColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, OyoroiArmorItem.GOLD_PART, color, STANDARD_GOLD_COLOR);
+        setColorTag(stack, HoshiKabutoItem.GOLD_PART, color, STANDARD_GOLD_COLOR);
     }
 
     public void setSilverColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, OyoroiArmorItem.SILVER_PART, color, STANDARD_SILVER_COLOR);
+        setColorTag(stack, HoshiKabutoItem.SILVER_PART, color, STANDARD_SILVER_COLOR);
     }
 
     public int getPrimaryColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, OyoroiArmorItem.PRIMARY_PART, STANDARD_PRIMARY_COLOR);
+        return getColorTag(stack, HoshiKabutoItem.PRIMARY_PART, STANDARD_PRIMARY_COLOR);
     }
 
     public int getSecondaryColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, OyoroiArmorItem.SECONDARY_PART, STANDARD_SECONDARY_COLOR);
+        return getColorTag(stack, HoshiKabutoItem.SECONDARY_PART, STANDARD_SECONDARY_COLOR);
     }
 
     public int getGoldColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, OyoroiArmorItem.GOLD_PART, STANDARD_GOLD_COLOR);
+        return getColorTag(stack, HoshiKabutoItem.GOLD_PART, STANDARD_GOLD_COLOR);
     }
 
     public int getSilverColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, OyoroiArmorItem.SILVER_PART, STANDARD_SILVER_COLOR);
+        return getColorTag(stack, HoshiKabutoItem.SILVER_PART, STANDARD_SILVER_COLOR);
     }
 
     @Override
     public int getColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, OyoroiArmorItem.CRAFTING_TABLE_PART, STANDARD_CRAFTING_TABLE_COLOR);
+        return getColorTag(stack, HoshiKabutoItem.CRAFTING_TABLE_PART, STANDARD_CRAFTING_TABLE_COLOR);
     }
 
     public int getCraftingTableColor(ItemStack stack) {
@@ -161,7 +156,6 @@ public class OyoroiArmorItem extends DyeableArmorItem implements GeoItem {
 
 
 
-
     private int getColorTag(@NotNull ItemStack stack, String tag, int defaultColor) {
         CompoundTag compoundTag = stack.getTagElement("display");
         return compoundTag != null && compoundTag.contains(tag, 99) ? compoundTag.getInt(tag) : defaultColor;
@@ -177,19 +171,19 @@ public class OyoroiArmorItem extends DyeableArmorItem implements GeoItem {
     }
 
     public void undoColor(ItemStack stack, int buttonIndex) {
-        if (stack.getItem() instanceof OyoroiArmorItem yoroiArmorItem) {
+        if (stack.getItem() instanceof HoshiKabutoItem HoshiKabutoItem) {
             switch (buttonIndex) {
                 case 0: // Primary color
-                    yoroiArmorItem.undoColorTag(stack, PRIMARY_PART, STANDARD_PRIMARY_COLOR);
+                    HoshiKabutoItem.undoColorTag(stack, PRIMARY_PART, STANDARD_PRIMARY_COLOR);
                     break;
                 case 1: // Secondary color
-                    yoroiArmorItem.undoColorTag(stack, SECONDARY_PART, STANDARD_SECONDARY_COLOR);
+                    HoshiKabutoItem.undoColorTag(stack, SECONDARY_PART, STANDARD_SECONDARY_COLOR);
                     break;
                 case 2: // Gold part
-                    yoroiArmorItem.undoColorTag(stack, GOLD_PART, STANDARD_GOLD_COLOR);
+                    HoshiKabutoItem.undoColorTag(stack, GOLD_PART, STANDARD_GOLD_COLOR);
                     break;
                 case 3: // Silver part
-                    yoroiArmorItem.undoColorTag(stack, SILVER_PART, STANDARD_SILVER_COLOR);
+                    HoshiKabutoItem.undoColorTag(stack, SILVER_PART, STANDARD_SILVER_COLOR);
                     break;
                 default:
                     break;

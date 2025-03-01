@@ -33,6 +33,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TAMAHAGANE_NUGGET = ITEMS.register("tamahagane_nugget",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TAMAHAGANE_PLATE = ITEMS.register("tamahagane_plate",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SODE = ITEMS.register("sode",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> TAIKO = ITEMS.register("taiko",
             () -> new TaikoItem(new Item.Properties()));
@@ -43,6 +47,10 @@ public class ModItems {
     public static final RegistryObject<Item> YOROI_STAND_ITEM = ITEMS.register("yoroi_stand",
             () -> new YoroiStandItem(new Item.Properties().stacksTo(16)));
 
+    public static final RegistryObject<Item> KABUTO = ITEMS.register("kabuto",
+            () -> new KabutoItem(ModArmorMaterials.BAREARMOR, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> HOSHI_HELMET = ITEMS.register("hoshi_kabuto",
+            () -> new HoshiKabutoItem(ModArmorMaterials.OYOROI, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> SUJI_HELMET = ITEMS.register("suji_kabuto",
             () -> new SujiKabutoItem(ModArmorMaterials.OYOROI, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> TOPPAINARI_HELMET = ITEMS.register("toppainari_kabuto",
@@ -83,6 +91,10 @@ public class ModItems {
             () -> new GihakamaItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> HAKAMA = ITEMS.register("hakama",
             () -> new GihakamaItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> KARIGINU = ITEMS.register("kariginu",
+            () -> new KariginuItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> KARIGINU_SASHINUKI = ITEMS.register("kariginu_sashinuki",
+            () -> new KariginuItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<Item> EBOSHIHAT = ITEMS.register("eboshi",
             () -> new EboshiHatItem(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));

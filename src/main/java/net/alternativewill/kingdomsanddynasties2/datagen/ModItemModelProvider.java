@@ -121,6 +121,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         //INGOT ITEMS
         simpleItem(ModItems.TAMAHAGANE_INGOT);
         simpleItem(ModItems.TAMAHAGANE_NUGGET);
+        simpleItem(ModItems.TAMAHAGANE_PLATE);
+
+        //ARMOR CRAFTING ITEMS
+        simpleItem(ModItems.KABUTO);
+        simpleItem(ModItems.SODE);
 
         //ORE ITEMS
         simpleItem(ModItems.RAW_TAMAHAGANE);
@@ -149,6 +154,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.WAKIZASHI);
         handheldItem(ModItems.TACHI);
         handheldItem(ModItems.ODACHI);
+
 
         getBuilder("katana")
                 .parent(new ModelFile.UncheckedModelFile("item/handheld"))
@@ -189,6 +195,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .translation(-4, 4, 0) // Move the item slightly upward
                 .scale(2.5F, 2.5F, 1.5F) // Scale the item up to 1.5x
                 .end()
+                .transform(ItemDisplayContext.GUI)
+                .rotation(180, 180, 180) // Rotate the item to face forward in the item frame
+                .translation(4, 5F, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
                 .transform(ItemDisplayContext.GROUND)
                 .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
                 .translation(-4, 12, 0) // Move the item slightly upward
@@ -218,6 +229,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
                 .translation(-5, 5, 0) // Move the item slightly upward
                 .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.GUI)
+                .rotation(180, 180, 180) // Rotate the item to face forward in the item frame
+                .translation(6, 5.5F, 0) // Move the item slightly upward
+                .scale(1.7F, 1.7F, 1.5F) // Scale the item up to 1.5x
                 .end()
                 .transform(ItemDisplayContext.GROUND)
                 .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
@@ -249,6 +265,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .translation(-4, 4, 0) // Move the item slightly upward
                 .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
                 .end()
+                .transform(ItemDisplayContext.GUI)
+                .rotation(180, 180, 180) // Rotate the item to face forward in the item frame
+                .translation(3F, 3F, 0) // Move the item slightly upward
+                .scale(1.3F, 1.3F, 1.3F) // Scale the item up to 1.5x
+                .end()
                 .transform(ItemDisplayContext.GROUND)
                 .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
                 .translation(-4, 4, 0) // Move the item slightly upward
@@ -278,6 +299,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
                 .translation(-8, 5, 0) // Move the item slightly upward
                 .scale(2.5F, 2.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.GUI)
+                .rotation(180, 180, 180) // Rotate the item to face forward in the item frame
+                .translation(4.8F, 4.5F, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
                 .end()
                 .transform(ItemDisplayContext.GROUND)
                 .rotation(180, 360, 180) // Rotate the item to face forward in the item frame

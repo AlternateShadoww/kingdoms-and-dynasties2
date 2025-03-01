@@ -80,6 +80,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RAW_TAMAHAGANE.get());
                         output.accept(ModItems.TAMAHAGANE_INGOT.get());
                         output.accept(ModItems.TAMAHAGANE_NUGGET.get());
+                        output.accept(ModItems.TAMAHAGANE_PLATE.get());
+
+                        output.accept(ModItems.KABUTO.get());
+                        output.accept(ModItems.SODE.get());
 
                         output.accept(ModItems.PATTERNED_SCROLL.get());
 
@@ -101,7 +105,10 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.GI.get());
                         output.accept(ModItems.HAKAMA.get());
+                        output.accept(ModItems.KARIGINU.get());
+                        output.accept(ModItems.KARIGINU_SASHINUKI.get());
 
+                        output.accept(ModItems.HOSHI_HELMET.get());
                         output.accept(ModItems.SUJI_HELMET.get());
                         output.accept(ModItems.TOPPAINARI_HELMET.get());
                         output.accept(ModItems.ZUNARI_HELMET.get());
