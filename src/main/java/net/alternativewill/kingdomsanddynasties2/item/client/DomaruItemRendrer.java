@@ -1,7 +1,7 @@
 package net.alternativewill.kingdomsanddynasties2.item.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.alternativewill.kingdomsanddynasties2.item.custom.OyoroiArmorItem;
+import net.alternativewill.kingdomsanddynasties2.item.custom.DomaruArmorItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -17,19 +17,20 @@ import software.bernie.geckolib.cache.object.GeoBone;
 import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.core.object.Color;
 import software.bernie.geckolib.core.object.DataTicket;
+import software.bernie.geckolib.renderer.GeoItemRenderer;
 
-public class OyoroiItemRenderer extends DyeableGeoItemRenderer<OyoroiArmorItem> {
+public class DomaruItemRendrer extends DyeableGeoItemRenderer<DomaruArmorItem> {
 
     protected float partialTick;
 
-    public OyoroiItemRenderer() {
-        super(new OyoroiArmorModel());
+    public DomaruItemRendrer() {
+        super(new DomaruArmorModel());
     }
 
     @Override
     public void renderByItem(ItemStack stack, ItemDisplayContext displayContext, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, int packedOverlay) {
         this.currentItemStack = stack;
-        this.animatable = (OyoroiArmorItem)stack.getItem();
+        this.animatable = (DomaruArmorItem)stack.getItem();
         this.renderPerspective = displayContext;
         this.partialTick = Minecraft.getInstance().getFrameTime();
 
@@ -258,17 +259,17 @@ public class OyoroiItemRenderer extends DyeableGeoItemRenderer<OyoroiArmorItem> 
         return true;
     }
 
-    public static final String PRIMARY_PART = "_primary";
-    public static final String SECONDARY_PART = "_secondary";
-    public static final String GOLD_PART = "_gold";
-    public static final String SILVER_PART = "_silver";
-    public static final String CRAFTING_TABLE_PART = "_craftingtable";
+    public static final String PRIMARY_PART = "primary";
+    public static final String SECONDARY_PART = "secondary";
+    public static final String GOLD_PART = "gold";
+    public static final String SILVER_PART = "silver";
+    public static final String CRAFTING_TABLE_PART = "color";
 
     @Override
     protected @NotNull Color getColorForBone(GeoBone geoBone) {
         ItemStack itemStack = this.currentItemStack;
 
-        if (itemStack.getItem() instanceof OyoroiArmorItem armorItem) {
+        if (itemStack.getItem() instanceof DomaruArmorItem armorItem) {
             int primaryColor = armorItem.getPrimaryColor(itemStack);
             int secondaryColor = armorItem.getSecondaryColor(itemStack);
             int goldColor = armorItem.getGoldColor(itemStack);
@@ -277,28 +278,32 @@ public class OyoroiItemRenderer extends DyeableGeoItemRenderer<OyoroiArmorItem> 
 
             String boneName = geoBone.getName();
 
-            if (boneName.endsWith(PRIMARY_PART)) {
-                return applyDyeToBone(geoBone, primaryColor, PRIMARY_PART);
-            } else if (boneName.endsWith(SECONDARY_PART)) {
-                return applyDyeToBone(geoBone, secondaryColor, SECONDARY_PART);
-            } else if (boneName.endsWith(GOLD_PART)) {
-                return applyDyeToBone(geoBone, goldColor, GOLD_PART);
-            } else if (boneName.endsWith(SILVER_PART)) {
-                return applyDyeToBone(geoBone, silverColor, SILVER_PART);
-            } else if (boneName.endsWith(CRAFTING_TABLE_PART)) {
-                return applyDyeToBone(geoBone, craftingTableColor, CRAFTING_TABLE_PART);
+            if (boneName.endsWith(DomaruArmorRenderer.PRIMARY_PART)) {
+                return applyDyeToBone(geoBone, primaryColor, DomaruArmorRenderer.PRIMARY_PART);
+            } else if (boneName.endsWith(DomaruArmorRenderer.SECONDARY_PART)) {
+                return applyDyeToBone(geoBone, secondaryColor, DomaruArmorRenderer.SECONDARY_PART);
+            } else if (boneName.endsWith(DomaruArmorRenderer.GOLD_PART)) {
+                return applyDyeToBone(geoBone, goldColor, DomaruArmorRenderer.GOLD_PART);
+            } else if (boneName.endsWith(DomaruArmorRenderer.SILVER_PART)) {
+                return applyDyeToBone(geoBone, silverColor, DomaruArmorRenderer.SILVER_PART);
+            } else if (boneName.endsWith(DomaruArmorRenderer.CRAFTING_TABLE_PART)) {
+                return applyDyeToBone(geoBone, craftingTableColor, DomaruArmorRenderer.CRAFTING_TABLE_PART);
             }
         }
 
-        return Color.ofOpaque(OyoroiArmorItem.STANDARD_COLOR);
+        return Color.ofOpaque(DomaruArmorItem.STANDARD_COLOR);
     }
 
     public Color applyDyeToBone(GeoBone geoBone, int color, String boneEndsWith) {
-        return Color.ofOpaque(color);
+        GeoBone parentBone = geoBone.getParent();
+        if (parentBone == null || !parentBone.getName().endsWith(boneEndsWith)) {
+            return Color.ofOpaque(color);
+        }
+        return Color.ofOpaque(DomaruArmorItem.STANDARD_COLOR);
     }
 
     @Override
-    public RenderType getRenderType(OyoroiArmorItem animatable, ResourceLocation texture,
+    public RenderType getRenderType(DomaruArmorItem animatable, ResourceLocation texture,
                                     MultiBufferSource renderTypeBuffer, float partialTick) {
         return RenderType.entityTranslucent(texture);
     }
