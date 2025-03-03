@@ -28,7 +28,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         //ONLY BLOCKS UNTIL FURTHER NOTICE
-        this.dropSelf(ModBlocks.IRON_SAND_BLOCK.get());
+        this.add(ModBlocks.IRON_SAND_BLOCK.get(), createOreDrop(ModBlocks.IRON_SAND_BLOCK.get(), ModItems.IRON_SAND.get()));
+
         this.dropSelf(ModBlocks.GRAVELLED_IRON_SAND_BLOCK.get());
         this.dropSelf(ModBlocks.MOSSY_IRON_SAND_BLOCK.get());
         

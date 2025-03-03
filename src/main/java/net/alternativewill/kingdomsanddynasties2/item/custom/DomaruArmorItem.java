@@ -32,9 +32,9 @@ public class DomaruArmorItem extends DyeableArmorItem implements GeoItem {
 
     // Standard Colors
     public static final int STANDARD_CRAFTING_TABLE_COLOR = 16777215;
-    public static final int STANDARD_PRIMARY_COLOR = 16777215;
+    public static final int STANDARD_PRIMARY_COLOR = 11579568;
     public static final int STANDARD_SECONDARY_COLOR = 16777215;
-    public static final int STANDARD_GOLD_COLOR = 16777215;
+    public static final int STANDARD_GOLD_COLOR = 15124606;
     public static final int STANDARD_SILVER_COLOR = 16777215;
     public static final int STANDARD_COLOR = 16777215;
 
@@ -65,7 +65,7 @@ public class DomaruArmorItem extends DyeableArmorItem implements GeoItem {
 
             @Override
             public BlockEntityWithoutLevelRenderer getCustomRenderer() {
-                return RendererInstances.DOMARU_ITEM_RENDRER;
+                return RendererInstances.DOMARU_ITEM_RENDERER;
             }
         });
     }

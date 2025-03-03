@@ -48,6 +48,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.PATTERNED_SCROLL);
         simpleItem(ModItems.IRON_SAND);
         simpleItem(ModItems.COTTON);
+        simpleItem(ModItems.KASURI);
         simpleItem(ModItems.COTTONSEED);
         simpleItem(ModItems.YOROI_STAND_ITEM);
 
@@ -130,17 +131,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         //ORE ITEMS
         simpleItem(ModItems.RAW_TAMAHAGANE);
 
-        //ARMOR ITEMS
-        simpleItem(ModItems.EBOSHIHAT);
-        simpleItem(ModItems.ZUNARI_HELMET);
-        simpleItem(ModItems.TOPPAINARI_HELMET);
-        simpleItem(ModItems.EBOSHI_HELMET);
-        simpleItem(ModItems.SUJI_HELMET);
+        //ARMOR ITEM
 
         simpleItem(ModItems.MENPO);
 
-        simpleItem(ModItems.GI);
-        simpleItem(ModItems.HAKAMA);
 
         //TOOLS & WEAPONS
         simpleItem(ModItems.KATANA_SHEATH);
@@ -154,6 +148,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.WAKIZASHI);
         handheldItem(ModItems.TACHI);
         handheldItem(ModItems.ODACHI);
+
+        simpleItem(ModItems.TSUKA);
+        simpleItem(ModItems.SMALLTSUKA);
+        simpleItem(ModItems.LONGTSUKA);
 
 
         getBuilder("katana")

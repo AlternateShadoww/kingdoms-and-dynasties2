@@ -1,9 +1,10 @@
 package net.alternativewill.kingdomsanddynasties2.item.custom;
 
 import net.alternativewill.kingdomsanddynasties2.item.client.KariginuRenderer;
-import net.alternativewill.kingdomsanddynasties2.item.client.OyoroiArmorRenderer;
+import net.alternativewill.kingdomsanddynasties2.item.client.RendererInstances;
 import net.alternativewill.kingdomsanddynasties2.util.ColorCombiner;
 import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -29,18 +30,16 @@ public class KariginuItem extends DyeableArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
     // Standard Colors
-    public static final int STANDARD_CRAFTING_TABLE_COLOR = 16777215;
-    public static final int STANDARD_PRIMARY_COLOR = 16777215;
-    public static final int STANDARD_SECONDARY_COLOR = 16777215;
-    public static final int STANDARD_GOLD_COLOR = 16777215;
-    public static final int STANDARD_SILVER_COLOR = 16777215;
+    public static final int STANDARD_PRIMARY_COLOR = 9629564 ;
+    public static final int STANDARD_SECONDARY_COLOR = 7646310;
+    public static final int STANDARD_GOLD_COLOR = 15124606;
+    public static final int STANDARD_SILVER_COLOR = 12571350 ;
     public static final int STANDARD_COLOR = 16777215;
 
     public static final String PRIMARY_PART = "primary";
     public static final String SECONDARY_PART = "secondary";
     public static final String GOLD_PART = "gold";
     public static final String SILVER_PART = "silver";
-    public static final String CRAFTING_TABLE_PART = "color";
 
     public KariginuItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
@@ -60,6 +59,11 @@ public class KariginuItem extends DyeableArmorItem implements GeoItem {
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
                 return this.renderer;
             }
+
+            @Override
+            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                return RendererInstances.KARIGINU_ITEM_RENDERER;
+            }
         });
     }
 
@@ -71,7 +75,6 @@ public class KariginuItem extends DyeableArmorItem implements GeoItem {
     @Override
     public void setColor(@NotNull ItemStack stack, int color) {
         CompoundTag displayTag = stack.getOrCreateTagElement("display");
-        displayTag.putInt(CRAFTING_TABLE_PART, color);
     }
 
     public void setPrimaryColor(@NotNull ItemStack stack, int color) {
@@ -106,14 +109,6 @@ public class KariginuItem extends DyeableArmorItem implements GeoItem {
         return getColorTag(stack, KariginuItem.SILVER_PART, STANDARD_SILVER_COLOR);
     }
 
-    @Override
-    public int getColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, KariginuItem.CRAFTING_TABLE_PART, STANDARD_CRAFTING_TABLE_COLOR);
-    }
-
-    public int getCraftingTableColor(ItemStack stack) {
-        return getColor(stack);
-    }
 
     public void wipeColors(@NotNull ItemStack stack, String tag, int color, Player player) {
         CompoundTag displayTag = stack.getOrCreateTagElement("display");
@@ -155,6 +150,7 @@ public class KariginuItem extends DyeableArmorItem implements GeoItem {
 
 
 
+
     private int getColorTag(@NotNull ItemStack stack, String tag, int defaultColor) {
         CompoundTag compoundTag = stack.getTagElement("display");
         return compoundTag != null && compoundTag.contains(tag, 99) ? compoundTag.getInt(tag) : defaultColor;
@@ -170,19 +166,19 @@ public class KariginuItem extends DyeableArmorItem implements GeoItem {
     }
 
     public void undoColor(ItemStack stack, int buttonIndex) {
-        if (stack.getItem() instanceof KariginuItem KariginuItem) {
+        if (stack.getItem() instanceof KariginuItem yoroiArmorItem) {
             switch (buttonIndex) {
                 case 0: // Primary color
-                    KariginuItem.undoColorTag(stack, PRIMARY_PART, STANDARD_PRIMARY_COLOR);
+                    yoroiArmorItem.undoColorTag(stack, PRIMARY_PART, STANDARD_PRIMARY_COLOR);
                     break;
                 case 1: // Secondary color
-                    KariginuItem.undoColorTag(stack, SECONDARY_PART, STANDARD_SECONDARY_COLOR);
+                    yoroiArmorItem.undoColorTag(stack, SECONDARY_PART, STANDARD_SECONDARY_COLOR);
                     break;
                 case 2: // Gold part
-                    KariginuItem.undoColorTag(stack, GOLD_PART, STANDARD_GOLD_COLOR);
+                    yoroiArmorItem.undoColorTag(stack, GOLD_PART, STANDARD_GOLD_COLOR);
                     break;
                 case 3: // Silver part
-                    KariginuItem.undoColorTag(stack, SILVER_PART, STANDARD_SILVER_COLOR);
+                    yoroiArmorItem.undoColorTag(stack, SILVER_PART, STANDARD_SILVER_COLOR);
                     break;
                 default:
                     break;

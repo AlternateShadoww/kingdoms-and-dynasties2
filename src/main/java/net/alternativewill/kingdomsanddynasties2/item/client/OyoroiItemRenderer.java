@@ -105,34 +105,34 @@ public class OyoroiItemRenderer extends DyeableGeoItemRenderer<OyoroiArmorItem> 
     private void applyGuiTransformations(PoseStack poseStack, ArmorItem.Type armorType) {
         switch (armorType) {
             case HELMET:
-                poseStack.translate(0.6F, -1.5F, 0.0F);
+                poseStack.translate(0.7F, -1.6F, 0.0F);
                 poseStack.mulPose(new Quaternionf().rotationXYZ(
                         (float)Math.toRadians(0),
-                        (float)Math.toRadians(-40),
+                        (float)Math.toRadians(140),
                         (float)Math.toRadians(0)
                 ));
                 break;
             case CHESTPLATE:
-                poseStack.translate(0.625F, -1F, 0.0F);
+                poseStack.translate(0.7F, -1F, 0.0F);
                 poseStack.mulPose(new Quaternionf().rotationXYZ(
                         (float)Math.toRadians(0),
-                        (float)Math.toRadians(-40),
+                        (float)Math.toRadians(140),
                         (float)Math.toRadians(0)
                 ));
                 break;
             case LEGGINGS:
-                poseStack.translate(0.6F, -0.3F, 0.0F);
+                poseStack.translate(0.7F, -0.3F, 0.0F);
                 poseStack.mulPose(new Quaternionf().rotationXYZ(
                         (float)Math.toRadians(0),
-                        (float)Math.toRadians(-40),
+                        (float)Math.toRadians(140),
                         (float)Math.toRadians(0)
                 ));
                 break;
             case BOOTS:
-                poseStack.translate(0.6F, 0.0F, 0.0F);
+                poseStack.translate(0.7F, 0.0F, 0.0F);
                 poseStack.mulPose(new Quaternionf().rotationXYZ(
                         (float)Math.toRadians(0),
-                        (float)Math.toRadians(-40),
+                        (float)Math.toRadians(140),
                         (float)Math.toRadians(0)
                 ));
                 break;
@@ -226,26 +226,26 @@ public class OyoroiItemRenderer extends DyeableGeoItemRenderer<OyoroiArmorItem> 
                     ));
                     break;
                 case CHESTPLATE:
-                    poseStack.translate(1F, -0.8F, -0.5F);
+                    poseStack.translate(1F, -0.8F, 0.7F);
                     poseStack.mulPose(new Quaternionf().rotationXYZ(
                             (float) Math.toRadians(0),
-                            (float) Math.toRadians(-60),
+                            (float) Math.toRadians(120),
                             (float) Math.toRadians(0)
                     ));
                     break;
                 case LEGGINGS:
-                    poseStack.translate(0.76F, 0.05F, -0.1F);
+                    poseStack.translate(1F, 0.05F, 1F);
                     poseStack.mulPose(new Quaternionf().rotationXYZ(
                             (float) Math.toRadians(0),
-                            (float) Math.toRadians(-55),
+                            (float) Math.toRadians(125),
                             (float) Math.toRadians(0)
                     ));
                     break;
                 case BOOTS:
-                    poseStack.translate(1F, 0.4F, -0.2F);
+                    poseStack.translate(1F, 0.4F, 1F);
                     poseStack.mulPose(new Quaternionf().rotationXYZ(
                             (float) Math.toRadians(0),
-                            (float) Math.toRadians(-60),
+                            (float) Math.toRadians(120),
                             (float) Math.toRadians(0)
                     ));
                     break;

@@ -1,14 +1,14 @@
 package net.alternativewill.kingdomsanddynasties2.item.custom;
 
 import net.alternativewill.kingdomsanddynasties2.item.client.GihakamaRenderer;
-import net.alternativewill.kingdomsanddynasties2.item.client.OyoroiArmorRenderer;
+import net.alternativewill.kingdomsanddynasties2.item.client.RendererInstances;
 import net.alternativewill.kingdomsanddynasties2.util.ColorCombiner;
 import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.DyeableArmorItem;
 import net.minecraft.world.item.ItemStack;
@@ -30,8 +30,9 @@ public class GihakamaItem extends DyeableArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
     // Standard Colors
-    public static final int STANDARD_PRIMARY_COLOR = 16777215;
-    public static final int STANDARD_SECONDARY_COLOR = 11119255;
+    public static final int STANDARD_PRIMARY_COLOR = 4144959;
+    public static final int STANDARD_SECONDARY_COLOR = 2105376;
+    public static final int STANDARD_COLOR = 16777215;
 
     public static final String PRIMARY_PART = "primary";
     public static final String SECONDARY_PART = "secondary";
@@ -53,6 +54,11 @@ public class GihakamaItem extends DyeableArmorItem implements GeoItem {
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
                 return this.renderer;
+            }
+
+            @Override
+            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                return RendererInstances.GIHAKAMA_ITEM_RENDERER;
             }
         });
     }
@@ -129,6 +135,7 @@ public class GihakamaItem extends DyeableArmorItem implements GeoItem {
 
 
 
+
     private int getColorTag(@NotNull ItemStack stack, String tag, int defaultColor) {
         CompoundTag compoundTag = stack.getTagElement("display");
         return compoundTag != null && compoundTag.contains(tag, 99) ? compoundTag.getInt(tag) : defaultColor;
@@ -144,13 +151,13 @@ public class GihakamaItem extends DyeableArmorItem implements GeoItem {
     }
 
     public void undoColor(ItemStack stack, int buttonIndex) {
-        if (stack.getItem() instanceof GihakamaItem GihakamaItem) {
+        if (stack.getItem() instanceof GihakamaItem yoroiArmorItem) {
             switch (buttonIndex) {
                 case 0: // Primary color
-                    GihakamaItem.undoColorTag(stack, PRIMARY_PART, STANDARD_PRIMARY_COLOR);
+                    yoroiArmorItem.undoColorTag(stack, PRIMARY_PART, STANDARD_PRIMARY_COLOR);
                     break;
                 case 1: // Secondary color
-                    GihakamaItem.undoColorTag(stack, SECONDARY_PART, STANDARD_SECONDARY_COLOR);
+                    yoroiArmorItem.undoColorTag(stack, SECONDARY_PART, STANDARD_SECONDARY_COLOR);
                     break;
                 default:
                     break;

@@ -14,20 +14,20 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
     OYOROI("oyoroi", 25, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266655_) -> {
-        p_266655_.put(ArmorItem.Type.BOOTS, 3);
-        p_266655_.put(ArmorItem.Type.LEGGINGS, 6);
-        p_266655_.put(ArmorItem.Type.CHESTPLATE, 8);
+        p_266655_.put(ArmorItem.Type.BOOTS, 2);
+        p_266655_.put(ArmorItem.Type.LEGGINGS, 7);
+        p_266655_.put(ArmorItem.Type.CHESTPLATE, 7);
         p_266655_.put(ArmorItem.Type.HELMET, 3);
     }), 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
         return Ingredient.of(ModItems.TAMAHAGANE_INGOT.get());
 
     }),
     DOMARU("domaru", 25, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266655_) -> {
-        p_266655_.put(ArmorItem.Type.BOOTS, 2);
+        p_266655_.put(ArmorItem.Type.BOOTS, 3);
         p_266655_.put(ArmorItem.Type.LEGGINGS, 5);
-        p_266655_.put(ArmorItem.Type.CHESTPLATE, 7);
+        p_266655_.put(ArmorItem.Type.CHESTPLATE, 6);
         p_266655_.put(ArmorItem.Type.HELMET, 2);
-    }), 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
+    }), 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 1.0F, 0, () -> {
         return Ingredient.of(ModItems.TAMAHAGANE_INGOT.get());
 
     }),
@@ -41,7 +41,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     }),
     GIHAKAMA("gihakama", 25, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266655_) -> {
         p_266655_.put(ArmorItem.Type.LEGGINGS, 2);
-        p_266655_.put(ArmorItem.Type.CHESTPLATE, 4);
+        p_266655_.put(ArmorItem.Type.CHESTPLATE, 3);
     }), 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0F, 0F, () -> {
         return Ingredient.of(ModItems.COTTON.get());
 
@@ -53,7 +53,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
 
     }),
     BAMBOO("bamboo", 25, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266655_) -> {
-        p_266655_.put(ArmorItem.Type.HELMET, 2);
+        p_266655_.put(ArmorItem.Type.HELMET, 1);
     }), 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0F, 0F, () -> {
         return Ingredient.of(Items.BAMBOO);
 

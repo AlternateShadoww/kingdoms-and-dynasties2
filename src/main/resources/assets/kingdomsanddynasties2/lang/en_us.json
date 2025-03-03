@@ -12,6 +12,7 @@
   "item.kingdomsanddynasties2.tamahagane_plate": "Tamahagane Plate",
   "item.kingdomsanddynasties2.sode": "Sode",
   "item.kingdomsanddynasties2.kabuto": "Kabuto",
+  "item.kingdomsanddynasties2.kasuri": "Kasuri",
 
   "block.kingdomsanddynasties2.iron_sand_block": "Iron Sand Block",
   "block.kingdomsanddynasties2.gravelled_iron_sand_block": "Gravelled Iron Sand Block",
@@ -88,7 +89,7 @@
   "item.kingdomsanddynasties2.gi": "Gi",
   "item.kingdomsanddynasties2.hakama": "Hakama",
 
-  "item.kingdomsanddynasties2.kariginu": "Kariginu",
+  "item.kingdomsanddynasties2.kariginu_gi": "Kariginu",
   "item.kingdomsanddynasties2.kariginu_sashinuki": "Kariginu Sashinuki",
 
   "item.kingdomsanddynasties2.hara-ate_do": "Hara-ate Dō",
@@ -102,9 +103,14 @@
   "item.kingdomsanddynasties2.jingasa_4": "Jingasa",
   "item.kingdomsanddynasties2.jingasa_5": "Roningasa",
 
-  "item.kingdomsanddynasties2.eboshi": "Eboshi",
+  "item.kingdomsanddynasties2.eboshi_hat": "Eboshi",
+  "item.kingdomsanddynasties2.eboshi_hat2": "Kanmuri",
 
   "item.kingdomsanddynasties2.taiko": "Taiko",
+
+  "item.kingdomsanddynasties2.tsuka": "Tsuka",
+  "item.kingdomsanddynasties2.small_tsuka": "Short Tsuka",
+  "item.kingdomsanddynasties2.long_tsuka": "Long Tsuka",
 
   "item.kingdomsanddynasties2.katana": "Katana",
   "item.kingdomsanddynasties2.katana_sheath": "Katana Sheath",

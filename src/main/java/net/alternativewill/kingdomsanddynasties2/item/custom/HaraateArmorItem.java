@@ -1,10 +1,10 @@
 package net.alternativewill.kingdomsanddynasties2.item.custom;
 
 import net.alternativewill.kingdomsanddynasties2.item.client.HaraateArmorRenderer;
-import net.alternativewill.kingdomsanddynasties2.item.client.HaraateHakamaArmorRenderer;
-import net.alternativewill.kingdomsanddynasties2.item.client.OyoroiArmorRenderer;
+import net.alternativewill.kingdomsanddynasties2.item.client.RendererInstances;
 import net.alternativewill.kingdomsanddynasties2.util.ColorCombiner;
 import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -31,9 +31,9 @@ public class HaraateArmorItem extends DyeableArmorItem implements GeoItem {
 
     // Standard Colors
     public static final int STANDARD_CRAFTING_TABLE_COLOR = 16777215;
-    public static final int STANDARD_PRIMARY_COLOR = 16777215;
+    public static final int STANDARD_PRIMARY_COLOR = 11579568;
     public static final int STANDARD_SECONDARY_COLOR = 16777215;
-    public static final int STANDARD_GOLD_COLOR = 16777215;
+    public static final int STANDARD_GOLD_COLOR = 15124606;
     public static final int STANDARD_SILVER_COLOR = 16777215;
     public static final int STANDARD_COLOR = 16777215;
 
@@ -60,6 +60,11 @@ public class HaraateArmorItem extends DyeableArmorItem implements GeoItem {
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
                 return this.renderer;
+            }
+
+            @Override
+            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                return RendererInstances.HARAATE_ITEM_RENDERER;
             }
         });
     }
@@ -156,6 +161,7 @@ public class HaraateArmorItem extends DyeableArmorItem implements GeoItem {
 
 
 
+
     private int getColorTag(@NotNull ItemStack stack, String tag, int defaultColor) {
         CompoundTag compoundTag = stack.getTagElement("display");
         return compoundTag != null && compoundTag.contains(tag, 99) ? compoundTag.getInt(tag) : defaultColor;
@@ -171,19 +177,19 @@ public class HaraateArmorItem extends DyeableArmorItem implements GeoItem {
     }
 
     public void undoColor(ItemStack stack, int buttonIndex) {
-        if (stack.getItem() instanceof HaraateArmorItem HaraateArmorItem) {
+        if (stack.getItem() instanceof HaraateArmorItem yoroiArmorItem) {
             switch (buttonIndex) {
                 case 0: // Primary color
-                    HaraateArmorItem.undoColorTag(stack, PRIMARY_PART, STANDARD_PRIMARY_COLOR);
+                    yoroiArmorItem.undoColorTag(stack, PRIMARY_PART, STANDARD_PRIMARY_COLOR);
                     break;
                 case 1: // Secondary color
-                    HaraateArmorItem.undoColorTag(stack, SECONDARY_PART, STANDARD_SECONDARY_COLOR);
+                    yoroiArmorItem.undoColorTag(stack, SECONDARY_PART, STANDARD_SECONDARY_COLOR);
                     break;
                 case 2: // Gold part
-                    HaraateArmorItem.undoColorTag(stack, GOLD_PART, STANDARD_GOLD_COLOR);
+                    yoroiArmorItem.undoColorTag(stack, GOLD_PART, STANDARD_GOLD_COLOR);
                     break;
                 case 3: // Silver part
-                    HaraateArmorItem.undoColorTag(stack, SILVER_PART, STANDARD_SILVER_COLOR);
+                    yoroiArmorItem.undoColorTag(stack, SILVER_PART, STANDARD_SILVER_COLOR);
                     break;
                 default:
                     break;

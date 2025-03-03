@@ -39,7 +39,7 @@ public class KariginuRenderer extends DyeableGeoArmorRenderer<KariginuItem> {
             int secondaryColor = armorItem.getSecondaryColor(itemStack);
             int goldColor = armorItem.getGoldColor(itemStack);
             int silverColor = armorItem.getSilverColor(itemStack);
-            int craftingTableColor = armorItem.getCraftingTableColor(itemStack);
+
 
             String boneName = geoBone.getName();
 

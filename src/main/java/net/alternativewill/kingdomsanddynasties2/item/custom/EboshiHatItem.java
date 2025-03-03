@@ -1,8 +1,10 @@
 package net.alternativewill.kingdomsanddynasties2.item.custom;
 
 import net.alternativewill.kingdomsanddynasties2.item.client.EboshiHatRenderer;
+import net.alternativewill.kingdomsanddynasties2.item.client.RendererInstances;
 import net.alternativewill.kingdomsanddynasties2.util.ColorCombiner;
 import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -28,17 +30,10 @@ public class EboshiHatItem extends DyeableArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
     // Standard Colors
-    public static final int STANDARD_CRAFTING_TABLE_COLOR = 16777215;
-    public static final int STANDARD_PRIMARY_COLOR = 16777215;
-    public static final int STANDARD_SECONDARY_COLOR = 16777215;
-    public static final int STANDARD_GOLD_COLOR = 16777215;
-    public static final int STANDARD_SILVER_COLOR = 16777215;
+    public static final int STANDARD_CRAFTING_TABLE_COLOR = 3355443;
+
     public static final int STANDARD_COLOR = 16777215;
 
-    public static final String PRIMARY_PART = "primary";
-    public static final String SECONDARY_PART = "secondary";
-    public static final String GOLD_PART = "gold";
-    public static final String SILVER_PART = "silver";
     public static final String CRAFTING_TABLE_PART = "color";
 
     public EboshiHatItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
@@ -59,6 +54,11 @@ public class EboshiHatItem extends DyeableArmorItem implements GeoItem {
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
                 return this.renderer;
             }
+
+            @Override
+            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                return RendererInstances.EBOSHIHAT_ITEM_RENDERER;
+            }
         });
     }
 
@@ -73,37 +73,6 @@ public class EboshiHatItem extends DyeableArmorItem implements GeoItem {
         displayTag.putInt(CRAFTING_TABLE_PART, color);
     }
 
-    public void setPrimaryColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, EboshiHatItem.PRIMARY_PART, color, STANDARD_PRIMARY_COLOR);
-    }
-
-    public void setSecondaryColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, EboshiHatItem.SECONDARY_PART, color, STANDARD_SECONDARY_COLOR);
-    }
-
-    public void setGoldColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, EboshiHatItem.GOLD_PART, color, STANDARD_GOLD_COLOR);
-    }
-
-    public void setSilverColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, EboshiHatItem.SILVER_PART, color, STANDARD_SILVER_COLOR);
-    }
-
-    public int getPrimaryColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, EboshiHatItem.PRIMARY_PART, STANDARD_PRIMARY_COLOR);
-    }
-
-    public int getSecondaryColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, EboshiHatItem.SECONDARY_PART, STANDARD_SECONDARY_COLOR);
-    }
-
-    public int getGoldColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, EboshiHatItem.GOLD_PART, STANDARD_GOLD_COLOR);
-    }
-
-    public int getSilverColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, EboshiHatItem.SILVER_PART, STANDARD_SILVER_COLOR);
-    }
 
     @Override
     public int getColor(@NotNull ItemStack stack) {
@@ -168,24 +137,5 @@ public class EboshiHatItem extends DyeableArmorItem implements GeoItem {
         return cache;
     }
 
-    public void undoColor(ItemStack stack, int buttonIndex) {
-        if (stack.getItem() instanceof EboshiHatItem EboshiHatItem) {
-            switch (buttonIndex) {
-                case 0: // Primary color
-                    EboshiHatItem.undoColorTag(stack, PRIMARY_PART, STANDARD_PRIMARY_COLOR);
-                    break;
-                case 1: // Secondary color
-                    EboshiHatItem.undoColorTag(stack, SECONDARY_PART, STANDARD_SECONDARY_COLOR);
-                    break;
-                case 2: // Gold part
-                    EboshiHatItem.undoColorTag(stack, GOLD_PART, STANDARD_GOLD_COLOR);
-                    break;
-                case 3: // Silver part
-                    EboshiHatItem.undoColorTag(stack, SILVER_PART, STANDARD_SILVER_COLOR);
-                    break;
-                default:
-                    break;
+
             }
-        }
-    }
-}

@@ -14,19 +14,19 @@ public class OyoroiArmorModel extends GeoModel<OyoroiArmorItem> {
 
         switch (armorType) {
             case HELMET:
-                fileName = "oyoroi_helmet";
+                fileName = "oyoroi_kabuto";
                 break;
             case CHESTPLATE:
-                fileName = "oyoroi_chestplate";
+                fileName = "oyoroi_do";
                 break;
             case LEGGINGS:
-                fileName = "oyoroi_leggings";
+                fileName = "oyoroi_haidate";
                 break;
             case BOOTS:
-                fileName = "oyoroi_boots";
+                fileName = "oyoroi_geta";
                 break;
             default:
-                fileName = "oyoroi_chestplate"; // Default fallback
+                fileName = "oyoroi_do"; // Default fallback
         }
 
         return new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "geo/" + fileName + ".geo.json");

@@ -1,0 +1,52 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bipedHead",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "armorHead",
+					"parent": "bipedHead",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "bipedHead2",
+					"parent": "armorHead",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "armorHead2",
+					"parent": "bipedHead2",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-3.5, 32, -4], "size": [7, 3, 8], "inflate": 0.2, "uv": [0, 44]},
+						{"origin": [-4.5, 23.5, -4.75], "size": [9, 9, 9], "pivot": [3.5, 23.5, -3.75], "rotation": [-5, 0, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "eboshihat2_craftingtable",
+					"parent": "armorHead2",
+					"pivot": [2.5, 32, -3],
+					"cubes": [
+						{"origin": [-2.25, 39, -1.75], "size": [4, 3, 8], "inflate": 0.2, "pivot": [0.75, 39, -0.75], "rotation": [-72.5, 0, 0], "uv": [40, 0]},
+						{"origin": [-2.25, 39.92615, 3.60407], "size": [4, 4, 16], "inflate": 0.2, "pivot": [0.75, 39.75, 3.5], "rotation": [-82.5, 0, 0], "uv": [0, 23]},
+						{"origin": [-2.25, 39, 2], "size": [4, 2, 4], "pivot": [0.75, 39, 3], "rotation": [-120, 0, 0], "uv": [48, 13]},
+						{"origin": [-6, 35, -0.25], "size": [12, 1, 1], "uv": [0, 20]},
+						{"origin": [-3.5, 32, -4], "size": [7, 3, 8], "uv": [34, 22]}
+					]
+				}
+			]
+		}
+	]
+}

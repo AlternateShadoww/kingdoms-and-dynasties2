@@ -1,7 +1,7 @@
-// 1.20.1	2024-12-13T12:54:51.6427958	Loot Tables
+// 1.20.1	2025-03-02T23:25:28.1373397	Loot Tables
 edde058fef2ffead0d3bb3abd92b5ccca8226247 data/kingdomsanddynasties2/loot_tables/blocks/cotton_crop.json
 d2092e75c679316aee5d3721fa054027074040f4 data/kingdomsanddynasties2/loot_tables/blocks/gravelled_iron_sand_block.json
-54af78a3d762808d1c4aae2963a5ee7bb89a447e data/kingdomsanddynasties2/loot_tables/blocks/iron_sand_block.json
+82f38088748e4b5fd7b36bea615a66d41f585174 data/kingdomsanddynasties2/loot_tables/blocks/iron_sand_block.json
 f0367ec7000868b8ffb2db7b544f827db62f0ec6 data/kingdomsanddynasties2/loot_tables/blocks/mossy_iron_sand_block.json
 44558c18ba84f00862638cd228dbc6916723a0dd data/kingdomsanddynasties2/loot_tables/blocks/mullberry_button.json
 a39fcfd9140de744d403905be9be9bac8d2c7776 data/kingdomsanddynasties2/loot_tables/blocks/mullberry_door.json

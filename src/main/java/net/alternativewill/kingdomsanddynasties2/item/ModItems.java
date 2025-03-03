@@ -2,10 +2,8 @@ package net.alternativewill.kingdomsanddynasties2.item;
 
 import net.alternativewill.kingdomsanddynasties2.KingdomsAndDynasties2;
 import net.alternativewill.kingdomsanddynasties2.block.ModBlocks;
-import net.alternativewill.kingdomsanddynasties2.entity.ModEntities;
 import net.alternativewill.kingdomsanddynasties2.item.custom.*;
 import net.minecraft.world.item.*;
-import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,6 +16,8 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, KingdomsAndDynasties2.MOD_ID);
 
     public static final RegistryObject<Item> COTTON = ITEMS.register("cotton",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> KASURI = ITEMS.register("kasuri",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COTTONSEED = ITEMS.register("cottonseed",
             () -> new ItemNameBlockItem(ModBlocks.COTTON_CROP.get(), new Item.Properties()));
@@ -91,15 +91,17 @@ public class ModItems {
             () -> new GihakamaItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> HAKAMA = ITEMS.register("hakama",
             () -> new GihakamaItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-    public static final RegistryObject<Item> KARIGINU = ITEMS.register("kariginu",
+    public static final RegistryObject<Item> KARIGINU = ITEMS.register("kariginu_gi",
             () -> new KariginuItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> KARIGINU_SASHINUKI = ITEMS.register("kariginu_sashinuki",
             () -> new KariginuItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
-    public static final RegistryObject<Item> EBOSHIHAT = ITEMS.register("eboshi",
+    public static final RegistryObject<Item> EBOSHIHAT = ITEMS.register("eboshi_hat",
             () -> new EboshiHatItem(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> EBOSHIHAT2 = ITEMS.register("eboshi_hat2",
+            () -> new EboshiHat2Item(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> JINGASA = ITEMS.register("jingasa_1",
-            () -> new JingasaItem(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new Jingasa1Item(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> JINGASA2 = ITEMS.register("jingasa_2",
             () -> new Jingasa2Item(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> JINGASA3 = ITEMS.register("jingasa_3",
@@ -119,6 +121,13 @@ public class ModItems {
             () -> new SwordItem(ModToolTiers.TAMAHAGANE, 6,-2.7f, new Item.Properties()));
     public static final RegistryObject<Item> ODACHI = ITEMS.register("odachi",
             () -> new SwordItem(ModToolTiers.TAMAHAGANE, 7,-3, new Item.Properties()));
+
+    public static final RegistryObject<Item> SMALLTSUKA = ITEMS.register("small_tsuka",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TSUKA = ITEMS.register("tsuka",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LONGTSUKA = ITEMS.register("long_tsuka",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> KATANA_SHEATH = ITEMS.register("katana_sheath",
             () -> new Item(new Item.Properties()));

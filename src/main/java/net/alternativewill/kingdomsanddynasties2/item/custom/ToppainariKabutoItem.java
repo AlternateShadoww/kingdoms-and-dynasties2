@@ -1,8 +1,10 @@
 package net.alternativewill.kingdomsanddynasties2.item.custom;
 
+import net.alternativewill.kingdomsanddynasties2.item.client.RendererInstances;
 import net.alternativewill.kingdomsanddynasties2.item.client.ToppainariKabutoRenderer;
 import net.alternativewill.kingdomsanddynasties2.util.ColorCombiner;
 import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -29,9 +31,9 @@ public class ToppainariKabutoItem extends DyeableArmorItem implements GeoItem {
 
     // Standard Colors
     public static final int STANDARD_CRAFTING_TABLE_COLOR = 16777215;
-    public static final int STANDARD_PRIMARY_COLOR = 16777215;
+    public static final int STANDARD_PRIMARY_COLOR = 11579568;
     public static final int STANDARD_SECONDARY_COLOR = 16777215;
-    public static final int STANDARD_GOLD_COLOR = 16777215;
+    public static final int STANDARD_GOLD_COLOR = 15124606;
     public static final int STANDARD_SILVER_COLOR = 16777215;
     public static final int STANDARD_COLOR = 16777215;
 
@@ -58,6 +60,11 @@ public class ToppainariKabutoItem extends DyeableArmorItem implements GeoItem {
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
                 return this.renderer;
+            }
+
+            @Override
+            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                return RendererInstances.TOPPAINARI_ITEM_RENDERER;
             }
         });
     }

@@ -74,6 +74,7 @@ public class ModCreativeModeTabs {
 
                         //MATERIALS
                         output.accept(ModItems.COTTON.get());
+                        output.accept(ModItems.KASURI.get());
                         output.accept(ModItems.COTTONSEED.get());
                         output.accept(ModItems.SILK.get());
                         output.accept(ModItems.IRON_SAND.get());
@@ -85,13 +86,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.KABUTO.get());
                         output.accept(ModItems.SODE.get());
 
+                        output.accept(ModItems.SMALLTSUKA.get());
+                        output.accept(ModItems.TSUKA.get());
+                        output.accept(ModItems.LONGTSUKA.get());
+
                         output.accept(ModItems.PATTERNED_SCROLL.get());
 
                         output.accept(ModItems.YOROI_STAND_ITEM.get());
                     })
                     .build());
     public static final RegistryObject<CreativeModeTab> KINGDOMSANDDYNASTYARMORS = CREATIVE_MODE_TABS.register("kingdoms_and_dynasties_armory",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.OYOROI_HELMET .get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.HOSHI_HELMET .get()))
                     .title(Component.translatable("creativetab.kingdomsanddynasty_armory"))
                     .displayItems((itemDisplayParameters, output) -> {
                         //ARMORS
@@ -102,6 +107,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.JINGASA5.get());
 
                         output.accept(ModItems.EBOSHIHAT.get());
+                        output.accept(ModItems.EBOSHIHAT2.get());
 
                         output.accept(ModItems.GI.get());
                         output.accept(ModItems.HAKAMA.get());

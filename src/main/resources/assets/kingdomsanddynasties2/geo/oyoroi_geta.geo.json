@@ -1,0 +1,93 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bipedLeftLeg",
+					"pivot": [2, 12, 0]
+				},
+				{
+					"name": "armorLeftLeg",
+					"parent": "bipedLeftLeg",
+					"pivot": [-2, 12, 0]
+				},
+				{
+					"name": "armorLeftBoot",
+					"parent": "bipedLeftLeg",
+					"pivot": [2, 12, 0]
+				},
+				{
+					"name": "leftboot_primary",
+					"parent": "armorLeftBoot",
+					"pivot": [-0.25, 0, -1],
+					"cubes": [
+						{"origin": [0, -0.25, -3.75], "size": [4, 2, 6], "inflate": 0.1, "uv": [132, 103]}
+					]
+				},
+				{
+					"name": "leftboot_nodye",
+					"parent": "armorLeftBoot",
+					"pivot": [-0.25, 0, -1],
+					"cubes": [
+						{"origin": [0, -0.25, -3.75], "size": [4, 2, 6], "inflate": 0.1, "uv": [136, 13]}
+					]
+				},
+				{
+					"name": "leftboot_craftingtable",
+					"parent": "armorLeftBoot",
+					"pivot": [-0.25, 0, -1],
+					"cubes": [
+						{"origin": [0, -0.25, -3.75], "size": [4, 2, 6], "inflate": 0.1, "uv": [136, 21]}
+					]
+				},
+				{
+					"name": "bipedRightLeg",
+					"pivot": [-2, 12, 0]
+				},
+				{
+					"name": "armorRightLeg",
+					"parent": "bipedRightLeg",
+					"pivot": [2, 12, 0]
+				},
+				{
+					"name": "armorRightBoot",
+					"parent": "bipedRightLeg",
+					"pivot": [-2, 12, 0]
+				},
+				{
+					"name": "rightboot_primary",
+					"parent": "armorRightBoot",
+					"pivot": [0.25, 0, -1],
+					"cubes": [
+						{"origin": [-4, -0.25, -3.75], "size": [4, 2, 6], "inflate": 0.1, "uv": [34, 141]}
+					]
+				},
+				{
+					"name": "rightboot_nodye",
+					"parent": "armorRightBoot",
+					"pivot": [0.25, 0, -1],
+					"cubes": [
+						{"origin": [-4, -0.25, -3.75], "size": [4, 2, 6], "inflate": 0.1, "uv": [86, 141]}
+					]
+				},
+				{
+					"name": "rightboot_craftingtable",
+					"parent": "armorRightBoot",
+					"pivot": [0.25, 0, -1],
+					"cubes": [
+						{"origin": [-4, -0.25, -3.75], "size": [4, 2, 6], "inflate": 0.1, "uv": [54, 142]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,134 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bipedHead",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "armorHead",
+					"parent": "bipedHead",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "bone3",
+					"parent": "armorHead",
+					"pivot": [0, 19, -2.5],
+					"cubes": [
+						{"origin": [-4.5, 23.125, -3.5], "size": [9, 12, 1], "pivot": [3.5, 23.125, -2.5], "rotation": [-12.5, 0, 0], "uv": [0, 50]},
+						{"origin": [-1, 20, -3.5], "size": [2, 4, 1], "uv": [26, 50]}
+					]
+				},
+				{
+					"name": "jingasa_1_craftingtable",
+					"parent": "armorHead",
+					"pivot": [8, 29.2, -8.5],
+					"cubes": [
+						{"origin": [-1, 19, -3.5], "size": [2, 4, 1], "inflate": 0.1, "uv": [20, 50]},
+						{"origin": [-8.5, 28.25, -8.75], "size": [17, 1, 1], "uv": [0, 46]},
+						{"origin": [8, 28.25, -8], "size": [1, 1, 17], "uv": [0, 0]},
+						{"origin": [-8.5, 28.25, 8.75], "size": [17, 1, 1], "uv": [0, 48]},
+						{"origin": [-9.25, 28.25, -8], "size": [1, 1, 17], "uv": [0, 18]},
+						{"origin": [-0.5, 33.75, -13], "size": [1, 1, 14], "pivot": [0, 34.25, 0.5], "rotation": [24, 45, 0], "uv": [36, 30]},
+						{"origin": [-13.5, 33.75, 0], "size": [14, 1, 1], "pivot": [0, 34.25, 0.5], "rotation": [-22.13338, 40.23876, -32.19651], "uv": [20, 60]},
+						{"origin": [-0.5, 33.75, 0], "size": [1, 1, 14], "pivot": [0, 34.25, 0.5], "rotation": [-24, 45, 0], "uv": [36, 45]},
+						{"origin": [-0.5, 33.75, 0], "size": [14, 1, 1], "pivot": [0, 34.25, 0.5], "rotation": [22.13338, 40.23876, 32.19651], "uv": [50, 60]},
+						{"origin": [-9, 29.2, 9.5], "size": [18, 10, 0], "pivot": [8, 29.2, 9.5], "rotation": [57.5, 0, 0], "uv": [36, 0]},
+						{"origin": [-9, 29.2, -8.5], "size": [18, 10, 0], "pivot": [8, 29.2, -8.5], "rotation": [-57.5, 0, 0], "uv": [0, 36]}
+					]
+				},
+				{
+					"name": "bone2_craftingtable",
+					"parent": "jingasa_1_craftingtable",
+					"pivot": [9, 29.2, -7.5],
+					"rotation": [0, -90, 0],
+					"cubes": [
+						{"origin": [8, 29.2, -7.5], "size": [18, 10, 0], "pivot": [9, 29.2, -7.5], "rotation": [-57.5, 0, 0], "uv": [36, 20]}
+					]
+				},
+				{
+					"name": "bone_craftingtable",
+					"parent": "jingasa_1_craftingtable",
+					"pivot": [-9, 29.2, -7.5],
+					"rotation": [0, 90, 0],
+					"cubes": [
+						{"origin": [-26, 29.2, -7.5], "size": [18, 10, 0], "pivot": [-9, 29.2, -7.5], "rotation": [-57.5, 0, 0], "uv": [36, 10]}
+					]
+				},
+				{
+					"name": "crest",
+					"parent": "armorHead",
+					"pivot": [6.5, 29.725, -11.55],
+					"cubes": [
+						{"origin": [-7.5, 29.725, -11.55], "size": [15, 12, 4], "inflate": -2, "pivot": [6.5, 29.725, -11.55], "rotation": [-57.5, 0, 0], "uv": [90, 112]}
+					]
+				},
+				{
+					"name": "bipedBody",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "armorBody",
+					"parent": "bipedBody",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "bipedRightArm",
+					"pivot": [-4, 22, 0]
+				},
+				{
+					"name": "armorRightArm",
+					"parent": "bipedRightArm",
+					"pivot": [-4, 22, 0]
+				},
+				{
+					"name": "bipedLeftArm",
+					"pivot": [4, 22, 0]
+				},
+				{
+					"name": "armorLeftArm",
+					"parent": "bipedLeftArm",
+					"pivot": [4, 22, 0]
+				},
+				{
+					"name": "bipedLeftLeg",
+					"pivot": [-2, 12, 0]
+				},
+				{
+					"name": "armorLeftLeg",
+					"parent": "bipedLeftLeg",
+					"pivot": [-2, 12, 0]
+				},
+				{
+					"name": "armorLeftBoot",
+					"parent": "bipedLeftLeg",
+					"pivot": [-2, 12, 0]
+				},
+				{
+					"name": "bipedRightLeg",
+					"pivot": [2, 12, 0]
+				},
+				{
+					"name": "armorRightLeg",
+					"parent": "bipedRightLeg",
+					"pivot": [2, 12, 0]
+				},
+				{
+					"name": "armorRightBoot",
+					"parent": "bipedRightLeg",
+					"pivot": [2, 12, 0]
+				}
+			]
+		}
+	]
+}

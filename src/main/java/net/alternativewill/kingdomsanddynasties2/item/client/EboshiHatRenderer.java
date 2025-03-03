@@ -11,10 +11,6 @@ import software.bernie.geckolib.renderer.DyeableGeoArmorRenderer;
 
 public class EboshiHatRenderer extends DyeableGeoArmorRenderer<EboshiHatItem> {
 
-    public static final String PRIMARY_PART = "_primary";
-    public static final String SECONDARY_PART = "_secondary";
-    public static final String GOLD_PART = "_gold";
-    public static final String SILVER_PART = "_silver";
     public static final String CRAFTING_TABLE_PART = "_craftingtable";
 
     public EboshiHatRenderer() {
@@ -35,23 +31,11 @@ public class EboshiHatRenderer extends DyeableGeoArmorRenderer<EboshiHatItem> {
         ItemStack itemStack = this.currentStack;
 
         if (itemStack.getItem() instanceof EboshiHatItem armorItem) {
-            int primaryColor = armorItem.getPrimaryColor(itemStack);
-            int secondaryColor = armorItem.getSecondaryColor(itemStack);
-            int goldColor = armorItem.getGoldColor(itemStack);
-            int silverColor = armorItem.getSilverColor(itemStack);
             int craftingTableColor = armorItem.getCraftingTableColor(itemStack);
 
             String boneName = geoBone.getName();
 
-            if (boneName.endsWith(EboshiHatRenderer.PRIMARY_PART)) {
-                return applyDyeToBone(geoBone, primaryColor, EboshiHatRenderer.PRIMARY_PART);
-            } else if (boneName.endsWith(EboshiHatRenderer.SECONDARY_PART)) {
-                return applyDyeToBone(geoBone, secondaryColor, EboshiHatRenderer.SECONDARY_PART);
-            } else if (boneName.endsWith(EboshiHatRenderer.GOLD_PART)) {
-                return applyDyeToBone(geoBone, goldColor, EboshiHatRenderer.GOLD_PART);
-            } else if (boneName.endsWith(EboshiHatRenderer.SILVER_PART)) {
-                return applyDyeToBone(geoBone, silverColor, EboshiHatRenderer.SILVER_PART);
-            } else if (boneName.endsWith(EboshiHatRenderer.CRAFTING_TABLE_PART)) {
+            if (boneName.endsWith(EboshiHatRenderer.CRAFTING_TABLE_PART)) {
                 return applyDyeToBone(geoBone, craftingTableColor, EboshiHatRenderer.CRAFTING_TABLE_PART);
             }
         }
