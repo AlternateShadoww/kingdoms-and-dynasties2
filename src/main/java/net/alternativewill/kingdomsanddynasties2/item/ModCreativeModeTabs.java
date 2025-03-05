@@ -136,11 +136,18 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MENPO.get());
                         output.accept(ModItems.TENGUMASK.get());
 
-                        output.accept(ModItems.KATANA.get());
                         output.accept(ModItems.TANTO.get());
                         output.accept(ModItems.WAKIZASHI.get());
+                        output.accept(ModItems.KATANA.get());
                         output.accept(ModItems.TACHI.get());
                         output.accept(ModItems.ODACHI.get());
+                        output.accept(ModItems.CHUKOTO.get());
+                        output.accept(ModItems.TSURUGI.get());
+                        output.accept(ModItems.NAGAMAKI.get());
+                        output.accept(ModItems.NAGINATA.get());
+                        output.accept(ModItems.YARI.get());
+                        output.accept(ModItems.HOKO.get());
+
 
                     })
                     .build());

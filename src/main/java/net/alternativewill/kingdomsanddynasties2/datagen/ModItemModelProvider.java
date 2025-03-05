@@ -168,161 +168,311 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .translation(0, 7, 0) // Move the item slightly upward
                 .scale(1.2F, 1.2F, 1).end()
                 .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
-                .rotation(45,91,-2)
-                .translation(0,8,2f)
-                .scale(1.2F, 1.2F, 1).end()
+                .rotation(0, -90, 45)  // Tilt it slightly to align with the hand
+                .translation(0F, 8, 2)  // Move up and slightly forward
+                .scale(1.2F, 1.2F, 1F).end()
                 .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
-                .rotation(45,-89,2)
-                .translation(0,8,2f)
-                .scale(1.2F, 1.2F, 1).end()
+                .rotation(0, 90, -45)  // Mirrored rotation
+                .translation(0, 8, 2)  // Reverse X translation
+                .scale(1.2F, 1.2F, 1F).end()
                 .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
-                .rotation(45,91,-2)
-                .translation(0,8,2f)
-                .scale(1.2F, 1.2F, 1).end()
+                .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
+                .translation(2, 4, 0) // Increase X translation slightly (move right)
+                .scale(1.0F, 1.0F, 1.0F).end()
                 .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
-                .rotation(45,-89,2)
-                .translation(0,8,2f)
-                .scale(1.2F, 1.2F, 1).end();
-
-        getBuilder("odachi")
-                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
-                .texture("layer0", modLoc("item/odachi"))
-                .transforms()
-                .transform(ItemDisplayContext.FIXED)
-                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
-                .translation(-4, 4, 0) // Move the item slightly upward
-                .scale(2.5F, 2.5F, 1.5F) // Scale the item up to 1.5x
-                .end()
-                .transform(ItemDisplayContext.GUI)
-                .rotation(180, 180, 180) // Rotate the item to face forward in the item frame
-                .translation(4, 5F, 0) // Move the item slightly upward
-                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
-                .end()
-                .transform(ItemDisplayContext.GROUND)
-                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
-                .translation(-4, 12, 0) // Move the item slightly upward
-                .scale(2.4F, 2.4F, 1).end()
-                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
-                .rotation(45,91,-2)
-                .translation(0,17,1.2f)
-                .scale(2.4F, 2.4F, 1).end()
-                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
-                .rotation(45,-89,2)
-                .translation(0,17,1.2f)
-                .scale(2.4F , 2.4F, 1).end()
-                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
-                .rotation(45,91,-2)
-                .translation(0,17,1.2f)
-                .scale(2.4F, 2.4F, 1).end()
-                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
-                .rotation(45,-89,2)
-                .translation(0,17,1.2f)
-                .scale(2.4F, 2.4F, 1).end();
-
+                .rotation(0, 90, -25) // Mirror rotation for left hand
+                .translation(2, 4, 0) // Adjust X translation slightly for left hand
+                .scale(1.0F, 1.0F, 1.0F).end();
         getBuilder("tanto")
                 .parent(new ModelFile.UncheckedModelFile("item/handheld"))
                 .texture("layer0", modLoc("item/tanto"))
                 .transforms()
                 .transform(ItemDisplayContext.FIXED)
                 .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
-                .translation(-5, 5, 0) // Move the item slightly upward
-                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
-                .end()
-                .transform(ItemDisplayContext.GUI)
-                .rotation(180, 180, 180) // Rotate the item to face forward in the item frame
-                .translation(6, 5.5F, 0) // Move the item slightly upward
-                .scale(1.7F, 1.7F, 1.5F) // Scale the item up to 1.5x
+                .translation(0, 1, 0) // Move the item slightly upward
+                .scale(1F, 1F, 1F) // Scale the item up to 1.5x
                 .end()
                 .transform(ItemDisplayContext.GROUND)
                 .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
-                .translation(-5, 5, 0) // Move the item slightly upward
-                .scale(1.2F, 1.2F, 1).end()
+                .translation(0, 7, 0) // Move the item slightly upward
+                .scale(0.7F, 0.7F, 0.7F).end()
                 .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
-                .rotation(45,91,-2)
-                .translation(0,8,2f)
-                .scale(1.2F, 1.2F, 1).end()
+                .rotation(0, -90, 45)  // Tilt it slightly to align with the hand
+                .translation(0F, 4, 2)  // Move up and slightly forward
+                .scale(0.7F, 0.7F, 1F).end()
                 .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
-                .rotation(45,-89,2)
-                .translation(0,8,2f)
-                .scale(1.2F, 1.2F, 1).end()
+                .rotation(0, 90, -45)  // Mirrored rotation
+                .translation(0, 4, 2)  // Reverse X translation
+                .scale(0.7F, 0.7F, 1F).end()
                 .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
-                .rotation(45,91,-2)
-                .translation(0,8,2f)
-                .scale(1.2F, 1.2F, 1).end()
+                .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
+                .translation(2, 4, 0) // Increase X translation slightly (move right)
+                .scale(0.7F, 0.7F, 1.0F).end()
                 .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
-                .rotation(45,-89,2)
-                .translation(0,8,2f)
-                .scale(1.2F, 1.2F, 1).end();
-
+                .rotation(0, 90, -25) // Mirror rotation for left hand
+                .translation(2, 4, 0) // Adjust X translation slightly for left hand
+                .scale(0.7F, 0.7F, 1.0F).end();
         getBuilder("wakizashi")
                 .parent(new ModelFile.UncheckedModelFile("item/handheld"))
                 .texture("layer0", modLoc("item/wakizashi"))
                 .transforms()
                 .transform(ItemDisplayContext.FIXED)
                 .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
-                .translation(-4, 4, 0) // Move the item slightly upward
-                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
-                .end()
-                .transform(ItemDisplayContext.GUI)
-                .rotation(180, 180, 180) // Rotate the item to face forward in the item frame
-                .translation(3F, 3F, 0) // Move the item slightly upward
-                .scale(1.3F, 1.3F, 1.3F) // Scale the item up to 1.5x
+                .translation(0, 1, 0) // Move the item slightly upward
+                .scale(1F, 1F, 1F) // Scale the item up to 1.5x
                 .end()
                 .transform(ItemDisplayContext.GROUND)
                 .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
-                .translation(-4, 4, 0) // Move the item slightly upward
+                .translation(0, 7, 0) // Move the item slightly upward
+                .scale(0.9F, 0.9F, 0.9F).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 45)  // Tilt it slightly to align with the hand
+                .translation(0F, 5.5F, 2)  // Move up and slightly forward
+                .scale(0.9F, 0.9F, 1F).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(0, 90, -45)  // Mirrored rotation
+                .translation(0, 5.5F, 2)  // Reverse X translation
+                .scale(0.9F, 0.9F, 1F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
+                .translation(2, 4, 0) // Increase X translation slightly (move right)
+                .scale(0.9F, 0.9F, 1.0F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(0, 90, -25) // Mirror rotation for left hand
+                .translation(2, 4, 0) // Adjust X translation slightly for left hand
+                .scale(0.9F, 0.9F, 1.0F).end();
+        getBuilder("chukoto")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/chukoto"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 1, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 7, 0) // Move the item slightly upward
                 .scale(1.2F, 1.2F, 1).end()
                 .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
-                .rotation(45,91,-2)
-                .translation(0,9.5f,2f)
-                .scale(1.2F, 1.2F, 1).end()
+                .rotation(0, -90, 45)  // Tilt it slightly to align with the hand
+                .translation(0F, 8, 2)  // Move up and slightly forward
+                .scale(1.2F, 1.2F, 1F).end()
                 .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
-                .rotation(45,-89,2)
-                .translation(0,9.5f,2f)
-                .scale(1.2F, 1.2F, 1).end()
+                .rotation(0, 90, -45)  // Mirrored rotation
+                .translation(0, 8, 2)  // Reverse X translation
+                .scale(1.2F, 1.2F, 1F).end()
                 .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
-                .rotation(45,91,-2)
-                .translation(0,8,2f)
-                .scale(1.2F, 1.2F, 1).end()
+                .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
+                .translation(2, 4, 0) // Increase X translation slightly (move right)
+                .scale(1.0F, 1.0F, 1.0F).end()
                 .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
-                .rotation(45,-89,2)
-                .translation(0,8,2f)
-                .scale(1.2F, 1.2F, 1).end();
-
+                .rotation(0, 90, -25) // Mirror rotation for left hand
+                .translation(2, 4, 0) // Adjust X translation slightly for left hand
+                .scale(1.0F, 1.0F, 1.0F).end();
+        getBuilder("tsurugi")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/tsurugi"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 1, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 7, 0) // Move the item slightly upward
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 45)  // Tilt it slightly to align with the hand
+                .translation(0F, 8, 2)  // Move up and slightly forward
+                .scale(1.2F, 1.2F, 1F).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(0, 90, -45)  // Mirrored rotation
+                .translation(0, 8, 2)  // Reverse X translation
+                .scale(1.2F, 1.2F, 1F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
+                .translation(2, 4, 0) // Increase X translation slightly (move right)
+                .scale(1.0F, 1.0F, 1.0F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(0, 90, -25) // Mirror rotation for left hand
+                .translation(2, 4, 0) // Adjust X translation slightly for left hand
+                .scale(1.0F, 1.0F, 1.0F).end();
         getBuilder("tachi")
                 .parent(new ModelFile.UncheckedModelFile("item/handheld"))
                 .texture("layer0", modLoc("item/tachi"))
                 .transforms()
                 .transform(ItemDisplayContext.FIXED)
                 .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
-                .translation(-8, 5, 0) // Move the item slightly upward
-                .scale(2.5F, 2.5F, 1.5F) // Scale the item up to 1.5x
-                .end()
-                .transform(ItemDisplayContext.GUI)
-                .rotation(180, 180, 180) // Rotate the item to face forward in the item frame
-                .translation(4.8F, 4.5F, 0) // Move the item slightly upward
+                .translation(0, 1, 0) // Move the item slightly upward
                 .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
                 .end()
                 .transform(ItemDisplayContext.GROUND)
                 .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
-                .translation(-8, 12, 0) // Move the item slightly upward
-                .scale(2.4F, 2.4F, 1).end()
+                .translation(0, 7, 0) // Move the item slightly upward
+                .scale(1.2F, 1.2F, 1).end()
                 .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
-                .rotation(45,91,-2)
-                .translation(0,18.2f,1.2f)
+                .rotation(0, -90, 45)  // Tilt it slightly to align with the hand
+                .translation(0F, 8, 2)  // Move up and slightly forward
+                .scale(1.4F, 1.4F, 1F).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(0, 90, -45)  // Mirrored rotation
+                .translation(0, 8, 2)  // Reverse X translation
+                .scale(1.4F, 1.4F, 1F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
+                .translation(2, 4, 0) // Increase X translation slightly (move right)
+                .scale(1.0F, 1.0F, 1.0F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(0, 90, -25) // Mirror rotation for left hand
+                .translation(2, 4, 0) // Adjust X translation slightly for left hand
+                .scale(1.0F, 1.0F, 1.0F).end();
+        getBuilder("odachi")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/odachi"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 1, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 7, 0) // Move the item slightly upward
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 45)  // Tilt it slightly to align with the hand
+                .translation(0F, 11, 4)  // Move up and slightly forward
+                .scale(1.6F, 1.6F, 1F).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(0, 90, -45)  // Mirrored rotation
+                .translation(0F, 11, 4)  // Reverse X translation
+                .scale(1.2F, 1.2F, 1F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
+                .translation(2, 4, 0) // Increase X translation slightly (move right)
+                .scale(1.0F, 1.0F, 1.0F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(0, 90, -25) // Mirror rotation for left hand
+                .translation(2, 4, 0) // Adjust X translation slightly for left hand
+                .scale(1.0F, 1.0F, 1.0F).end();
+        getBuilder("nagamaki")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/nagamaki"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 1, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 7, 0) // Move the item slightly upward
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 45)  // Tilt it slightly to align with the hand
+                .translation(0F, 8, 2)  // Move up and slightly forward
+                .scale(1.8F, 1.8F, 1F).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(0, 90, -45)  // Mirrored rotation
+                .translation(0, 8, 2)  // Reverse X translation
+                .scale(1.8F, 1.8F, 1F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
+                .translation(2, 4, 0) // Increase X translation slightly (move right)
+                .scale(1.0F, 1.0F, 1.0F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(0, 90, -25) // Mirror rotation for left hand
+                .translation(2, 4, 0) // Adjust X translation slightly for left hand
+                .scale(1.0F, 1.0F, 1.0F).end();
+        getBuilder("naginata")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/naginata"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 1, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 7, 0) // Move the item slightly upward
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 45)  // Tilt it slightly to align with the hand
+                .translation(0F, 8, 2)  // Move up and slightly forward
+                .scale(2.4F, 2.4F, 1F).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(0, 90, -45)  // Mirrored rotation
+                .translation(0, 8, 2)  // Reverse X translation
+                .scale(2.4F, 2.4F, 1F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
+                .translation(2, 4, 0) // Increase X translation slightly (move right)
+                .scale(1.0F, 1.0F, 1.0F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(0, 90, -25) // Mirror rotation for left hand
+                .translation(2, 4, 0) // Adjust X translation slightly for left hand
+                .scale(1.0F, 1.0F, 1.0F).end();
+        getBuilder("yari")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/yari"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 1, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 7, 0) // Move the item slightly upward
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 45)  // Tilt it slightly to align with the hand
+                .translation(0F, 8, 2)  // Move up and slightly forward
                 .scale(2.4F, 2.4F, 1).end()
                 .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
-                .rotation(45,-89,2)
-                .translation(0,18.2f,2f)
-                .scale(2.4F , 2.4F, 1).end()
-                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
-                .rotation(45,91,-2)
-                .translation(0,18.2f,2f)
+                .rotation(0, 90, -45)  // Mirrored rotation
+                .translation(0, 8, 2)  // Reverse X translation
                 .scale(2.4F, 2.4F, 1).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
+                .translation(2, 4, 0) // Increase X translation slightly (move right)
+                .scale(1.0F, 1.0F, 1.0F).end()
                 .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
-                .rotation(45,-89,2)
-                .translation(0,18.2f,2f)
-                .scale(2.4F, 2.4F, 1).end();
+                .rotation(0, 90, -25) // Mirror rotation for left hand
+                .translation(2, 4, 0) // Adjust X translation slightly for left hand
+                .scale(1.0F, 1.0F, 1.0F).end();
+        getBuilder("hoko")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/hoko"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 1, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 7, 0) // Move the item slightly upward
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 45)  // Tilt it slightly to align with the hand
+                .translation(0F, 8, 2)  // Move up and slightly forward
+                .scale(2.4F, 2.4F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(0, 90, -45)  // Mirrored rotation
+                .translation(0, 8, 2)  // Reverse X translation
+                .scale(2.4F, 2.4F, 1).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
+                .translation(2, 4, 0) // Increase X translation slightly (move right)
+                .scale(1.0F, 1.0F, 1.0F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(0, 90, -25) // Mirror rotation for left hand
+                .translation(2, 4, 0) // Adjust X translation slightly for left hand
+                .scale(1.0F, 1.0F, 1.0F).end();
     }
 
 

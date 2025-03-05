@@ -112,15 +112,27 @@ public class ModItems {
             () -> new Jingasa5Item(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));
 
     public static final RegistryObject<Item> KATANA = ITEMS.register("katana",
-            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 5,-2.4f, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 5,-2.35f, new Item.Properties()));
     public static final RegistryObject<Item> TANTO = ITEMS.register("tanto",
-            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 1,-1.3f, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.TANTO, 1,-1.3f, new Item.Properties()));
     public static final RegistryObject<Item> WAKIZASHI = ITEMS.register("wakizashi",
-            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 2,-1.6f, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.WAKIZASHI, 2,-1.6f, new Item.Properties()));
     public static final RegistryObject<Item> TACHI = ITEMS.register("tachi",
             () -> new SwordItem(ModToolTiers.TAMAHAGANE, 6,-2.7f, new Item.Properties()));
     public static final RegistryObject<Item> ODACHI = ITEMS.register("odachi",
-            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 7,-3, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.ODACHI, 8,-3, new Item.Properties()));
+    public static final RegistryObject<Item> CHUKOTO = ITEMS.register("chukoto",
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 6,-2.45f, new Item.Properties()));
+    public static final RegistryObject<Item> TSURUGI = ITEMS.register("tsurugi",
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 6,-2.7f, new Item.Properties()));
+    public static final RegistryObject<Item> NAGAMAKI = ITEMS.register("nagamaki",
+            () -> new SwordItem(ModToolTiers.NAGAMAKI, 7,-2.9f, new Item.Properties()));
+    public static final RegistryObject<Item> NAGINATA = ITEMS.register("naginata",
+            () -> new SwordItem(ModToolTiers.NAGINATA, 5,-2.5f, new Item.Properties()));
+    public static final RegistryObject<Item> HOKO = ITEMS.register("hoko",
+            () -> new SwordItem(ModToolTiers.YARI, 5,-2.4f, new Item.Properties()));
+    public static final RegistryObject<Item> YARI = ITEMS.register("yari",
+            () -> new SwordItem(ModToolTiers.YARI, 5,-2.55f, new Item.Properties()));
 
     public static final RegistryObject<Item> SMALLTSUKA = ITEMS.register("small_tsuka",
             () -> new Item(new Item.Properties()));

@@ -453,6 +453,78 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.TAMAHAGANE_INGOT.get()), has(ModItems.TAMAHAGANE_INGOT.get()))
                 .unlockedBy(getHasName(ModItems.LONGTSUKA.get()), has(ModItems.LONGTSUKA.get()))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.YARI.get(), 1)
+                .pattern("T")
+                .pattern("S")
+                .pattern("S")
+                .define('S', ModItems.LONGTSUKA.get())
+                .define('T', ModItems.TAMAHAGANE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TAMAHAGANE_INGOT.get()), has(ModItems.TAMAHAGANE_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.LONGTSUKA.get()), has(ModItems.LONGTSUKA.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NAGINATA.get(), 1)
+                .pattern("NT")
+                .pattern(" R")
+                .pattern(" S")
+                .define('S', ModItems.LONGTSUKA.get())
+                .define('N', ModItems.TAMAHAGANE_NUGGET.get())
+                .define('R', ModItems.TSUKA.get())
+                .define('T', ModItems.TAMAHAGANE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TAMAHAGANE_INGOT.get()), has(ModItems.TAMAHAGANE_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.TSUKA.get()), has(ModItems.TSUKA.get()))
+                .unlockedBy(getHasName(ModItems.LONGTSUKA.get()), has(ModItems.LONGTSUKA.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NAGAMAKI.get(), 1)
+                .pattern("T")
+                .pattern("S")
+                .pattern("S")
+                .define('S', ModItems.TSUKA.get())
+                .define('T', ModItems.TAMAHAGANE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TAMAHAGANE_INGOT.get()), has(ModItems.TAMAHAGANE_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.TSUKA.get()), has(ModItems.TSUKA.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HOKO.get(), 1)
+                .pattern("T")
+                .pattern("R")
+                .pattern("S")
+                .define('S', ModItems.LONGTSUKA.get())
+                .define('R', ModItems.TSUKA.get())
+                .define('T', ModItems.TAMAHAGANE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TAMAHAGANE_INGOT.get()), has(ModItems.TAMAHAGANE_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.TSUKA.get()), has(ModItems.TSUKA.get()))
+                .unlockedBy(getHasName(ModItems.LONGTSUKA.get()), has(ModItems.LONGTSUKA.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CHUKOTO.get(), 1)
+                .pattern("NN")
+                .pattern(" T")
+                .pattern(" S")
+                .define('S', ModItems.TSUKA.get())
+                .define('N', ModItems.TAMAHAGANE_NUGGET.get())
+                .define('T', ModItems.TAMAHAGANE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TAMAHAGANE_INGOT.get()), has(ModItems.TAMAHAGANE_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.TAMAHAGANE_NUGGET.get()), has(ModItems.TAMAHAGANE_NUGGET.get()))
+                .unlockedBy(getHasName(ModItems.TSUKA.get()), has(ModItems.TSUKA.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TSURUGI.get(), 1)
+                .pattern("N")
+                .pattern("T")
+                .pattern("S")
+                .define('S', ModItems.TSUKA.get())
+                .define('N', ModItems.TAMAHAGANE_NUGGET.get())
+                .define('T', ModItems.TAMAHAGANE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.TAMAHAGANE_INGOT.get()), has(ModItems.TAMAHAGANE_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.TAMAHAGANE_NUGGET.get()), has(ModItems.TAMAHAGANE_NUGGET.get()))
+                .unlockedBy(getHasName(ModItems.TSUKA.get()), has(ModItems.TSUKA.get()))
+                .save(pWriter);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.YOROI_STAND_ITEM.get(), 1)
+                .pattern("SSS")
+                .pattern(" S ")
+                .pattern("SSS")
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .save(pWriter);
 
         //Smelting
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_TAMAHAGANE.get())
@@ -462,6 +534,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(pWriter, List.of(ModItems.RAW_TAMAHAGANE.get()),
                 RecipeCategory.MISC, ModItems.TAMAHAGANE_INGOT.get(),
                 0.7f, 200, "tamahagane_ingot");
+
+        //PLACEHOLDER RECIPES
+        oreBlasting(pWriter, List.of(Items.IRON_INGOT),
+                RecipeCategory.MISC, ModItems.TAMAHAGANE_INGOT.get(),
+                0.7f, 210, "tamahagane_ingot");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SILK.get())
+                .requires(Items.STRING, 2)
+                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                .save(pWriter);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COTTONSEED.get())
+                .requires(Items.WHITE_WOOL, 1)
+                .requires(Items.WHEAT_SEEDS, 1)
+                .unlockedBy(getHasName(Items.WHEAT_SEEDS), has(Items.WHEAT_SEEDS))
+                .save(pWriter);
+
 
     }
 
