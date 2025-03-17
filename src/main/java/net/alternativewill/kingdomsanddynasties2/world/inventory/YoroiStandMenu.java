@@ -55,15 +55,15 @@ public class YoroiStandMenu extends AbstractContainerMenu implements Supplier<Ma
 
         addDyeSlots();
         addArmorSlots(pInv);
-        this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 134, 18)));
+        this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 134, 8)));
         addInventorySlots(pInv);
     }
 
     private void addDyeSlots() {
         for (int row = 0; row < 4; ++row) {
             int slotIndex = row * 2;
-            int xPosition = 62 - 35;
-            int yPosition = 15 + row * 18;
+            int xPosition = 61 - 35;
+            int yPosition = 8 + row * 18;
 
             this.customSlots.put(slotIndex, this.addSlot(new DyeSlot(internal, slotIndex, xPosition, yPosition) {
                 @Override
@@ -81,7 +81,7 @@ public class YoroiStandMenu extends AbstractContainerMenu implements Supplier<Ma
         for (int row = 0; row < 4; ++row) {
             int slotIndex = row * 2 + 1;
             int xPosition = 62;
-            int yPosition = 15 + row * 18;
+            int yPosition = 8 + row * 18;
 
             int armorSlotIndex = 3 - row;
             this.customSlots.put(slotIndex, this.addSlot(new Slot(pInv, 36 + armorSlotIndex, xPosition, yPosition) {
