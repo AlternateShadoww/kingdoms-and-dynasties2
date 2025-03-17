@@ -29,7 +29,7 @@ import static net.minecraft.client.gui.screens.inventory.InventoryScreen.renderE
 
 @OnlyIn(Dist.CLIENT)
 public class YoroiStandScreen extends AbstractContainerScreen<YoroiStandMenu> {
-    private static final ResourceLocation BACKGROUND = new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "textures/gui/armor_workbench.png");
+    private static final ResourceLocation BACKGROUND = new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "textures/gui/armor_workbench_texture.png");
     private final Map<Integer, Slot> customSlots = menu.get();
     private final Level world;
     private final int x, y, z;
@@ -76,7 +76,7 @@ public class YoroiStandScreen extends AbstractContainerScreen<YoroiStandMenu> {
         ImageButton clearColorButton = this.addRenderableWidget(new ImageButton(
                 new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "textures/gui/clear_button.png"),
                 this.leftPos + 153,
-                this.topPos + 70,
+                this.topPos + 63,
                 13,
                 13,
                 13,
@@ -95,7 +95,7 @@ public class YoroiStandScreen extends AbstractContainerScreen<YoroiStandMenu> {
             this.addRenderableWidget(new ImageButton(
                     new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "textures/gui/undo_button.png"),
                     this.leftPos + 10,
-                    this.topPos + 17 + (i * 18),
+                    this.topPos + 10 + (i * 18),
                     13,
                     13,
                     13,
@@ -117,7 +117,7 @@ public class YoroiStandScreen extends AbstractContainerScreen<YoroiStandMenu> {
         RenderSystem.setShaderColor(1, 1, 1, 1);
         RenderSystem.enableBlend();
         RenderSystem.defaultBlendFunc();
-        pGraphics.blit(BACKGROUND, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+        pGraphics.blit(BACKGROUND, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, 256, 256);
         RenderSystem.disableBlend();
     }
 
