@@ -47,6 +47,8 @@ public class ModItems {
     public static final RegistryObject<Item> YOROI_STAND_ITEM = ITEMS.register("yoroi_stand",
             () -> new YoroiStandItem(new Item.Properties().stacksTo(16)));
 
+    public static final RegistryObject<Item> FIRESTICK = ITEMS.register("fire_stick",
+            () -> new FlintAndSteelItem(new Item.Properties().durability(1)));
     public static final RegistryObject<Item> KABUTO = ITEMS.register("kabuto",
             () -> new KabutoItem(ModArmorMaterials.BAREARMOR, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> HOSHI_HELMET = ITEMS.register("hoshi_kabuto",
@@ -81,6 +83,12 @@ public class ModItems {
             () -> new HaraateHakamaArmorItem(ModArmorMaterials.DOMARU, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> HARAATEHAKAMA_LEGGINGS = ITEMS.register("hara-ate_hakama",
             () -> new HaraateHakamaArmorItem(ModArmorMaterials.DOMARU, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> HEIAN_OYOROI_CHESTPLATE = ITEMS.register("heian_oyoroi_do",
+            () -> new HeianOyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> HEIAN_OYOROI_LEGGINGS = ITEMS.register("heian_oyoroi_haidate",
+            () -> new HeianOyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> HEIAN_OYOROI_BOOTS = ITEMS.register("heian_oyoroi_geta",
+            () -> new HeianOyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final RegistryObject<Item> TENGUMASK = ITEMS.register("tengu_mask",
             () -> new TenguMaskItem(ModArmorMaterials.MENYOROI, ArmorItem.Type.HELMET, new Item.Properties()));
@@ -133,7 +141,8 @@ public class ModItems {
             () -> new SwordItem(ModToolTiers.YARI, 5,-2.4f, new Item.Properties()));
     public static final RegistryObject<Item> YARI = ITEMS.register("yari",
             () -> new SwordItem(ModToolTiers.YARI, 5,-2.55f, new Item.Properties()));
-
+    public static final RegistryObject<Item> YUMI = ITEMS.register("yumi",
+            () -> new YumiItem(new Item.Properties().stacksTo(1).durability(384)));
     public static final RegistryObject<Item> SMALLTSUKA = ITEMS.register("small_tsuka",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TSUKA = ITEMS.register("tsuka",

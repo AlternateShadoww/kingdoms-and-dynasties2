@@ -7,8 +7,11 @@ import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
@@ -29,10 +32,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         //ONLY BLOCKS UNTIL FURTHER NOTICE
         this.add(ModBlocks.IRON_SAND_BLOCK.get(), createOreDrop(ModBlocks.IRON_SAND_BLOCK.get(), ModItems.IRON_SAND.get()));
+        this.add(ModBlocks.DIRTY_SILT.get(), createOreDrop(ModBlocks.DIRTY_SILT.get(), Items.DIRT));
+        this.add(ModBlocks.GRAVELLED_SILT.get(), createOreDrop(ModBlocks.GRAVELLED_SILT.get(), Items.GRAVEL));
 
         this.dropSelf(ModBlocks.GRAVELLED_IRON_SAND_BLOCK.get());
         this.dropSelf(ModBlocks.MOSSY_IRON_SAND_BLOCK.get());
-        
+
+        this.dropSelf(ModBlocks.PALE_GRANITE.get());
+        this.dropSelf(ModBlocks.PALE_GRANITE_BRICKS.get());
+        this.dropSelf(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get());
+
         this.dropSelf(ModBlocks.MULLBERRY_LOG.get());
         this.dropSelf(ModBlocks.MULLBERRY_WOOD.get());
         this.dropSelf(ModBlocks.STRIPPED_MULLBERRY_LOG.get());

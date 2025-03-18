@@ -31,7 +31,7 @@ public class KariginuItem extends DyeableArmorItem implements GeoItem {
 
     // Standard Colors
     public static final int STANDARD_PRIMARY_COLOR = 16777215 ;
-    public static final int STANDARD_SECONDARY_COLOR = 7646310;
+    public static final int STANDARD_SECONDARY_COLOR = 16777215;
     public static final int STANDARD_GOLD_COLOR = 15124606;
     public static final int STANDARD_SILVER_COLOR = 12571350 ;
     public static final int STANDARD_COLOR = 16777215;

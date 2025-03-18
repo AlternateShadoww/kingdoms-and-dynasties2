@@ -76,8 +76,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // Simple cube blocks with uniform texture
         registerSimpleBlocks(
                 ModBlocks.IRON_SAND_BLOCK,
+                ModBlocks.DIRTY_SILT,
+                ModBlocks.GRAVELLED_SILT,
                 ModBlocks.MOSSY_IRON_SAND_BLOCK,
-                ModBlocks.GRAVELLED_IRON_SAND_BLOCK
+                ModBlocks.GRAVELLED_IRON_SAND_BLOCK,
+                ModBlocks.PALE_GRANITE,
+                ModBlocks.PALE_GRANITE_BRICKS,
+                ModBlocks.MOSSY_PALE_GRANITE_BRICKS
         );
 
         // Blocks with special rendering or custom textures

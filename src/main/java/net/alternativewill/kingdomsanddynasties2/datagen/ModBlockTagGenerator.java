@@ -18,8 +18,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     }
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-        this.tag(BlockTags.LOGS_THAT_BURN)
+        this.tag(BlockTags.DIRT)
                 .add(ModBlocks.IRON_SAND_BLOCK.get())
+                .add(ModBlocks.GRAVELLED_SILT.get())
+                .add(ModBlocks.DIRTY_SILT.get())
                 .add(ModBlocks.GRAVELLED_IRON_SAND_BLOCK.get())
                 .add(ModBlocks.MOSSY_IRON_SAND_BLOCK.get());
 
@@ -36,7 +38,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SUGI_WOOD.get())
                 .add(ModBlocks.STRIPPED_SUGI_LOG.get())
                 .add(ModBlocks.STRIPPED_SUGI_WOOD.get());
-
+        this.tag(BlockTags.STONE_BRICKS)
+                .add(ModBlocks.PALE_GRANITE.get())
+                .add(ModBlocks.PALE_GRANITE_BRICKS.get())
+                .add(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get());
 
 
 
