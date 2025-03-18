@@ -8,6 +8,7 @@ import net.alternativewill.kingdomsanddynasties2.entity.client.YoroiStandRendere
 import net.alternativewill.kingdomsanddynasties2.item.ModCreativeModeTabs;
 import net.alternativewill.kingdomsanddynasties2.item.ModItems;
 import net.alternativewill.kingdomsanddynasties2.network.ModNetworking;
+import net.alternativewill.kingdomsanddynasties2.util.ModItemProperties;
 import net.alternativewill.kingdomsanddynasties2.world.inventory.ModMenus;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -74,7 +75,11 @@ public class KingdomsAndDynasties2
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS);
     }
-
+    @SubscribeEvent
+    public static void onCommonSetup(FMLCommonSetupEvent event) {
+        LOGGER.info("Common setup for Kingdoms and Dynasties 2 mod");
+        ModItemProperties.addCustomItemProperties();  // Make sure this is called during setup
+    }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)

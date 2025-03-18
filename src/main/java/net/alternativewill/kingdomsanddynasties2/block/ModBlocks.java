@@ -31,13 +31,24 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, KingdomsAndDynasties2.MOD_ID);
 
+    public static final RegistryObject<Block> PALE_GRANITE = registerBlock("pale_granite",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).mapColor(MapColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1, 3).sound(SoundType.DEEPSLATE_BRICKS)));
+    public static final RegistryObject<Block> PALE_GRANITE_BRICKS = registerBlock("pale_granite_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).mapColor(MapColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1, 3).sound(SoundType.DEEPSLATE_BRICKS)));
+    public static final RegistryObject<Block> MOSSY_PALE_GRANITE_BRICKS = registerBlock("mossy_pale_granite_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).mapColor(MapColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1, 3).sound(SoundType.DEEPSLATE_BRICKS)));
+
+
     public static final RegistryObject<Block> IRON_SAND_BLOCK = registerBlock("iron_sand_block",
             () -> new GravelBlock(BlockBehaviour.Properties.copy(Blocks.SAND).mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BELL).requiresCorrectToolForDrops().strength(3.0F, 4.0F).sound(SoundType.SAND)));
     public static final RegistryObject<Block> GRAVELLED_IRON_SAND_BLOCK = registerBlock("gravelled_iron_sand_block",
             () -> new GravelBlock(BlockBehaviour.Properties.copy(Blocks.GRAVEL).mapColor(MapColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(3.0F, 4.0F).sound(SoundType.SAND)));
     public static final RegistryObject<Block> MOSSY_IRON_SAND_BLOCK = registerBlock("mossy_iron_sand_block",
             () -> new GravelBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).mapColor(MapColor.TERRACOTTA_GREEN).requiresCorrectToolForDrops().strength(3.0F, 4.0F).sound(SoundType.SAND)));
-
+    public static final RegistryObject<Block> DIRTY_SILT = registerBlock("dirty_silt",
+            () -> new GravelBlock(BlockBehaviour.Properties.copy(Blocks.SAND).mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BELL).strength(0.4F, 0.5F).sound(SoundType.SAND)));
+    public static final RegistryObject<Block> GRAVELLED_SILT = registerBlock("gravelled_silt",
+            () -> new GravelBlock(BlockBehaviour.Properties.copy(Blocks.SAND).mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BELL).strength(0.4F, 0.5F).sound(SoundType.SAND)));
     public static final RegistryObject<Block> COTTON_CROP = BLOCKS.register("cotton_crop",
             () -> new CottonCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 

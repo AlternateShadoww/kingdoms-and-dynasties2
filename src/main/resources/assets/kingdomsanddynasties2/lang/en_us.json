@@ -14,7 +14,12 @@
   "item.kingdomsanddynasties2.kabuto": "Kabuto",
   "item.kingdomsanddynasties2.kasuri": "Kasuri",
 
+  "block.kingdomsanddynasties2.pale_granite": "Pale Granite",
+  "block.kingdomsanddynasties2.pale_granite_bricks": "Pale Granite Bricks",
+  "block.kingdomsanddynasties2.mossy_pale_granite_bricks": "Mossy Pale Granite Bricks",
   "block.kingdomsanddynasties2.iron_sand_block": "Iron Sand Block",
+  "block.kingdomsanddynasties2.dirty_silt": "Dirty Silt",
+  "block.kingdomsanddynasties2.gravelled_silt": "Gravelled Silt",
   "block.kingdomsanddynasties2.gravelled_iron_sand_block": "Gravelled Iron Sand Block",
   "block.kingdomsanddynasties2.mossy_iron_sand_block": "Mossy Iron Sand Block",
 
@@ -128,7 +133,8 @@
   "item.kingdomsanddynasties2.hoko": "Hoko",
   "item.kingdomsanddynasties2.chukoto": "Chukoto",
   "item.kingdomsanddynasties2.tsurugi": "Tsurugi",
-
+  "item.kingdomsanddynasties2.yumi": "Yumi",
+  "item.kingdomsanddynasties2.fire_stick": "Fire Stick",
 
   "item.kingdomsanddynasties2.patterned_scroll": "Patterned Scroll",
 

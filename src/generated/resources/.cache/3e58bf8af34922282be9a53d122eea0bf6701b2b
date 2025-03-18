@@ -1,6 +1,8 @@
-// 1.20.1	2024-12-13T12:54:51.6447974	Tags for minecraft:block mod id kingdomsanddynasties2
+// 1.20.1	2025-03-18T04:45:36.5538143	Tags for minecraft:block mod id kingdomsanddynasties2
+0592caaa66cec202eb55dad0d075748572e5a1c7 data/minecraft/tags/blocks/dirt.json
 fa4088e77b03e5648bf39e208b157cd8fa983290 data/minecraft/tags/blocks/fences.json
 d052d26a08af132ba0ec6e7c44f53d756f1c11d5 data/minecraft/tags/blocks/fence_gates.json
-5855e4b6283ab46bddde0714b8b3c3354c445d00 data/minecraft/tags/blocks/logs_that_burn.json
+756daf695e383514cf35f4251150a4df9be548aa data/minecraft/tags/blocks/logs_that_burn.json
 6ffe7e97c7481059125c65f6405efc39c7c12b39 data/minecraft/tags/blocks/planks.json
+5c0000cc6c9a9b5eccd542a85561bd34f1e3a577 data/minecraft/tags/blocks/stone_bricks.json
 75de9e81fc9b62f0ac92afa80b1b4ed3ddcacfcf data/minecraft/tags/blocks/walls.json

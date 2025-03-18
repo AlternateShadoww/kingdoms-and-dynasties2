@@ -61,14 +61,14 @@ public class YoroiStandScreen extends AbstractContainerScreen<YoroiStandMenu> {
         this.renderTooltip(pGraphics, mouseX, mouseY);
 
         //TODO: CODE THAT HIGHLIGHTS THE SLOTS IN RED
-        for (Map.Entry<Integer, Slot> entry : menu.get().entrySet()) {
-            Slot slot = entry.getValue();
-            if (slot != null) {
-                int x = leftPos + slot.x;
-                int y = topPos + slot.y;
-                pGraphics.fill(x, y, x + 16, y + 16, 0x80FF0000);
-            }
-        }
+     //   for (Map.Entry<Integer, Slot> entry : menu.get().entrySet()) {
+     //       Slot slot = entry.getValue();
+     //       if (slot != null) {
+     //           int x = leftPos + slot.x;
+     //           int y = topPos + slot.y;
+     //           pGraphics.fill(x, y, x + 16, y + 16, 0x80FF0000);
+     //       }
+     //   }
         //TODO: END OF CODE THAT HIGHLIGHTS THE SLOTS IN RED
     }
 

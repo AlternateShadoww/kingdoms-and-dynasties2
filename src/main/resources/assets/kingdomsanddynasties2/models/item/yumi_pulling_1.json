@@ -1,0 +1,6 @@
+{
+  "parent": "kingdomsanddynasties2:item/yumi",
+  "textures": {
+    "layer0": "kingdomsanddynasties2:item/yumi_pulling_1"
+  }
+}

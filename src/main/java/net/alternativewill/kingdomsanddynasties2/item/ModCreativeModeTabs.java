@@ -67,12 +67,20 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MULLBERRY_LEAVES.get());
                         output.accept(ModBlocks.SUGI_LEAVES.get());
 
+                        //PALE_GRANITE
+                        output.accept(ModBlocks.PALE_GRANITE.get());
+                        output.accept(ModBlocks.PALE_GRANITE_BRICKS.get());
+                        output.accept(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get());
+
                         //IRONSAND
+                        output.accept(ModBlocks.DIRTY_SILT.get());
+                        output.accept(ModBlocks.GRAVELLED_SILT.get());
                         output.accept(ModBlocks.IRON_SAND_BLOCK.get());
                         output.accept(ModBlocks.GRAVELLED_IRON_SAND_BLOCK.get());
                         output.accept(ModBlocks.MOSSY_IRON_SAND_BLOCK.get());
 
                         //MATERIALS
+                        output.accept(ModItems.FIRESTICK.get());
                         output.accept(ModItems.COTTON.get());
                         output.accept(ModItems.KASURI.get());
                         output.accept(ModItems.COTTONSEED.get());
@@ -127,7 +135,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.DOMARU_CHESTPLATE.get());
                         output.accept(ModItems.DOMARU_LEGGINGS.get());
                         output.accept(ModItems.DOMARU_BOOTS.get());
-                        
+
                         output.accept(ModItems.HARAATE_CHESTPLATE.get());
                         output.accept(ModItems.HARAATE_LEGGINGS.get());
                         output.accept(ModItems.HARAATEHAKAMA_CHESTPLATE.get());
@@ -147,6 +155,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NAGINATA.get());
                         output.accept(ModItems.YARI.get());
                         output.accept(ModItems.HOKO.get());
+                        output.accept(ModItems.YUMI.get());
 
 
                     })

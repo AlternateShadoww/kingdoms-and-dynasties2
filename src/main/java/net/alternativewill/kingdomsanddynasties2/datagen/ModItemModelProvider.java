@@ -51,16 +51,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.KASURI);
         simpleItem(ModItems.COTTONSEED);
         simpleItem(ModItems.YOROI_STAND_ITEM);
-        simpleItem(ModItems.FIRESTICK);
 
         //BLOCK ITEMS
-        evenSimplerBlockItem(ModBlocks.PALE_GRANITE);
-        evenSimplerBlockItem(ModBlocks.PALE_GRANITE_BRICKS);
-        evenSimplerBlockItem(ModBlocks.MOSSY_PALE_GRANITE_BRICKS);
-
         evenSimplerBlockItem(ModBlocks.IRON_SAND_BLOCK);
-        evenSimplerBlockItem(ModBlocks.DIRTY_SILT);
-        evenSimplerBlockItem(ModBlocks.GRAVELLED_SILT);
         evenSimplerBlockItem(ModBlocks.GRAVELLED_IRON_SAND_BLOCK);
         evenSimplerBlockItem(ModBlocks.MOSSY_IRON_SAND_BLOCK);
         evenSimplerBlockItem(ModBlocks.RED_PINE_LOG);
@@ -355,7 +348,7 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
                 .rotation(0, 90, -45)  // Mirrored rotation
                 .translation(0F, 11, 4)  // Reverse X translation
-                .scale(1.6F, 1.6F, 1F).end()
+                .scale(1.2F, 1.2F, 1F).end()
                 .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
                 .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
                 .translation(2, 4, 0) // Increase X translation slightly (move right)

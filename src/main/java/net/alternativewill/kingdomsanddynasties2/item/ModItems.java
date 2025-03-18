@@ -83,12 +83,6 @@ public class ModItems {
             () -> new HaraateHakamaArmorItem(ModArmorMaterials.DOMARU, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> HARAATEHAKAMA_LEGGINGS = ITEMS.register("hara-ate_hakama",
             () -> new HaraateHakamaArmorItem(ModArmorMaterials.DOMARU, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-    public static final RegistryObject<Item> HEIAN_OYOROI_CHESTPLATE = ITEMS.register("heian_oyoroi_do",
-            () -> new HeianOyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-    public static final RegistryObject<Item> HEIAN_OYOROI_LEGGINGS = ITEMS.register("heian_oyoroi_haidate",
-            () -> new HeianOyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-    public static final RegistryObject<Item> HEIAN_OYOROI_BOOTS = ITEMS.register("heian_oyoroi_geta",
-            () -> new HeianOyoroiArmorItem(ModArmorMaterials.OYOROI, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final RegistryObject<Item> TENGUMASK = ITEMS.register("tengu_mask",
             () -> new TenguMaskItem(ModArmorMaterials.MENYOROI, ArmorItem.Type.HELMET, new Item.Properties()));
