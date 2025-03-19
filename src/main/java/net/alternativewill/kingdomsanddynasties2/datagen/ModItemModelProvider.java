@@ -51,6 +51,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.KASURI);
         simpleItem(ModItems.COTTONSEED);
         simpleItem(ModItems.YOROI_STAND_ITEM);
+        simpleItem(ModItems.FIRESTICK);
 
         //BLOCK ITEMS
         evenSimplerBlockItem(ModBlocks.IRON_SAND_BLOCK);
