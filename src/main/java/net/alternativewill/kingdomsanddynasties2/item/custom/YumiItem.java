@@ -1,5 +1,6 @@
 package net.alternativewill.kingdomsanddynasties2.item.custom;
 
+import net.alternativewill.kingdomsanddynasties2.KingdomsAndDynasties2;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
@@ -27,8 +28,8 @@ public class YumiItem extends BowItem {
                 if (power >= 0.1) {
                     if (!world.isClientSide) {
                         AbstractArrow arrow = new Arrow(world, player);
-                        arrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, power * 3.0F, 1.0F);
-                        arrow.setBaseDamage(arrow.getBaseDamage() * 2.0);  // Double the base arrow damage
+                        arrow.setBaseDamage(arrow.getBaseDamage() * 2.0);
+                        arrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, power * 6.0F, 1.0F);
                         world.addFreshEntity(arrow);
                     }
 
@@ -39,4 +40,16 @@ public class YumiItem extends BowItem {
             }
         }
     }
+
+    public static float getPowerForTime(int pCharge) {
+        float f = (float)pCharge / /*change this to make the draw faster or slower -->*/ 50.0F;
+        f = (f * f + f * 2.0F) / 3.0F;
+        if (f > 1.0F) {
+            f = 1.0F;
+        }
+
+        return f;
+    }
+    //if you do change the draw speed, you have to edit the model too
+    //change the value of minecraft:pull in the latter two overrides to multiples of 0.65 and 0.9 respectively, in seconds
 }

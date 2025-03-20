@@ -83,14 +83,14 @@
     {
       "predicate": {
         "minecraft:pulling": 1,
-        "minecraft:pull": 0.65
+        "minecraft:pull": 1.625
       },
       "model": "kingdomsanddynasties2:item/yumi_pulling_1"
     },
     {
       "predicate": {
         "minecraft:pulling": 1,
-        "minecraft:pull": 0.9
+        "minecraft:pull": 2.25
       },
       "model": "kingdomsanddynasties2:item/yumi_pulling_2"
     }
