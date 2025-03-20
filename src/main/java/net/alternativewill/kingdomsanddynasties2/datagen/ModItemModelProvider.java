@@ -54,6 +54,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.FIRESTICK);
 
         //BLOCK ITEMS
+        evenSimplerBlockItem(ModBlocks.WILD_COTTON);
         evenSimplerBlockItem(ModBlocks.IRON_SAND_BLOCK);
         evenSimplerBlockItem(ModBlocks.GRAVELLED_IRON_SAND_BLOCK);
         evenSimplerBlockItem(ModBlocks.MOSSY_IRON_SAND_BLOCK);

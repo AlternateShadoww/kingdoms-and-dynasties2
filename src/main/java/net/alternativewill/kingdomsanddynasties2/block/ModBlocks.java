@@ -51,6 +51,8 @@ public class ModBlocks {
             () -> new GravelBlock(BlockBehaviour.Properties.copy(Blocks.SAND).mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BELL).strength(0.4F, 0.5F).sound(SoundType.SAND)));
     public static final RegistryObject<Block> COTTON_CROP = BLOCKS.register("cotton_crop",
             () -> new CottonCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> WILD_COTTON = registerBlock("wild_cotton",
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.CORNFLOWER).mapColor(MapColor.TERRACOTTA_GREEN).noOcclusion().noCollission()));
 
     public static final RegistryObject<Block> RED_PINE_LOG = registerBlock("red_pine_log",
             () -> new ModFlamableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));

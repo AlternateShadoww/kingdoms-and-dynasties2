@@ -12,12 +12,14 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -34,7 +36,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.IRON_SAND_BLOCK.get(), createOreDrop(ModBlocks.IRON_SAND_BLOCK.get(), ModItems.IRON_SAND.get()));
         this.add(ModBlocks.DIRTY_SILT.get(), createOreDrop(ModBlocks.DIRTY_SILT.get(), Items.DIRT));
         this.add(ModBlocks.GRAVELLED_SILT.get(), createOreDrop(ModBlocks.GRAVELLED_SILT.get(), Items.GRAVEL));
-
+        this.add(ModBlocks.WILD_COTTON.get(), LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(ModItems.COTTONSEED.get()))
+                )
+                .withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(ModItems.SILK.get()))
+                )
+        );;
         this.dropSelf(ModBlocks.GRAVELLED_IRON_SAND_BLOCK.get());
         this.dropSelf(ModBlocks.MOSSY_IRON_SAND_BLOCK.get());
 

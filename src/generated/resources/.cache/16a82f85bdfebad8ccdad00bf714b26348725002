@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-18T20:40:20.5409639	Item Models: kingdomsanddynasties2
+// 1.20.1	2025-03-19T21:41:23.7525557	Item Models: kingdomsanddynasties2
 323a0f0b15512ebb6c61018bdbabb72ea13a3f83 assets/kingdomsanddynasties2/models/item/chukoto.json
 d7ae6069e945c7a853ddc5c147e1a2eeaf693e02 assets/kingdomsanddynasties2/models/item/cotton.json
 4cdd7fb6640ca0fc9bfa30489515a6196c682b2a assets/kingdomsanddynasties2/models/item/cottonseed.json
@@ -79,5 +79,6 @@ fdf534572923442b0bcc0820f6173418e162aabc assets/kingdomsanddynasties2/models/ite
 2fe7ad8de48dc53fc5fd719301b216550c72fced assets/kingdomsanddynasties2/models/item/tsurugi.json
 ab1f2e360a7649d85c14346a756842383d27124b assets/kingdomsanddynasties2/models/item/wakizashi.json
 2847e6a806958ebefddaf426261201de91b56468 assets/kingdomsanddynasties2/models/item/wakizashi_sheath.json
+c06f4ba6c4ebc554c9904983b318de1fa21fea5a assets/kingdomsanddynasties2/models/item/wild_cotton.json
 8bae1ef187ba85c6e395bf0cad00f54a445eddfc assets/kingdomsanddynasties2/models/item/yari.json
 16deff8cf874c7d485eed4295388a7f1a7613d62 assets/kingdomsanddynasties2/models/item/yoroi_stand.json

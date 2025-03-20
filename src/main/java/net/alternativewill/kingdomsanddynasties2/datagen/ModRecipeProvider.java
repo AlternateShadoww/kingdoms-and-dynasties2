@@ -82,6 +82,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ModItems.COTTON.get())
                 .unlockedBy(getHasName(ModItems.COTTON.get()), has(ModItems.COTTON.get()))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FIRESTICK.get(), 2)
+                .pattern(" S")
+                .pattern("S ")
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TAMAHAGANE_PLATE.get(), 1)
                 .pattern("SS")

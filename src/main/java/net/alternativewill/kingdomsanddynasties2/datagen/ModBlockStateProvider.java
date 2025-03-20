@@ -26,7 +26,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         registerTreeBlocks();
         registerCrops();
         registerGeneralBlocks();
-        
+
+
+        simpleBlock(ModBlocks.WILD_COTTON.get(), models().getExistingFile(modLoc("block/wild_cotton")));
         // Stair blocks
         stairsBlock(((StairBlock) ModBlocks.SUGI_STAIRS.get()), blockTexture(ModBlocks.SUGI_PLANKS.get()));
         stairsBlock(((StairBlock) ModBlocks.RED_PINE_STAIRS.get()), blockTexture(ModBlocks.RED_PINE_PLANKS.get()));
@@ -86,7 +88,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         );
 
         // Blocks with special rendering or custom textures
-        registerSpecialBlocks();
+        registerSpecialBlocks(
+        );
     }
     @SafeVarargs
     private void registerSimpleBlocks(RegistryObject<Block>... blocks) {

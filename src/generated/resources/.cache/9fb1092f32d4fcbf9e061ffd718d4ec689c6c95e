@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-05T01:01:05.7312198	Recipes
+// 1.20.1	2025-03-18T21:12:14.5498371	Recipes
 57c54fc00481923703a478647b79a6ee7ff67187 data/kingdomsanddynasties2/advancements/recipes/misc/chukoto.json
 d28774729f66aa635d15eb300cfe609c2d8757d5 data/kingdomsanddynasties2/advancements/recipes/misc/cottonseed.json
 84e8ae71b60340faa1a41cd07d5b9e98ab3545fb data/kingdomsanddynasties2/advancements/recipes/misc/do-maru_do.json
@@ -7,6 +7,7 @@ c6b1835dd6e49da812fb46bd879845d715c4e5f8 data/kingdomsanddynasties2/advancements
 ed65ab46f81e36f54d64e3b98979584b5cb46822 data/kingdomsanddynasties2/advancements/recipes/misc/eboshi_hat.json
 ab31c91f1533267455309f365098fd8f512cff38 data/kingdomsanddynasties2/advancements/recipes/misc/eboshi_hat2.json
 811071709c1159521dbe8b8ba6931f656573c3ed data/kingdomsanddynasties2/advancements/recipes/misc/eboshi_kabuto.json
+97b353d5a57c39e761c00fac1922e145695e2ea9 data/kingdomsanddynasties2/advancements/recipes/misc/fire_stick.json
 76fed30dfb540fd2155c3f45088276f72423ceaa data/kingdomsanddynasties2/advancements/recipes/misc/gi.json
 ce18e6c8ad109fef185636b2f1c0c840c0b87203 data/kingdomsanddynasties2/advancements/recipes/misc/hakama.json
 2f74a773e6350a7baee25aacd5a7df5a98084585 data/kingdomsanddynasties2/advancements/recipes/misc/hara-ate_do.json
@@ -66,6 +67,7 @@ ff2589ab6dbfd3c07299b4fd9abfc77fbc6e3fe5 data/kingdomsanddynasties2/recipes/do-m
 09de70b1271c355625a3d92c53a53f0d8e8f179e data/kingdomsanddynasties2/recipes/eboshi_hat.json
 701a6372a28a7769b61afd23ec8326e6bfb3ca1c data/kingdomsanddynasties2/recipes/eboshi_hat2.json
 60e30e6bc2d458d737d93706bbbbc09555028bea data/kingdomsanddynasties2/recipes/eboshi_kabuto.json
+e313ae1995103463c98ce95dce2c7b8055c2b648 data/kingdomsanddynasties2/recipes/fire_stick.json
 523e76b84566ae90b27ca727afb2fb08589021d8 data/kingdomsanddynasties2/recipes/gi.json
 fbc726a658bf8c7cac065268d5d2fe90f3cd5029 data/kingdomsanddynasties2/recipes/hakama.json
 27decbde277ebd2431843511a36fc1f1b0ee9ece data/kingdomsanddynasties2/recipes/hara-ate_do.json

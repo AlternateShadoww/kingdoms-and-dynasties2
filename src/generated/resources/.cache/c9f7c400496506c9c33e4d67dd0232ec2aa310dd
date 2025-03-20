@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-18T04:45:36.5478091	Block States: kingdomsanddynasties2
+// 1.20.1	2025-03-19T20:59:50.9840659	Block States: kingdomsanddynasties2
 e71a9e8fa3cb414ff1374df25665308313d72675 assets/kingdomsanddynasties2/blockstates/cotton_crop.json
 d1d68a1d8895f16c81cea0b21af283ef8c036c52 assets/kingdomsanddynasties2/blockstates/dirty_silt.json
 479aa0dde5a06ce32f2753896e3be165dce5dfcd assets/kingdomsanddynasties2/blockstates/gravelled_iron_sand_block.json
@@ -53,6 +53,7 @@ aefc1789a919ee02e955147ed2c1cc42a9c49da4 assets/kingdomsanddynasties2/blockstate
 8105b1295aa2a5ac246ceb70078b7c25defd3de5 assets/kingdomsanddynasties2/blockstates/sugi_trapdoor.json
 0c3f8e1baa7e936ca2b886b99955fbdd51fe8db3 assets/kingdomsanddynasties2/blockstates/sugi_wall.json
 8fee34c69a1c7cedfa840367968bcb1091a0f726 assets/kingdomsanddynasties2/blockstates/sugi_wood.json
+0dc87c227ee73bc1f2698c81540339ca539e0f0a assets/kingdomsanddynasties2/blockstates/wild_cotton.json
 96cc3480a377442bfdc450c81719e8728035503b assets/kingdomsanddynasties2/models/block/cotton_crop0.json
 14da8e07e8432158fea7c3e35531c9932386cd6f assets/kingdomsanddynasties2/models/block/cotton_crop1.json
 c90c5ceffff577315b3c6972bf4c4b0b54008c23 assets/kingdomsanddynasties2/models/block/cotton_crop2.json

@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-18T04:45:36.5518125	Loot Tables
+// 1.20.1	2025-03-19T21:35:43.4789224	Loot Tables
 edde058fef2ffead0d3bb3abd92b5ccca8226247 data/kingdomsanddynasties2/loot_tables/blocks/cotton_crop.json
 15588591ca4e9e7d698a66967ab30ce2f9199cc1 data/kingdomsanddynasties2/loot_tables/blocks/dirty_silt.json
 d2092e75c679316aee5d3721fa054027074040f4 data/kingdomsanddynasties2/loot_tables/blocks/gravelled_iron_sand_block.json
@@ -53,3 +53,4 @@ f7130b122d592fd881aff3b955a8a2991c65f1e9 data/kingdomsanddynasties2/loot_tables/
 376328a897db668ab035c46833c288dd68fb6c30 data/kingdomsanddynasties2/loot_tables/blocks/sugi_trapdoor.json
 2360bae82d1a58f3bafcfa3125073cbddaafae00 data/kingdomsanddynasties2/loot_tables/blocks/sugi_wall.json
 5447aeec316c7c9b74f4cb3696b67a1ab4204042 data/kingdomsanddynasties2/loot_tables/blocks/sugi_wood.json
+d08e1abe2a66035b9fccf90add178a23f974f491 data/kingdomsanddynasties2/loot_tables/blocks/wild_cotton.json
