@@ -4,6 +4,7 @@ import net.alternativewill.kingdomsanddynasties2.entity.ModEntities;
 import net.alternativewill.kingdomsanddynasties2.entity.custom.YoroiStandEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -33,7 +34,8 @@ public class YoroiStandItem extends Item {
             Vec3 vec3 = Vec3.atBottomCenterOf(blockPos);
 
             YoroiStandEntity yoroiStandEntity = new YoroiStandEntity(ModEntities.YOROI_STAND.get(), level);
-            yoroiStandEntity.setPos(vec3.x(), vec3.y(), vec3.z());
+            float f = (float) Mth.floor((Mth.wrapDegrees(pContext.getRotation() - 180.0F) + 22.5F) / 45.0F) * 45.0F;
+            yoroiStandEntity.moveTo(vec3.x(), vec3.y(), vec3.z(), f, 0.0f);
 
             level.addFreshEntity(yoroiStandEntity);
             itemStack.shrink(1);
