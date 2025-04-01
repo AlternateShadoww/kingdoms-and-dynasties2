@@ -367,6 +367,26 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.HAKAMA.get()), has(ModItems.HAKAMA.get()))
                 .unlockedBy(getHasName(ModItems.HARAATE_CHESTPLATE.get()), has(ModItems.HARAATE_CHESTPLATE.get()))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TENGUMASK.get(), 1)
+                .pattern(" BY")
+                .pattern("SBR")
+                .pattern(" B ")
+                .define('S', Items.STICK)
+                .define('B', Items.BAMBOO_PLANKS)
+                .define('R', Items.RED_DYE)
+                .define('Y', Items.YELLOW_DYE)
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .unlockedBy(getHasName(Items.BAMBOO_PLANKS), has(Items.BAMBOO_PLANKS))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MENPO.get(), 1)
+                .pattern("STS")
+                .pattern("NTN")
+                .define('S', ModItems.SILK.get())
+                .define('T', ModItems.TAMAHAGANE_INGOT.get())
+                .define('N', ModItems.TAMAHAGANE_NUGGET.get())
+                .unlockedBy(getHasName(ModItems.TAMAHAGANE_INGOT.get()), has(ModItems.TAMAHAGANE_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.TAMAHAGANE_NUGGET.get()), has(ModItems.TAMAHAGANE_NUGGET.get()))
+                .save(pWriter);
         //KARIGINU
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.KARIGINU.get(), 1)
                 .pattern("S S")
@@ -412,6 +432,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         //WEAPONS
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.YUMI.get(), 1)
+                .pattern("BTS")
+                .pattern("T S")
+                .pattern("BTS")
+                .define('S', ModItems.SILK.get())
+                .define('T', Items.STICK)
+                .define('B', Items.BAMBOO_PLANKS)
+                .unlockedBy(getHasName(ModItems.SILK.get()), has(ModItems.SILK.get()))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .unlockedBy(getHasName(Items.BAMBOO_PLANKS), has(Items.BAMBOO_PLANKS))
+                .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TANTO.get(), 1)
                 .pattern("N")
                 .pattern("T")
@@ -523,6 +554,83 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.TSUKA.get()), has(ModItems.TSUKA.get()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SHIKKUI_PLASTER.get(), 2)
+                .pattern("KN")
+                .pattern("NE")
+                .define('E', Items.EGG)
+                .define('N', Items.CLAY_BALL)
+                .define('K', Items.KELP)
+                .unlockedBy(getHasName(Items.EGG), has(Items.EGG))
+                .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
+                .unlockedBy(getHasName(Items.KELP), has(Items.KELP))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PALE_GRANITE_BRICKS.get(), 4)
+                .pattern("NN")
+                .pattern("NN")
+                .define('N', ModBlocks.PALE_GRANITE.get())
+                .unlockedBy(getHasName(ModBlocks.PALE_GRANITE.get()), has(ModBlocks.PALE_GRANITE.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PALE_GRANITE_SLAB.get(), 6)
+                .pattern("NNN")
+                .define('N', ModBlocks.PALE_GRANITE.get())
+                .unlockedBy(getHasName(ModBlocks.PALE_GRANITE.get()), has(ModBlocks.PALE_GRANITE.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PALE_GRANITE_BRICK_SLAB.get(), 6)
+                .pattern("NNN")
+                .define('N', ModBlocks.PALE_GRANITE_BRICKS.get())
+                .unlockedBy(getHasName(ModBlocks.PALE_GRANITE_BRICKS.get()), has(ModBlocks.PALE_GRANITE_BRICKS.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MOSSY_PALE_GRANITE_BRICK_SLAB.get(), 6)
+                .pattern("NNN")
+                .define('N', ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get())
+                .unlockedBy(getHasName(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get()), has(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PALE_GRANITE_STAIRS.get(), 6)
+                .pattern("N  ")
+                .pattern("NN ")
+                .pattern("NNN")
+                .define('N', ModBlocks.PALE_GRANITE.get())
+                .unlockedBy(getHasName(ModBlocks.PALE_GRANITE.get()), has(ModBlocks.PALE_GRANITE.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PALE_GRANITE_BRICK_STAIRS.get(), 6)
+                .pattern("N  ")
+                .pattern("NN ")
+                .pattern("NNN")
+                .define('N', ModBlocks.PALE_GRANITE_BRICKS.get())
+                .unlockedBy(getHasName(ModBlocks.PALE_GRANITE_BRICKS.get()), has(ModBlocks.PALE_GRANITE_BRICKS.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MOSSY_PALE_GRANITE_BRICK_STAIRS.get(), 6)
+                .pattern("N  ")
+                .pattern("NN ")
+                .pattern("NNN")
+                .define('N', ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get())
+                .unlockedBy(getHasName(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get()), has(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PALE_GRANITE_WALL.get(), 6)
+                .pattern("NNN")
+                .pattern("NNN")
+                .define('N', ModBlocks.PALE_GRANITE.get())
+                .unlockedBy(getHasName(ModBlocks.PALE_GRANITE.get()), has(ModBlocks.PALE_GRANITE.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PALE_GRANITE_BRICK_WALL.get(), 6)
+                .pattern("NNN")
+                .pattern("NNN")
+                .define('N', ModBlocks.PALE_GRANITE_BRICKS.get())
+                .unlockedBy(getHasName(ModBlocks.PALE_GRANITE_BRICKS.get()), has(ModBlocks.PALE_GRANITE_BRICKS.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MOSSY_PALE_GRANITE_BRICK_WALL.get(), 6)
+                .pattern("NNN")
+                .pattern("NNN")
+                .define('N', ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get())
+                .unlockedBy(getHasName(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get()), has(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get()))
+                .save(pWriter);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get())
+                .requires(ModBlocks.PALE_GRANITE_BRICKS.get(), 1)
+                .requires(Items.MOSS_CARPET, 4)
+                .unlockedBy(getHasName(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get()), has(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get()))
+                .save(pWriter);
+
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.YOROI_STAND_ITEM.get(), 1)
                 .pattern("SSS")
@@ -542,19 +650,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 0.7f, 200, "tamahagane_ingot");
 
         //PLACEHOLDER RECIPES
-        oreBlasting(pWriter, List.of(Items.IRON_INGOT),
-                RecipeCategory.MISC, ModItems.TAMAHAGANE_INGOT.get(),
-                0.7f, 210, "tamahagane_ingot");
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SILK.get())
-                .requires(Items.STRING, 2)
-                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
-                .save(pWriter);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COTTONSEED.get())
-                .requires(Items.WHITE_WOOL, 1)
-                .requires(Items.WHEAT_SEEDS, 1)
-                .unlockedBy(getHasName(Items.WHEAT_SEEDS), has(Items.WHEAT_SEEDS))
-                .save(pWriter);
-
 
     }
 

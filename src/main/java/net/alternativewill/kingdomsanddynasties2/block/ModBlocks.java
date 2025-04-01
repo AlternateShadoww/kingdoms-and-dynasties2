@@ -32,11 +32,32 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, KingdomsAndDynasties2.MOD_ID);
 
     public static final RegistryObject<Block> PALE_GRANITE = registerBlock("pale_granite",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).mapColor(MapColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1, 3).sound(SoundType.DEEPSLATE_BRICKS)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANDESITE).mapColor(MapColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1, 3).sound(SoundType.DEEPSLATE_BRICKS)));
     public static final RegistryObject<Block> PALE_GRANITE_BRICKS = registerBlock("pale_granite_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).mapColor(MapColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1, 3).sound(SoundType.DEEPSLATE_BRICKS)));
     public static final RegistryObject<Block> MOSSY_PALE_GRANITE_BRICKS = registerBlock("mossy_pale_granite_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).mapColor(MapColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1, 3).sound(SoundType.DEEPSLATE_BRICKS)));
+    public static final RegistryObject<Block> MOSSY_PALE_GRANITE_BRICK_STAIRS = registerBlock("mossy_pale_granite_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.PALE_GRANITE.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
+    public static final RegistryObject<Block> MOSSY_PALE_GRANITE_BRICK_SLAB = registerBlock("mossy_pale_granite_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
+    public static final RegistryObject<Block> PALE_GRANITE_STAIRS = registerBlock("pale_granite_stairs",
+            () -> new StairBlock(() -> ModBlocks.PALE_GRANITE.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.ANDESITE)));
+    public static final RegistryObject<Block> PALE_GRANITE_SLAB = registerBlock("pale_granite_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE)));
+    public static final RegistryObject<Block> PALE_GRANITE_BRICK_STAIRS = registerBlock("pale_granite_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.PALE_GRANITE.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
+    public static final RegistryObject<Block> PALE_GRANITE_BRICK_SLAB = registerBlock("pale_granite_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
+    public static final RegistryObject<Block> PALE_GRANITE_WALL = registerBlock("pale_granite_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE).sound(SoundType.DEEPSLATE_BRICKS)));
+    public static final RegistryObject<Block> PALE_GRANITE_BRICK_WALL = registerBlock("pale_granite_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).sound(SoundType.DEEPSLATE_BRICKS)));
+    public static final RegistryObject<Block> MOSSY_PALE_GRANITE_BRICK_WALL = registerBlock("mossy_pale_granite_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).sound(SoundType.DEEPSLATE_BRICKS)));
+
+    public static final RegistryObject<Block> SHIKKUI_PLASTER = registerBlock("shikkui_plaster",
+            () -> new PlankBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).mapColor(MapColor.COLOR_LIGHT_GRAY).requiresCorrectToolForDrops().strength(1, 3).sound(SoundType.PACKED_MUD)));
 
 
     public static final RegistryObject<Block> IRON_SAND_BLOCK = registerBlock("iron_sand_block",

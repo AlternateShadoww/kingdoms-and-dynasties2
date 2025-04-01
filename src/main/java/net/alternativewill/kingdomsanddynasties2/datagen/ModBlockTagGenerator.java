@@ -47,6 +47,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.PLANKS)
                 .add(ModBlocks.MULLBERRY_PLANKS.get())
+                .add(ModBlocks.SHIKKUI_PLASTER.get())
                 .add(ModBlocks.RED_PINE_PLANKS.get())
                 .add(ModBlocks.SUGI_PLANKS.get());
 
@@ -64,7 +65,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.MULLBERRY_WALL.get())
                 .add(ModBlocks.RED_PINE_WALL.get())
+                .add(ModBlocks.PALE_GRANITE_WALL.get())
+                .add(ModBlocks.PALE_GRANITE_BRICK_WALL.get())
+                .add(ModBlocks.MOSSY_PALE_GRANITE_BRICK_WALL.get())
                 .add(ModBlocks.SUGI_WALL.get());
+
     }
 
 }

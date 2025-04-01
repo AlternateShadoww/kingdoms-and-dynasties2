@@ -30,11 +30,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlock(ModBlocks.WILD_COTTON.get(), models().getExistingFile(modLoc("block/wild_cotton")));
         // Stair blocks
+        stairsBlock(((StairBlock) ModBlocks.PALE_GRANITE_STAIRS.get()), blockTexture(ModBlocks.PALE_GRANITE.get()));
+        stairsBlock(((StairBlock) ModBlocks.PALE_GRANITE_BRICK_STAIRS.get()), blockTexture(ModBlocks.PALE_GRANITE_BRICKS.get()));
+        stairsBlock(((StairBlock) ModBlocks.MOSSY_PALE_GRANITE_BRICK_STAIRS.get()), blockTexture(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get()));
         stairsBlock(((StairBlock) ModBlocks.SUGI_STAIRS.get()), blockTexture(ModBlocks.SUGI_PLANKS.get()));
         stairsBlock(((StairBlock) ModBlocks.RED_PINE_STAIRS.get()), blockTexture(ModBlocks.RED_PINE_PLANKS.get()));
         stairsBlock(((StairBlock) ModBlocks.MULLBERRY_STAIRS.get()), blockTexture(ModBlocks.MULLBERRY_PLANKS.get()));
 
         // Slab blocks
+        slabBlock(((SlabBlock) ModBlocks.PALE_GRANITE_SLAB.get()), blockTexture(ModBlocks.PALE_GRANITE.get()), blockTexture(ModBlocks.PALE_GRANITE.get()));
+        slabBlock(((SlabBlock) ModBlocks.PALE_GRANITE_BRICK_SLAB.get()), blockTexture(ModBlocks.PALE_GRANITE_BRICKS.get()), blockTexture(ModBlocks.PALE_GRANITE_BRICKS.get()));
+        slabBlock(((SlabBlock) ModBlocks.MOSSY_PALE_GRANITE_BRICK_SLAB.get()), blockTexture(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get()), blockTexture(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get()));
         slabBlock(((SlabBlock) ModBlocks.SUGI_SLAB.get()), blockTexture(ModBlocks.SUGI_PLANKS.get()), blockTexture(ModBlocks.SUGI_PLANKS.get()));
         slabBlock(((SlabBlock) ModBlocks.RED_PINE_SLAB.get()), blockTexture(ModBlocks.RED_PINE_PLANKS.get()), blockTexture(ModBlocks.RED_PINE_PLANKS.get()));
         slabBlock(((SlabBlock) ModBlocks.MULLBERRY_SLAB.get()), blockTexture(ModBlocks.MULLBERRY_PLANKS.get()), blockTexture(ModBlocks.MULLBERRY_PLANKS.get()));
@@ -60,6 +66,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGateBlock(((FenceGateBlock) ModBlocks.MULLBERRY_FENCE_GATE.get()), blockTexture(ModBlocks.MULLBERRY_PLANKS.get()));
 
         // Wall blocks
+        wallBlock(((WallBlock) ModBlocks.PALE_GRANITE_WALL.get()), blockTexture(ModBlocks.PALE_GRANITE.get()));
+        wallBlock(((WallBlock) ModBlocks.PALE_GRANITE_BRICK_WALL.get()), blockTexture(ModBlocks.PALE_GRANITE_BRICKS.get()));
+        wallBlock(((WallBlock) ModBlocks.MOSSY_PALE_GRANITE_BRICK_WALL.get()), blockTexture(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get()));
         wallBlock(((WallBlock) ModBlocks.SUGI_WALL.get()), blockTexture(ModBlocks.SUGI_LOG.get()));
         wallBlock(((WallBlock) ModBlocks.RED_PINE_WALL.get()), blockTexture(ModBlocks.RED_PINE_LOG.get()));
         wallBlock(((WallBlock) ModBlocks.MULLBERRY_WALL.get()), blockTexture(ModBlocks.MULLBERRY_LOG.get()));
@@ -84,7 +93,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 ModBlocks.GRAVELLED_IRON_SAND_BLOCK,
                 ModBlocks.PALE_GRANITE,
                 ModBlocks.PALE_GRANITE_BRICKS,
-                ModBlocks.MOSSY_PALE_GRANITE_BRICKS
+                ModBlocks.MOSSY_PALE_GRANITE_BRICKS,
+                ModBlocks.SHIKKUI_PLASTER
         );
 
         // Blocks with special rendering or custom textures

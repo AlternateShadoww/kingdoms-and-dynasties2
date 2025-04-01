@@ -36,6 +36,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.tag(ItemTags.PLANKS)
                 .add(ModBlocks.MULLBERRY_PLANKS.get().asItem())
                 .add(ModBlocks.RED_PINE_PLANKS.get().asItem())
+                .add(ModBlocks.SHIKKUI_PLASTER.get().asItem())
                 .add(ModBlocks.SUGI_PLANKS.get().asItem());
+
     }
 }

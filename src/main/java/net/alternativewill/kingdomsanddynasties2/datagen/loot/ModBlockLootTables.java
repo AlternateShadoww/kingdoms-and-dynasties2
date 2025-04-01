@@ -34,8 +34,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         //ONLY BLOCKS UNTIL FURTHER NOTICE
         this.add(ModBlocks.IRON_SAND_BLOCK.get(), createOreDrop(ModBlocks.IRON_SAND_BLOCK.get(), ModItems.IRON_SAND.get()));
-        this.add(ModBlocks.DIRTY_SILT.get(), createOreDrop(ModBlocks.DIRTY_SILT.get(), Items.DIRT));
-        this.add(ModBlocks.GRAVELLED_SILT.get(), createOreDrop(ModBlocks.GRAVELLED_SILT.get(), Items.GRAVEL));
+        this.add(ModBlocks.DIRTY_SILT.get(), createOreDrop(ModBlocks.DIRTY_SILT.get(), ModItems.IRON_SAND.get()));
+        this.add(ModBlocks.GRAVELLED_SILT.get(), createOreDrop(ModBlocks.GRAVELLED_SILT.get(), ModItems.IRON_SAND.get()));
         this.add(ModBlocks.WILD_COTTON.get(), LootTable.lootTable()
                 .withPool(LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
@@ -48,10 +48,23 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         );;
         this.dropSelf(ModBlocks.GRAVELLED_IRON_SAND_BLOCK.get());
         this.dropSelf(ModBlocks.MOSSY_IRON_SAND_BLOCK.get());
+        this.dropSelf(ModBlocks.SHIKKUI_PLASTER.get());
 
         this.dropSelf(ModBlocks.PALE_GRANITE.get());
+        this.add(ModBlocks.PALE_GRANITE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PALE_GRANITE_SLAB.get()));
         this.dropSelf(ModBlocks.PALE_GRANITE_BRICKS.get());
+        this.add(ModBlocks.PALE_GRANITE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PALE_GRANITE_BRICK_SLAB.get()));
         this.dropSelf(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get());
+        this.add(ModBlocks.MOSSY_PALE_GRANITE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.MOSSY_PALE_GRANITE_BRICK_SLAB.get()));
+        this.dropSelf(ModBlocks.MOSSY_PALE_GRANITE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.PALE_GRANITE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.PALE_GRANITE_STAIRS.get());
+        this.dropSelf(ModBlocks.MOSSY_PALE_GRANITE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.PALE_GRANITE_BRICK_WALL.get());
+        this.dropSelf(ModBlocks.PALE_GRANITE_WALL.get());
 
         this.dropSelf(ModBlocks.MULLBERRY_LOG.get());
         this.dropSelf(ModBlocks.MULLBERRY_WOOD.get());

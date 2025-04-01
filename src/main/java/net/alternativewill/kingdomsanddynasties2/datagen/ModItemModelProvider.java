@@ -76,13 +76,20 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.STRIPPED_MULLBERRY_WOOD);
         evenSimplerBlockItem(ModBlocks.MULLBERRY_PLANKS);
         evenSimplerBlockItem(ModBlocks.MULLBERRY_LEAVES);
+        evenSimplerBlockItem(ModBlocks.SHIKKUI_PLASTER);
 
         //STAIRS
+        evenSimplerBlockItem(ModBlocks.PALE_GRANITE_STAIRS);
+        evenSimplerBlockItem(ModBlocks.PALE_GRANITE_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.MOSSY_PALE_GRANITE_BRICK_STAIRS);
         evenSimplerBlockItem(ModBlocks.SUGI_STAIRS);
         evenSimplerBlockItem(ModBlocks.RED_PINE_STAIRS);
         evenSimplerBlockItem(ModBlocks.MULLBERRY_STAIRS);
 
         //SLABS
+        evenSimplerBlockItem(ModBlocks.PALE_GRANITE_SLAB);
+        evenSimplerBlockItem(ModBlocks.PALE_GRANITE_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.MOSSY_PALE_GRANITE_BRICK_SLAB);
         evenSimplerBlockItem(ModBlocks.SUGI_SLAB);
         evenSimplerBlockItem(ModBlocks.RED_PINE_SLAB);
         evenSimplerBlockItem(ModBlocks.MULLBERRY_SLAB);
@@ -107,6 +114,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.MULLBERRY_FENCE_GATE);
 
         //WALLS
+        wallItem(ModBlocks.PALE_GRANITE_WALL, ModBlocks.PALE_GRANITE);
+        wallItem(ModBlocks.PALE_GRANITE_BRICK_WALL, ModBlocks.PALE_GRANITE_BRICKS);
+        wallItem(ModBlocks.MOSSY_PALE_GRANITE_BRICK_WALL, ModBlocks.MOSSY_PALE_GRANITE_BRICKS);
         wallItem(ModBlocks.SUGI_WALL, ModBlocks.SUGI_LOG);
         wallItem(ModBlocks.RED_PINE_WALL, ModBlocks.RED_PINE_LOG);
         wallItem(ModBlocks.MULLBERRY_WALL, ModBlocks.MULLBERRY_LOG);
@@ -156,6 +166,64 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.LONGTSUKA);
 
 
+        getBuilder("kozuchi")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/kozuchi"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 1, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 7, 0) // Move the item slightly upward
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 45)  // Tilt it slightly to align with the hand
+                .translation(0F, 8, 2)  // Move up and slightly forward
+                .scale(1F, 1F, 1F).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(0, 90, -45)  // Mirrored rotation
+                .translation(0, 8, 2)  // Reverse X translation
+                .scale(1F, 1F, 1F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
+                .translation(2, 4, 0) // Increase X translation slightly (move right)
+                .scale(1.0F, 1.0F, 1.0F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(0, 90, -25) // Mirror rotation for left hand
+                .translation(2, 4, 0) // Adjust X translation slightly for left hand
+                .scale(1.0F, 1.0F, 1.0F).end();
+        getBuilder("paddle")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/paddle"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 1, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 7, 0) // Move the item slightly upward
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 45)  // Tilt it slightly to align with the hand
+                .translation(0F, 8, 2)  // Move up and slightly forward
+                .scale(1.2F, 1.2F, 1F).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(0, 90, -45)  // Mirrored rotation
+                .translation(0, 8, 2)  // Reverse X translation
+                .scale(1.2F, 1.2F, 1F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
+                .translation(2, 4, 0) // Increase X translation slightly (move right)
+                .scale(1.0F, 1.0F, 1.0F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(0, 90, -25) // Mirror rotation for left hand
+                .translation(2, 4, 0) // Adjust X translation slightly for left hand
+                .scale(1.0F, 1.0F, 1.0F).end();
         getBuilder("katana")
                 .parent(new ModelFile.UncheckedModelFile("item/handheld"))
                 .texture("layer0", modLoc("item/katana"))
@@ -330,6 +398,35 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .rotation(0, 90, -25) // Mirror rotation for left hand
                 .translation(2, 4, 0) // Adjust X translation slightly for left hand
                 .scale(1.0F, 1.0F, 1.0F).end();
+        getBuilder("kanabo")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/kanabo"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 1, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 7, 0) // Move the item slightly upward
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 45)  // Tilt it slightly to align with the hand
+                .translation(0F, 8, 2)  // Move up and slightly forward
+                .scale(1.4F, 1.4F, 1F).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(0, 90, -45)  // Mirrored rotation
+                .translation(0, 8, 2)  // Reverse X translation
+                .scale(1.4F, 1.4F, 1F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
+                .translation(2, 4, 0) // Increase X translation slightly (move right)
+                .scale(1.0F, 1.0F, 1.0F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(0, 90, -25) // Mirror rotation for left hand
+                .translation(2, 4, 0) // Adjust X translation slightly for left hand
+                .scale(1.0F, 1.0F, 1.0F).end();
         getBuilder("odachi")
                 .parent(new ModelFile.UncheckedModelFile("item/handheld"))
                 .texture("layer0", modLoc("item/odachi"))
@@ -350,15 +447,15 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
                 .rotation(0, 90, -45)  // Mirrored rotation
                 .translation(0F, 11, 4)  // Reverse X translation
-                .scale(1.2F, 1.2F, 1F).end()
+                .scale(1.6F, 1.6F, 1F).end()
                 .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
                 .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
                 .translation(2, 4, 0) // Increase X translation slightly (move right)
-                .scale(1.0F, 1.0F, 1.0F).end()
+                .scale(1.2F, 1.2F, 1.0F).end()
                 .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
                 .rotation(0, 90, -25) // Mirror rotation for left hand
                 .translation(2, 4, 0) // Adjust X translation slightly for left hand
-                .scale(1.0F, 1.0F, 1.0F).end();
+                .scale(1.2F, 1.2F, 1.0F).end();
         getBuilder("nagamaki")
                 .parent(new ModelFile.UncheckedModelFile("item/handheld"))
                 .texture("layer0", modLoc("item/nagamaki"))

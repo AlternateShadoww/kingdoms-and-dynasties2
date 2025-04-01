@@ -20,67 +20,80 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.kingdomsanddynasty_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         //WOOD
-                        output.accept(ModBlocks.MULLBERRY_LOG.get());
-                        output.accept(ModBlocks.MULLBERRY_WOOD.get());
-                        output.accept(ModBlocks.STRIPPED_MULLBERRY_LOG.get());
-                        output.accept(ModBlocks.STRIPPED_MULLBERRY_WOOD.get());
-                        output.accept(ModBlocks.MULLBERRY_PLANKS.get());
-                        output.accept(ModBlocks.MULLBERRY_STAIRS.get());
-                        output.accept(ModBlocks.MULLBERRY_SLAB.get());
-                        output.accept(ModBlocks.MULLBERRY_BUTTON.get());
-                        output.accept(ModBlocks.MULLBERRY_PRESSURE_PLATE.get());
-                        output.accept(ModBlocks.MULLBERRY_FENCE.get());
-                        output.accept(ModBlocks.MULLBERRY_FENCE_GATE.get());
-                        output.accept(ModBlocks.MULLBERRY_WALL.get());
-                        output.accept(ModBlocks.MULLBERRY_DOOR.get());
-                        output.accept(ModBlocks.MULLBERRY_TRAPDOOR.get());
-                        output.accept(ModBlocks.RED_PINE_LOG.get());
-                        output.accept(ModBlocks.RED_PINE_WOOD.get());
-                        output.accept(ModBlocks.STRIPPED_RED_PINE_LOG.get());
-                        output.accept(ModBlocks.STRIPPED_RED_PINE_WOOD.get());
-                        output.accept(ModBlocks.RED_PINE_PLANKS.get());
-                        output.accept(ModBlocks.RED_PINE_STAIRS.get());
-                        output.accept(ModBlocks.RED_PINE_SLAB.get());
-                        output.accept(ModBlocks.RED_PINE_BUTTON.get());
-                        output.accept(ModBlocks.RED_PINE_PRESSURE_PLATE.get());
-                        output.accept(ModBlocks.RED_PINE_FENCE.get());
-                        output.accept(ModBlocks.RED_PINE_FENCE_GATE.get());
-                        output.accept(ModBlocks.RED_PINE_WALL.get());
-                        output.accept(ModBlocks.RED_PINE_DOOR.get());
-                        output.accept(ModBlocks.RED_PINE_TRAPDOOR.get());
-                        output.accept(ModBlocks.SUGI_LOG.get());
-                        output.accept(ModBlocks.SUGI_WOOD.get());
-                        output.accept(ModBlocks.STRIPPED_SUGI_LOG.get());
-                        output.accept(ModBlocks.STRIPPED_SUGI_WOOD.get());
-                        output.accept(ModBlocks.SUGI_PLANKS.get());
-                        output.accept(ModBlocks.SUGI_STAIRS.get());
-                        output.accept(ModBlocks.SUGI_SLAB.get());
-                        output.accept(ModBlocks.SUGI_BUTTON.get());
-                        output.accept(ModBlocks.SUGI_PRESSURE_PLATE.get());
-                        output.accept(ModBlocks.SUGI_FENCE.get());
-                        output.accept(ModBlocks.SUGI_FENCE_GATE.get());
-                        output.accept(ModBlocks.SUGI_WALL.get());
-                        output.accept(ModBlocks.SUGI_DOOR.get());
-                        output.accept(ModBlocks.SUGI_TRAPDOOR.get());
+                        //output.accept(ModBlocks.MULLBERRY_LOG.get());
+                       // output.accept(ModBlocks.MULLBERRY_WOOD.get());
+                        //output.accept(ModBlocks.STRIPPED_MULLBERRY_LOG.get());
+                       // output.accept(ModBlocks.STRIPPED_MULLBERRY_WOOD.get());
+                        //output.accept(ModBlocks.MULLBERRY_PLANKS.get());
+                       // output.accept(ModBlocks.MULLBERRY_STAIRS.get());
+                       // output.accept(ModBlocks.MULLBERRY_SLAB.get());
+                      // output.accept(ModBlocks.MULLBERRY_BUTTON.get());
+                      //  output.accept(ModBlocks.MULLBERRY_PRESSURE_PLATE.get());
+                      //  output.accept(ModBlocks.MULLBERRY_FENCE.get());
+                       // output.accept(ModBlocks.MULLBERRY_FENCE_GATE.get());
+                       // output.accept(ModBlocks.MULLBERRY_WALL.get());
+                       // output.accept(ModBlocks.MULLBERRY_DOOR.get());
+                       //output.accept(ModBlocks.MULLBERRY_TRAPDOOR.get());
+                        //output.accept(ModBlocks.RED_PINE_LOG.get());
+                       // output.accept(ModBlocks.RED_PINE_WOOD.get());
+                        //output.accept(ModBlocks.STRIPPED_RED_PINE_LOG.get());
+                       // output.accept(ModBlocks.STRIPPED_RED_PINE_WOOD.get());
+                       // output.accept(ModBlocks.RED_PINE_PLANKS.get());
+                       // output.accept(ModBlocks.RED_PINE_STAIRS.get());
+                       // output.accept(ModBlocks.RED_PINE_SLAB.get());
+                       // output.accept(ModBlocks.RED_PINE_BUTTON.get());
+                       // output.accept(ModBlocks.RED_PINE_PRESSURE_PLATE.get());
+                       // output.accept(ModBlocks.RED_PINE_FENCE.get());
+                       // output.accept(ModBlocks.RED_PINE_FENCE_GATE.get());
+                       // output.accept(ModBlocks.RED_PINE_WALL.get());
+                      //  output.accept(ModBlocks.RED_PINE_DOOR.get());
+                       // output.accept(ModBlocks.RED_PINE_TRAPDOOR.get());
+                      //  output.accept(ModBlocks.SUGI_LOG.get());
+                        //output.accept(ModBlocks.SUGI_WOOD.get());
+                      //  output.accept(ModBlocks.STRIPPED_SUGI_LOG.get());
+                        //output.accept(ModBlocks.STRIPPED_SUGI_WOOD.get());
+                       // output.accept(ModBlocks.SUGI_PLANKS.get());
+                       // output.accept(ModBlocks.SUGI_STAIRS.get());
+                       // output.accept(ModBlocks.SUGI_SLAB.get());
+                       // output.accept(ModBlocks.SUGI_BUTTON.get());
+                      // output.accept(ModBlocks.SUGI_PRESSURE_PLATE.get());
+                      //  output.accept(ModBlocks.SUGI_FENCE.get());
+                       // output.accept(ModBlocks.SUGI_FENCE_GATE.get());
+                       // output.accept(ModBlocks.SUGI_WALL.get());
+                       // output.accept(ModBlocks.SUGI_DOOR.get());
+                       // output.accept(ModBlocks.SUGI_TRAPDOOR.get());
                         //FOILAGE
-                        output.accept(ModBlocks.RED_PINE_LEAVES.get());
-                        output.accept(ModBlocks.MULLBERRY_LEAVES.get());
-                        output.accept(ModBlocks.SUGI_LEAVES.get());
+                       // output.accept(ModBlocks.RED_PINE_LEAVES.get());
+                      //  output.accept(ModBlocks.MULLBERRY_LEAVES.get());
+                       // output.accept(ModBlocks.SUGI_LEAVES.get());
 
+
+                        output.accept(ModBlocks.SHIKKUI_PLASTER.get());
                         //PALE_GRANITE
                         output.accept(ModBlocks.PALE_GRANITE.get());
+                        output.accept(ModBlocks.PALE_GRANITE_SLAB.get());
+                        output.accept(ModBlocks.PALE_GRANITE_STAIRS.get());
+                        output.accept(ModBlocks.PALE_GRANITE_WALL.get());
                         output.accept(ModBlocks.PALE_GRANITE_BRICKS.get());
+                        output.accept(ModBlocks.PALE_GRANITE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.PALE_GRANITE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.PALE_GRANITE_BRICK_WALL.get());
                         output.accept(ModBlocks.MOSSY_PALE_GRANITE_BRICKS.get());
+                        output.accept(ModBlocks.MOSSY_PALE_GRANITE_BRICK_SLAB.get());
+                        output.accept(ModBlocks.MOSSY_PALE_GRANITE_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.MOSSY_PALE_GRANITE_BRICK_WALL.get());
 
                         //IRONSAND
                         output.accept(ModBlocks.DIRTY_SILT.get());
                         output.accept(ModBlocks.GRAVELLED_SILT.get());
                         output.accept(ModBlocks.IRON_SAND_BLOCK.get());
-                        output.accept(ModBlocks.GRAVELLED_IRON_SAND_BLOCK.get());
-                        output.accept(ModBlocks.MOSSY_IRON_SAND_BLOCK.get());
+                    //    output.accept(ModBlocks.GRAVELLED_IRON_SAND_BLOCK.get());
+                     //   output.accept(ModBlocks.MOSSY_IRON_SAND_BLOCK.get());
 
                         //MATERIALS
                         output.accept(ModItems.FIRESTICK.get());
+                        output.accept(ModItems.KOZUCHI.get());
+                        output.accept(ModItems.PADDLE.get());
                         output.accept(ModItems.COTTON.get());
                         output.accept(ModItems.KASURI.get());
                         output.accept(ModItems.COTTONSEED.get());
@@ -98,7 +111,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TSUKA.get());
                         output.accept(ModItems.LONGTSUKA.get());
 
-                        output.accept(ModItems.PATTERNED_SCROLL.get());
+                  //      output.accept(ModItems.PATTERNED_SCROLL.get());
 
                         output.accept(ModItems.YOROI_STAND_ITEM.get());
                     })
@@ -155,6 +168,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NAGINATA.get());
                         output.accept(ModItems.YARI.get());
                         output.accept(ModItems.HOKO.get());
+                        output.accept(ModItems.KANABO.get());
                         output.accept(ModItems.YUMI.get());
 
 

@@ -28,8 +28,8 @@ public class YumiItem extends BowItem {
                 if (power >= 0.1) {
                     if (!world.isClientSide) {
                         AbstractArrow arrow = new Arrow(world, player);
-                        arrow.setBaseDamage(arrow.getBaseDamage() * 2.0);
-                        arrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, power * 6.0F, 1.0F);
+                        arrow.setBaseDamage(arrow.getBaseDamage() * 1.5);
+                        arrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, power * 4.5F, 0.5F);
                         world.addFreshEntity(arrow);
                     }
 
@@ -42,7 +42,7 @@ public class YumiItem extends BowItem {
     }
 
     public static float getPowerForTime(int pCharge) {
-        float f = (float)pCharge / /*change this to make the draw faster or slower -->*/ 50.0F;
+        float f = (float)pCharge / /*change this to make the draw faster or slower -->*/ 40.0F;
         f = (f * f + f * 2.0F) / 3.0F;
         if (f > 1.0F) {
             f = 1.0F;

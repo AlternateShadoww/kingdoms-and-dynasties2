@@ -24,6 +24,11 @@ public class ModItems {
     public static final RegistryObject<Item> SILK = ITEMS.register("silk",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> PADDLE = ITEMS.register("paddle",
+            () -> new SwordItem(ModToolTiers.BAMBOO, 0,-2.35f, new Item.Properties()));
+    public static final RegistryObject<Item> KOZUCHI = ITEMS.register("kozuchi",
+            () -> new SwordItem(ModToolTiers.BAMBOO, 0,-2.35f, new Item.Properties()));
+
 
     public static final RegistryObject<Item> IRON_SAND = ITEMS.register("iron_sand",
             () -> new Item(new Item.Properties()));
@@ -113,6 +118,8 @@ public class ModItems {
     public static final RegistryObject<Item> JINGASA5 = ITEMS.register("jingasa_5",
             () -> new Jingasa5Item(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));
 
+    public static final RegistryObject<Item> KANABO = ITEMS.register("kanabo",
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 8,-3.35f, new Item.Properties()));
     public static final RegistryObject<Item> KATANA = ITEMS.register("katana",
             () -> new SwordItem(ModToolTiers.TAMAHAGANE, 5,-2.35f, new Item.Properties()));
     public static final RegistryObject<Item> TANTO = ITEMS.register("tanto",
