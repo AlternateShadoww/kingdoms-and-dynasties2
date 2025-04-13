@@ -5,6 +5,7 @@ import net.alternativewill.kingdomsanddynasties2.block.ModBlocks;
 import net.alternativewill.kingdomsanddynasties2.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -12,6 +13,7 @@ import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.fml.common.Mod;
 
@@ -340,13 +342,29 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GI.get(), 1)
                 .pattern("C C")
                 .pattern("KKK")
-                .pattern("KKK")
+                .pattern("SSS")
                 .define('K', ModItems.KASURI.get())
                 .define('C', ModItems.COTTON.get())
+                .define('S', ModItems.SILK.get())
                 .unlockedBy(getHasName(ModItems.KASURI.get()), has(ModItems.KASURI.get()))
                 .unlockedBy(getHasName(ModItems.COTTON.get()), has(ModItems.COTTON.get()))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GINEW.get(), 1)
+                .pattern("K K")
+                .pattern("KKK")
+                .pattern("KKK")
+                .define('K', ModItems.KASURI.get())
+                .unlockedBy(getHasName(ModItems.KASURI.get()), has(ModItems.KASURI.get()))
+                .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HAKAMA.get(), 1)
+                .pattern("SSS")
+                .pattern("K K")
+                .define('S', ModItems.SILK.get())
+                .define('K', ModItems.KASURI.get())
+                .unlockedBy(getHasName(ModItems.KASURI.get()), has(ModItems.KASURI.get()))
+                .unlockedBy(getHasName(ModItems.SILK.get()), has(ModItems.SILK.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HAKAMANEW.get(), 1)
                 .pattern("SSS")
                 .pattern("K K")
                 .pattern("S S")
@@ -385,6 +403,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('T', ModItems.TAMAHAGANE_INGOT.get())
                 .define('N', ModItems.TAMAHAGANE_NUGGET.get())
                 .unlockedBy(getHasName(ModItems.TAMAHAGANE_INGOT.get()), has(ModItems.TAMAHAGANE_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.TAMAHAGANE_NUGGET.get()), has(ModItems.TAMAHAGANE_NUGGET.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.KANABO.get(), 1)
+                .pattern("NIN")
+                .pattern("NIN")
+                .pattern(" I ")
+                .define('I', ModItems.TAMAHAGANE_INGOT.get())
+                .define('N', ModItems.TAMAHAGANE_NUGGET.get())
+                .unlockedBy(getHasName(ModItems.TAMAHAGANE_INGOT.get()), has(ModItems.TAMAHAGANE_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.TAMAHAGANE_NUGGET.get()), has(ModItems.TAMAHAGANE_NUGGET.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WOODENKANABO.get(), 1)
+                .pattern("NRN")
+                .pattern("NRN")
+                .pattern(" S ")
+                .define('R', ItemTags.PLANKS)
+                .define('N', ModItems.TAMAHAGANE_NUGGET.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.RED_PINE_PLANKS.get()), has(ModBlocks.RED_PINE_PLANKS.get()))
                 .unlockedBy(getHasName(ModItems.TAMAHAGANE_NUGGET.get()), has(ModItems.TAMAHAGANE_NUGGET.get()))
                 .save(pWriter);
         //KARIGINU

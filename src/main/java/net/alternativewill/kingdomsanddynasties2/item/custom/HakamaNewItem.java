@@ -1,6 +1,6 @@
 package net.alternativewill.kingdomsanddynasties2.item.custom;
 
-import net.alternativewill.kingdomsanddynasties2.item.client.GihakamaRenderer;
+import net.alternativewill.kingdomsanddynasties2.item.client.HakamaRenderer;
 import net.alternativewill.kingdomsanddynasties2.item.client.RendererInstances;
 import net.alternativewill.kingdomsanddynasties2.util.ColorCombiner;
 import net.minecraft.client.model.HumanoidModel;
@@ -26,7 +26,7 @@ import software.bernie.geckolib.core.object.PlayState;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class GihakamaItem extends DyeableArmorItem implements GeoItem {
+public class HakamaNewItem extends DyeableArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
     // Standard Colors
@@ -37,20 +37,20 @@ public class GihakamaItem extends DyeableArmorItem implements GeoItem {
     public static final String PRIMARY_PART = "primary";
     public static final String SECONDARY_PART = "secondary";
 
-    public GihakamaItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
+    public HakamaNewItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
     }
 
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
         consumer.accept(new IClientItemExtensions() {
-            private GihakamaRenderer renderer;
+            private HakamaRenderer renderer;
 
             @Override
             public @NotNull HumanoidModel<?> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack,
                                                                    EquipmentSlot equipmentSlot, HumanoidModel<?> original) {
                 if (this.renderer == null)
-                    this.renderer = new GihakamaRenderer();
+                    this.renderer = new HakamaRenderer();
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
                 return this.renderer;
@@ -58,7 +58,7 @@ public class GihakamaItem extends DyeableArmorItem implements GeoItem {
 
             @Override
             public BlockEntityWithoutLevelRenderer getCustomRenderer() {
-                return RendererInstances.GIHAKAMA_ITEM_RENDERER;
+                return RendererInstances.HAKAMA_ITEM_RENDERER;
             }
         });
     }
@@ -74,20 +74,20 @@ public class GihakamaItem extends DyeableArmorItem implements GeoItem {
     }
 
     public void setPrimaryColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, GihakamaItem.PRIMARY_PART, color, STANDARD_PRIMARY_COLOR);
+        setColorTag(stack, HakamaNewItem.PRIMARY_PART, color, STANDARD_PRIMARY_COLOR);
     }
 
     public void setSecondaryColor(@NotNull ItemStack stack, int color) {
-        setColorTag(stack, GihakamaItem.SECONDARY_PART, color, STANDARD_SECONDARY_COLOR);
+        setColorTag(stack, HakamaNewItem.SECONDARY_PART, color, STANDARD_SECONDARY_COLOR);
     }
 
 
     public int getPrimaryColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, GihakamaItem.PRIMARY_PART, STANDARD_PRIMARY_COLOR);
+        return getColorTag(stack, HakamaNewItem.PRIMARY_PART, STANDARD_PRIMARY_COLOR);
     }
 
     public int getSecondaryColor(@NotNull ItemStack stack) {
-        return getColorTag(stack, GihakamaItem.SECONDARY_PART, STANDARD_SECONDARY_COLOR);
+        return getColorTag(stack, HakamaNewItem.SECONDARY_PART, STANDARD_SECONDARY_COLOR);
     }
 
 
@@ -151,7 +151,7 @@ public class GihakamaItem extends DyeableArmorItem implements GeoItem {
     }
 
     public void undoColor(ItemStack stack, int buttonIndex) {
-        if (stack.getItem() instanceof GihakamaItem yoroiArmorItem) {
+        if (stack.getItem() instanceof HakamaNewItem yoroiArmorItem) {
             switch (buttonIndex) {
                 case 0: // Primary color
                     yoroiArmorItem.undoColorTag(stack, PRIMARY_PART, STANDARD_PRIMARY_COLOR);

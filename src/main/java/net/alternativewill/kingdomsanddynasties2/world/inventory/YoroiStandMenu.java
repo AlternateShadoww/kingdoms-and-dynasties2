@@ -4,7 +4,6 @@ import net.alternativewill.kingdomsanddynasties2.item.custom.*;
 import net.alternativewill.kingdomsanddynasties2.world.inventory.slots.DyeSlot;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Inventory;
@@ -24,7 +23,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 import java.util.function.Supplier;
 
 public class YoroiStandMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
@@ -475,6 +473,54 @@ public class YoroiStandMenu extends AbstractContainerMenu implements Supplier<Ma
                     System.out.println("Dye stack is now empty.");
                 }
             }
+        if (armorStack.getItem() instanceof HakamaNewItem HakamaItem) {
+            System.out.println("Found HakamaItem in slot: " + armorSlotIndex);
+            switch (dyeIndex) {
+                case 0: // Primary color
+                    HakamaItem.setPrimaryColor(armorStack, dyeColor);
+                    System.out.println("Set primary color to: " + dyeColor);
+                    break;
+                case 2: // Secondary color
+                    HakamaItem.setSecondaryColor(armorStack, dyeColor);
+                    System.out.println("Set secondary color to: " + dyeColor);
+                    break;
+                default:
+                    System.out.println("Invalid dye index: " + dyeIndex);
+                    break;
+            }
+
+
+            dyeStack.shrink(1);
+            System.out.println("Dye stack shrunk, new count: " + dyeStack.getCount());
+            if (dyeStack.getCount() == 0) {
+                dyeStack = ItemStack.EMPTY;
+                System.out.println("Dye stack is now empty.");
+            }
+        }
+            if (armorStack.getItem() instanceof GiNewItem GiNewItem) {
+                System.out.println("Found GiNewItem in slot: " + armorSlotIndex);
+                switch (dyeIndex) {
+                    case 0: // Primary color
+                        GiNewItem.setPrimaryColor(armorStack, dyeColor);
+                        System.out.println("Set primary color to: " + dyeColor);
+                        break;
+                    case 2: // Secondary color
+                        GiNewItem.setSecondaryColor(armorStack, dyeColor);
+                        System.out.println("Set secondary color to: " + dyeColor);
+                        break;
+                    default:
+                        System.out.println("Invalid dye index: " + dyeIndex);
+                        break;
+                }
+
+
+                dyeStack.shrink(1);
+                System.out.println("Dye stack shrunk, new count: " + dyeStack.getCount());
+                if (dyeStack.getCount() == 0) {
+                    dyeStack = ItemStack.EMPTY;
+                    System.out.println("Dye stack is now empty.");
+                }
+        }
 
 
 

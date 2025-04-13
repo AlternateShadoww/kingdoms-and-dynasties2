@@ -110,6 +110,16 @@ public class CleanArmorPacket {
                         KariginuItem.wipeColors(slot, KariginuItem.GOLD_PART, KariginuItem.STANDARD_GOLD_COLOR, player);
                         KariginuItem.wipeColors(slot, KariginuItem.SILVER_PART, KariginuItem.STANDARD_SILVER_COLOR, player);
                     }
+                    if (slot.getItem() instanceof HakamaNewItem HakamaItem) {
+                        HakamaItem.clearColor(slot);
+                        HakamaItem.wipeColors(slot, HakamaItem.PRIMARY_PART, HakamaItem.STANDARD_PRIMARY_COLOR, player);
+                        HakamaItem.wipeColors(slot, HakamaItem.SECONDARY_PART, HakamaItem.STANDARD_SECONDARY_COLOR, player);
+                    }
+                    if (slot.getItem() instanceof GiNewItem GiNewItem) {
+                        GiNewItem.clearColor(slot);
+                        GiNewItem.wipeColors(slot, GiNewItem.PRIMARY_PART, GiNewItem.STANDARD_PRIMARY_COLOR, player);
+                        GiNewItem.wipeColors(slot, GiNewItem.SECONDARY_PART, GiNewItem.STANDARD_SECONDARY_COLOR, player);
+                    }
 
 
                 });

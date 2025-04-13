@@ -131,6 +131,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.EBOSHIHAT2.get());
 
                         output.accept(ModItems.GI.get());
+                        output.accept(ModItems.GINEW.get());
+                        output.accept(ModItems.HAKAMANEW.get());
                         output.accept(ModItems.HAKAMA.get());
                         output.accept(ModItems.KARIGINU.get());
                         output.accept(ModItems.KARIGINU_SASHINUKI.get());
@@ -168,6 +170,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NAGINATA.get());
                         output.accept(ModItems.YARI.get());
                         output.accept(ModItems.HOKO.get());
+                        output.accept(ModItems.WOODENKANABO.get());
                         output.accept(ModItems.KANABO.get());
                         output.accept(ModItems.YUMI.get());
 

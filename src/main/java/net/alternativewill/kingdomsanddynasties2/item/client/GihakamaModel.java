@@ -17,7 +17,7 @@ public class GihakamaModel extends GeoModel<GihakamaItem> {
                 fileName = "gi";
                 break;
             case LEGGINGS:
-                fileName = "hakama";
+                fileName = "tattsuke_bakama";
                 break;
             default:
                 fileName = "gi"; // Default fallback

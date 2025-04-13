@@ -96,8 +96,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> GI = ITEMS.register("gi",
             () -> new GihakamaItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-    public static final RegistryObject<Item> HAKAMA = ITEMS.register("hakama",
+    public static final RegistryObject<Item> HAKAMA = ITEMS.register("tattsuke_bakama",
             () -> new GihakamaItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> GINEW = ITEMS.register("samue_gi",
+            () -> new GiNewItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> HAKAMANEW = ITEMS.register("hakama",
+            () -> new HakamaNewItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> KARIGINU = ITEMS.register("kariginu_gi",
             () -> new KariginuItem(ModArmorMaterials.GIHAKAMA, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> KARIGINU_SASHINUKI = ITEMS.register("kariginu_sashinuki",
@@ -118,6 +122,8 @@ public class ModItems {
     public static final RegistryObject<Item> JINGASA5 = ITEMS.register("jingasa_5",
             () -> new Jingasa5Item(ModArmorMaterials.BAMBOO, ArmorItem.Type.HELMET, new Item.Properties()));
 
+    public static final RegistryObject<Item> WOODENKANABO = ITEMS.register("wooden_kanabo",
+            () -> new SwordItem(ModToolTiers.REDPINE, 6,-3.1f, new Item.Properties().durability(250)));
     public static final RegistryObject<Item> KANABO = ITEMS.register("kanabo",
             () -> new SwordItem(ModToolTiers.TAMAHAGANE, 8,-3.35f, new Item.Properties()));
     public static final RegistryObject<Item> KATANA = ITEMS.register("katana",

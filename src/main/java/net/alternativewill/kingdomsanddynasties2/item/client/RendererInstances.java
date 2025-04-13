@@ -10,6 +10,8 @@ public class RendererInstances {
     public static final SujiKabutoItemRenderer SUJI_ITEM_RENDERER = new SujiKabutoItemRenderer();
     public static final TenguMaskItemRenderer TENGU_MASK_RENDERER = new TenguMaskItemRenderer();
     public static final GihakamaItemRenderer GIHAKAMA_ITEM_RENDERER = new GihakamaItemRenderer();
+    public static final GiNewItemRenderer GINEW_ITEM_RENDERER = new GiNewItemRenderer();
+    public static final HakamaItemRenderer HAKAMA_ITEM_RENDERER = new HakamaItemRenderer();
     public static final KariginuItemRenderer KARIGINU_ITEM_RENDERER = new KariginuItemRenderer();
     public static final HaraateItemRenderer HARAATE_ITEM_RENDERER = new HaraateItemRenderer();
     public static final HaraateHakamaItemRenderer HARAATE_HAKAMA_ITEM_RENDERER = new HaraateHakamaItemRenderer();

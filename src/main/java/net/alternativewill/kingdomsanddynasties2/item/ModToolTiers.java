@@ -22,6 +22,10 @@ public class ModToolTiers {
             new ForgeTier(3, 750, 0.2f, 1f, 10,
                     ModTags.Blocks.NEEDS_TAMAHAGANE_TOOL, () -> Ingredient.of(ModItems.TAMAHAGANE_INGOT.get())),
             new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "tamahagane"), List.of(Tiers.DIAMOND), List.of());
+    public static final Tier REDPINE = TierSortingRegistry.registerTier(
+            new ForgeTier(3, 250, 0.2f, 1f, 10,
+                    Tags.Blocks.NEEDS_WOOD_TOOL, () -> Ingredient.of(ModBlocks.RED_PINE_PLANKS.get())),
+            new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "red_pine"), List.of(Tiers.WOOD), List.of());
     public static final Tier TANTO = TierSortingRegistry.registerTier(
             new ForgeTier(3, 450, 0.2f, 1f, 10,
                     ModTags.Blocks.NEEDS_TAMAHAGANE_TOOL, () -> Ingredient.of(ModItems.TAMAHAGANE_INGOT.get())),

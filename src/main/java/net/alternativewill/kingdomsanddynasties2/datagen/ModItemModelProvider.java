@@ -427,6 +427,35 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .rotation(0, 90, -25) // Mirror rotation for left hand
                 .translation(2, 4, 0) // Adjust X translation slightly for left hand
                 .scale(1.0F, 1.0F, 1.0F).end();
+        getBuilder("wooden_kanabo")
+                .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", modLoc("item/wooden_kanabo"))
+                .transforms()
+                .transform(ItemDisplayContext.FIXED)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 1, 0) // Move the item slightly upward
+                .scale(1.5F, 1.5F, 1.5F) // Scale the item up to 1.5x
+                .end()
+                .transform(ItemDisplayContext.GROUND)
+                .rotation(180, 360, 180) // Rotate the item to face forward in the item frame
+                .translation(0, 7, 0) // Move the item slightly upward
+                .scale(1.2F, 1.2F, 1).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 45)  // Tilt it slightly to align with the hand
+                .translation(0F, 8, 2)  // Move up and slightly forward
+                .scale(1.4F, 1.4F, 1F).end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(0, 90, -45)  // Mirrored rotation
+                .translation(0, 8, 2)  // Reverse X translation
+                .scale(1.4F, 1.4F, 1F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(0, -90, 25) // Keep rotation similar to the diamond sword
+                .translation(2, 4, 0) // Increase X translation slightly (move right)
+                .scale(1.0F, 1.0F, 1.0F).end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(0, 90, -25) // Mirror rotation for left hand
+                .translation(2, 4, 0) // Adjust X translation slightly for left hand
+                .scale(1.0F, 1.0F, 1.0F).end();
         getBuilder("odachi")
                 .parent(new ModelFile.UncheckedModelFile("item/handheld"))
                 .texture("layer0", modLoc("item/odachi"))
