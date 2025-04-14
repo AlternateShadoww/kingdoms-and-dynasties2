@@ -135,7 +135,7 @@ public class ModItems {
     public static final RegistryObject<Item> TACHI = ITEMS.register("tachi",
             () -> new SwordItem(ModToolTiers.TAMAHAGANE, 6,-2.7f, new Item.Properties()));
     public static final RegistryObject<Item> ODACHI = ITEMS.register("odachi",
-            () -> new SwordItem(ModToolTiers.ODACHI, 8,-3, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.ODACHI, 4,-3, new Item.Properties()));
     public static final RegistryObject<Item> CHUKOTO = ITEMS.register("chukoto",
             () -> new SwordItem(ModToolTiers.TAMAHAGANE, 6,-2.45f, new Item.Properties()));
     public static final RegistryObject<Item> TSURUGI = ITEMS.register("tsurugi",

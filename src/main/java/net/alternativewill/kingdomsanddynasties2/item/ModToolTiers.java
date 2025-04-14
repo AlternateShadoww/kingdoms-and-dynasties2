@@ -35,7 +35,7 @@ public class ModToolTiers {
                     ModTags.Blocks.NEEDS_TAMAHAGANE_TOOL, () -> Ingredient.of(ModItems.TAMAHAGANE_INGOT.get())),
             new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "wakizashi"), List.of(Tiers.DIAMOND), List.of());
     public static final Tier ODACHI = TierSortingRegistry.registerTier(
-            new ForgeTier(3, 700, 0.2f, 1f, 10,
+            new ForgeTier(3, 700, 0.2f, 2.25f, 10,
                     ModTags.Blocks.NEEDS_TAMAHAGANE_TOOL, () -> Ingredient.of(ModItems.TAMAHAGANE_INGOT.get())),
             new ResourceLocation(KingdomsAndDynasties2.MOD_ID, "odachi"), List.of(Tiers.DIAMOND), List.of());
     public static final Tier NAGINATA = TierSortingRegistry.registerTier(

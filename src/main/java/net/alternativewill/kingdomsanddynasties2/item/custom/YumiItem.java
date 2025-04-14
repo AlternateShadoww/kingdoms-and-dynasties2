@@ -31,6 +31,13 @@ public class YumiItem extends BowItem {
                         arrow.setBaseDamage(arrow.getBaseDamage() * 1.5);
                         arrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, power * 4.5F, 0.5F);
                         world.addFreshEntity(arrow);
+
+                        if (!player.getAbilities().instabuild) {
+                            ammo.shrink(1);
+                            if (ammo.isEmpty()) {
+                                player.getInventory().removeItem(ammo);
+                            }
+                        }
                     }
 
                     stack.hurtAndBreak(1, player, (e) -> e.broadcastBreakEvent(player.getUsedItemHand()));
