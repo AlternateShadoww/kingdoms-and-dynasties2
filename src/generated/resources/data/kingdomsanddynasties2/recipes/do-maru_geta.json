@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "kingdomsanddynasties2:tamahagane_ingot"
+    }
+  },
+  "pattern": [
+    "T T",
+    "T T"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:do-maru_geta"
+  },
+  "show_notification": true
+}

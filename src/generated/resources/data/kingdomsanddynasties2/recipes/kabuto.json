@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "kingdomsanddynasties2:tamahagane_plate"
+    },
+    "S": {
+      "item": "kingdomsanddynasties2:silk"
+    },
+    "T": {
+      "item": "kingdomsanddynasties2:tamahagane_ingot"
+    }
+  },
+  "pattern": [
+    "TPT",
+    "T T",
+    "SSS"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:kabuto"
+  },
+  "show_notification": true
+}

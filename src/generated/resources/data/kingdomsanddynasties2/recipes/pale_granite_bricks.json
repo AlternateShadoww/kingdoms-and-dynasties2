@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "kingdomsanddynasties2:pale_granite"
+    }
+  },
+  "pattern": [
+    "NN",
+    "NN"
+  ],
+  "result": {
+    "count": 4,
+    "item": "kingdomsanddynasties2:pale_granite_bricks"
+  },
+  "show_notification": true
+}

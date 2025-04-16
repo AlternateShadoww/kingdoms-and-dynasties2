@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "kingdomsanddynasties2:pale_granite_bricks"
+    },
+    {
+      "item": "minecraft:moss_carpet"
+    },
+    {
+      "item": "minecraft:moss_carpet"
+    },
+    {
+      "item": "minecraft:moss_carpet"
+    },
+    {
+      "item": "minecraft:moss_carpet"
+    }
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:mossy_pale_granite_bricks"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kingdomsanddynasties2:cottonseed"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kingdomsanddynasties2:silk"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "kingdomsanddynasties2:blocks/wild_cotton"
+}

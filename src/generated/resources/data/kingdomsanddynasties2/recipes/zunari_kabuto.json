@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "kingdomsanddynasties2:kabuto"
+    },
+    "T": {
+      "item": "kingdomsanddynasties2:tamahagane_ingot"
+    }
+  },
+  "pattern": [
+    "TTT",
+    "TKT"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:zunari_kabuto"
+  },
+  "show_notification": true
+}

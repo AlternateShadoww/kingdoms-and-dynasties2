@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "kingdomsanddynasties2:cotton"
+    },
+    "K": {
+      "item": "kingdomsanddynasties2:kasuri"
+    }
+  },
+  "pattern": [
+    "C C",
+    "KKK",
+    "KKK"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:gi"
+  },
+  "show_notification": true
+}

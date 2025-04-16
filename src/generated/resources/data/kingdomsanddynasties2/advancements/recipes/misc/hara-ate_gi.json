@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gi": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kingdomsanddynasties2:gi"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_hara-ate_do": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kingdomsanddynasties2:hara-ate_do"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kingdomsanddynasties2:hara-ate_gi"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_gi",
+      "has_hara-ate_do",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kingdomsanddynasties2:hara-ate_gi"
+    ]
+  },
+  "sends_telemetry_event": false
+}

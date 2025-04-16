@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "kingdomsanddynasties2:tsuka"
+    },
+    "T": {
+      "item": "kingdomsanddynasties2:tamahagane_ingot"
+    }
+  },
+  "pattern": [
+    "T",
+    "S",
+    "S"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:nagamaki"
+  },
+  "show_notification": true
+}

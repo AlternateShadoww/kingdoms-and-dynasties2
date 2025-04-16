@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bamboo"
+    },
+    "S": {
+      "item": "kingdomsanddynasties2:silk"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "pattern": [
+    " W ",
+    "WBW",
+    "SSS"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:jingasa_4"
+  },
+  "show_notification": true
+}

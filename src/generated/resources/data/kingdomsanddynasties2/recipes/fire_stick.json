@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " S",
+    "S "
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:fire_stick"
+  },
+  "show_notification": true
+}

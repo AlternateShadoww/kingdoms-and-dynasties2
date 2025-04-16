@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-30T18:57:48.2138959	Loot Tables
+// 1.20.1	2025-04-15T23:27:56.720976	Loot Tables
 edde058fef2ffead0d3bb3abd92b5ccca8226247 data/kingdomsanddynasties2/loot_tables/blocks/cotton_crop.json
 54adac1846d1f16f2ab5f8e9e60d397aeb68b861 data/kingdomsanddynasties2/loot_tables/blocks/dirty_silt.json
 d2092e75c679316aee5d3721fa054027074040f4 data/kingdomsanddynasties2/loot_tables/blocks/gravelled_iron_sand_block.json
@@ -44,6 +44,7 @@ ed8300f47e628433765b9f8d6311661cc3d98652 data/kingdomsanddynasties2/loot_tables/
 b22ee8bcbf3636d14d24ff2f7615335442de8850 data/kingdomsanddynasties2/loot_tables/blocks/red_pine_wall.json
 524d33c42da51eead63ef880476faa12c41d0b2a data/kingdomsanddynasties2/loot_tables/blocks/red_pine_wood.json
 e91c6871bf2a94ce82c608c526cf178cae4d2534 data/kingdomsanddynasties2/loot_tables/blocks/shikkui_plaster.json
+75ec15cfee047db8df10f07d96d6877409678045 data/kingdomsanddynasties2/loot_tables/blocks/stone_anvil.json
 f888858a32a996750456972d1262cd3a29e15190 data/kingdomsanddynasties2/loot_tables/blocks/stripped_mullberry_log.json
 f0a1d34db7f481ca06291ec062741a2289878d34 data/kingdomsanddynasties2/loot_tables/blocks/stripped_mullberry_wood.json
 398fda1a5e5de23d6407c0bf7bdbea71f38e1e05 data/kingdomsanddynasties2/loot_tables/blocks/stripped_red_pine_log.json

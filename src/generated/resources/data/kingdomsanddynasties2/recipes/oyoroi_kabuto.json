@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "K": {
+      "item": "kingdomsanddynasties2:kabuto"
+    },
+    "T": {
+      "item": "kingdomsanddynasties2:tamahagane_ingot"
+    }
+  },
+  "pattern": [
+    "GTG",
+    "TKT"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:oyoroi_kabuto"
+  },
+  "show_notification": true
+}

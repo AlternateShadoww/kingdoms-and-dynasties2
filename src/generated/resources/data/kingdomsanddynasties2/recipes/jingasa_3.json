@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "kingdomsanddynasties2:silk"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "pattern": [
+    " W ",
+    "W W",
+    "SSS"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:jingasa_3"
+  },
+  "show_notification": true
+}

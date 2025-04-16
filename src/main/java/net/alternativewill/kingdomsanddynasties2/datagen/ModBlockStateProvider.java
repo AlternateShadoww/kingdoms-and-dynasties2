@@ -81,6 +81,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.SUGI_TRAPDOOR.get()), modLoc("block/sugi_trapdoor"), true, "cutout");
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.RED_PINE_TRAPDOOR.get()), modLoc("block/red_pine_trapdoor"), true, "cutout");
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.MULLBERRY_TRAPDOOR.get()), modLoc("block/mullberry_trapdoor"), true, "cutout");
+
+        simpleBlock(ModBlocks.STONE_ANVIL.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/stone_anvil"))
+                );
     }
 
     private void registerGeneralBlocks() {

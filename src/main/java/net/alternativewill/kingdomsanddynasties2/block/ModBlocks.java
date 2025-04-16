@@ -4,6 +4,7 @@ import net.alternativewill.kingdomsanddynasties2.KingdomsAndDynasties2;
 import net.alternativewill.kingdomsanddynasties2.block.custom.CottonCropBlock;
 import net.alternativewill.kingdomsanddynasties2.block.custom.ModFlamableRotatedPillarBlock;
 import net.alternativewill.kingdomsanddynasties2.block.custom.PlankBlock;
+import net.alternativewill.kingdomsanddynasties2.block.custom.StoneAnvilBlock;
 import net.alternativewill.kingdomsanddynasties2.item.ModItems;
 
 import net.minecraft.core.BlockPos;
@@ -219,6 +220,9 @@ public class ModBlocks {
                 }
             }
             );
+    public static final RegistryObject<Block> STONE_ANVIL = registerBlock("stone_anvil",
+            () -> new StoneAnvilBlock(BlockBehaviour.Properties.copy(Blocks.GRINDSTONE).mapColor(MapColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1, 3).sound(SoundType.STONE).noOcclusion()));
+
 
 
 

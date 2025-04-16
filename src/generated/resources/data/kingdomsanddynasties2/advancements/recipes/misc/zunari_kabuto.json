@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_kabuto": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kingdomsanddynasties2:kabuto"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_tamahagane_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kingdomsanddynasties2:tamahagane_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kingdomsanddynasties2:zunari_kabuto"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_kabuto",
+      "has_tamahagane_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kingdomsanddynasties2:zunari_kabuto"
+    ]
+  },
+  "sends_telemetry_event": false
+}

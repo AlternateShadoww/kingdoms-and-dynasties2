@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "kingdomsanddynasties2:mossy_pale_granite_bricks"
+    }
+  },
+  "pattern": [
+    "NNN",
+    "NNN"
+  ],
+  "result": {
+    "count": 6,
+    "item": "kingdomsanddynasties2:mossy_pale_granite_brick_wall"
+  },
+  "show_notification": true
+}

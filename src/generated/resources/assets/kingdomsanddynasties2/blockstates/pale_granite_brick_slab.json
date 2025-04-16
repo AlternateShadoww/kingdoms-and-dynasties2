@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "kingdomsanddynasties2:block/pale_granite_brick_slab"
+    },
+    "type=double": {
+      "model": "kingdomsanddynasties2:block/pale_granite_bricks"
+    },
+    "type=top": {
+      "model": "kingdomsanddynasties2:block/pale_granite_brick_slab_top"
+    }
+  }
+}

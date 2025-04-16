@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "kingdomsanddynasties2:iron_sand"
+    },
+    {
+      "item": "kingdomsanddynasties2:iron_sand"
+    },
+    {
+      "item": "kingdomsanddynasties2:iron_sand"
+    },
+    {
+      "item": "kingdomsanddynasties2:iron_sand"
+    }
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:raw_tamahagane"
+  }
+}

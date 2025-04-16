@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "K": {
+      "item": "kingdomsanddynasties2:kabuto"
+    },
+    "N": {
+      "item": "kingdomsanddynasties2:tamahagane_nugget"
+    },
+    "P": {
+      "item": "kingdomsanddynasties2:tamahagane_plate"
+    },
+    "T": {
+      "item": "kingdomsanddynasties2:tamahagane_ingot"
+    }
+  },
+  "pattern": [
+    " N ",
+    "GPG",
+    "TKT"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:eboshi_kabuto"
+  },
+  "show_notification": true
+}

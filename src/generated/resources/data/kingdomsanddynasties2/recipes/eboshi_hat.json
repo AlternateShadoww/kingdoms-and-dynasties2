@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "S": {
+      "item": "kingdomsanddynasties2:silk"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SPS"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:eboshi_hat"
+  },
+  "show_notification": true
+}

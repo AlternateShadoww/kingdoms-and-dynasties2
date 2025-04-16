@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "minecraft:egg"
+    },
+    "K": {
+      "item": "minecraft:kelp"
+    },
+    "N": {
+      "item": "minecraft:clay_ball"
+    }
+  },
+  "pattern": [
+    "KN",
+    "NE"
+  ],
+  "result": {
+    "count": 2,
+    "item": "kingdomsanddynasties2:shikkui_plaster"
+  },
+  "show_notification": true
+}

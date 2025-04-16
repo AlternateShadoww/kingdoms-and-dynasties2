@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "T": {
+      "item": "kingdomsanddynasties2:tamahagane_ingot"
+    }
+  },
+  "pattern": [
+    "TTT",
+    "T T",
+    "G G"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:do-maru_haidate"
+  },
+  "show_notification": true
+}

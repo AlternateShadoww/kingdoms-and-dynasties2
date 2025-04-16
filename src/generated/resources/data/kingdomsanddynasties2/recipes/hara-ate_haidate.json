@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "N": {
+      "item": "kingdomsanddynasties2:tamahagane_nugget"
+    },
+    "T": {
+      "item": "kingdomsanddynasties2:tamahagane_ingot"
+    }
+  },
+  "pattern": [
+    "NTN",
+    "T T",
+    "G G"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:hara-ate_haidate"
+  },
+  "show_notification": true
+}

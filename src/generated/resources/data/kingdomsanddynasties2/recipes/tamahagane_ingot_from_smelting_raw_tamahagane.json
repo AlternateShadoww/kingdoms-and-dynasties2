@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "tamahagane_ingot",
+  "ingredient": {
+    "item": "kingdomsanddynasties2:raw_tamahagane"
+  },
+  "result": "kingdomsanddynasties2:tamahagane_ingot"
+}

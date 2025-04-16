@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "kingdomsanddynasties2:hakama"
+    },
+    {
+      "item": "kingdomsanddynasties2:hara-ate_haidate"
+    }
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:hara-ate_hakama"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "kingdomsanddynasties2:tamahagane_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "kingdomsanddynasties2:tamahagane_nugget"
+  }
+}

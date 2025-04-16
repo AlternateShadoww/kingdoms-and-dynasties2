@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "kingdomsanddynasties2:tamahagane_nugget"
+    },
+    "S": {
+      "item": "kingdomsanddynasties2:silk"
+    },
+    "T": {
+      "item": "kingdomsanddynasties2:tamahagane_ingot"
+    }
+  },
+  "pattern": [
+    "STS",
+    "NTN"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:menpo"
+  },
+  "show_notification": true
+}

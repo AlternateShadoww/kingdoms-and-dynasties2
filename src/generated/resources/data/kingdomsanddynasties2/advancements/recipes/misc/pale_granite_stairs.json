@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pale_granite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kingdomsanddynasties2:pale_granite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kingdomsanddynasties2:pale_granite_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_pale_granite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kingdomsanddynasties2:pale_granite_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}

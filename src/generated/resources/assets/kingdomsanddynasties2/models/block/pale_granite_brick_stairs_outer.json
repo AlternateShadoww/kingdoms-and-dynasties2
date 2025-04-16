@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "kingdomsanddynasties2:block/pale_granite_bricks",
+    "side": "kingdomsanddynasties2:block/pale_granite_bricks",
+    "top": "kingdomsanddynasties2:block/pale_granite_bricks"
+  }
+}

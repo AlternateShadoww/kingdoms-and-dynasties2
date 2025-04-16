@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_sand": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kingdomsanddynasties2:iron_sand"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kingdomsanddynasties2:raw_tamahagane"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_iron_sand",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kingdomsanddynasties2:raw_tamahagane"
+    ]
+  },
+  "sends_telemetry_event": false
+}

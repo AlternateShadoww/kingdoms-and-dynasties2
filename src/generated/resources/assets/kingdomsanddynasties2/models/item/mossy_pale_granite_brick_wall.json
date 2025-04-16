@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "kingdomsanddynasties2:block/mossy_pale_granite_bricks"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_silk": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kingdomsanddynasties2:silk"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_tamahagane_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kingdomsanddynasties2:tamahagane_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_tamahagane_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kingdomsanddynasties2:tamahagane_nugget"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kingdomsanddynasties2:sode"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_silk",
+      "has_tamahagane_nugget",
+      "has_tamahagane_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kingdomsanddynasties2:sode"
+    ]
+  },
+  "sends_telemetry_event": false
+}

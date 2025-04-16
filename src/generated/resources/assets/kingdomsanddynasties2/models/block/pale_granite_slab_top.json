@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "kingdomsanddynasties2:block/pale_granite",
+    "side": "kingdomsanddynasties2:block/pale_granite",
+    "top": "kingdomsanddynasties2:block/pale_granite"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "kingdomsanddynasties2:kasuri"
+    },
+    "S": {
+      "item": "kingdomsanddynasties2:silk"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "K K",
+    "S S"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:hakama"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "kingdomsanddynasties2:tamahagane_nugget"
+    },
+    "S": {
+      "item": "kingdomsanddynasties2:small_tsuka"
+    },
+    "T": {
+      "item": "kingdomsanddynasties2:tamahagane_ingot"
+    }
+  },
+  "pattern": [
+    "N",
+    "T",
+    "S"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:tanto"
+  },
+  "show_notification": true
+}

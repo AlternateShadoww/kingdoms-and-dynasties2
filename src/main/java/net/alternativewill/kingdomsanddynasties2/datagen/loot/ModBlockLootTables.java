@@ -121,6 +121,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.RED_PINE_FENCE_GATE.get());
         this.dropSelf(ModBlocks.RED_PINE_WALL.get());
 
+        this.dropSelf(ModBlocks.STONE_ANVIL.get());
+
         this.add(ModBlocks.RED_PINE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.RED_PINE_SLAB.get()));
         this.add(ModBlocks.RED_PINE_DOOR.get(),

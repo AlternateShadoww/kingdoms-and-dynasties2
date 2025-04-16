@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "kingdomsanddynasties2:cotton"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "P": {
+      "item": "kingdomsanddynasties2:tamahagane_plate"
+    },
+    "S": {
+      "item": "kingdomsanddynasties2:sode"
+    }
+  },
+  "pattern": [
+    "S S",
+    "PPP",
+    "CLC"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:oyoroi_do"
+  },
+  "show_notification": true
+}

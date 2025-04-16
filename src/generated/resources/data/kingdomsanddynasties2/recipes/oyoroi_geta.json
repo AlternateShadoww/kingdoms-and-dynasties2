@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "kingdomsanddynasties2:tamahagane_nugget"
+    },
+    "P": {
+      "item": "kingdomsanddynasties2:tamahagane_plate"
+    }
+  },
+  "pattern": [
+    "P P",
+    "N N"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:oyoroi_geta"
+  },
+  "show_notification": true
+}

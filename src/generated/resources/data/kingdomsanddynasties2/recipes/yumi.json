@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bamboo_planks"
+    },
+    "S": {
+      "item": "kingdomsanddynasties2:silk"
+    },
+    "T": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "BTS",
+    "T S",
+    "BTS"
+  ],
+  "result": {
+    "item": "kingdomsanddynasties2:yumi"
+  },
+  "show_notification": true
+}
