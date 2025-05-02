@@ -1,0 +1,88 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-23, 13, -11], "size": [46, 7, 22], "uv": [0, 37]},
+						{"origin": [-23, 17.75, -11], "size": [46, 3, 22], "inflate": 0.25, "uv": [0, 66]},
+						{"origin": [-24, 0, -12], "size": [48, 13, 24], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "fired",
+					"pivot": [22, 17.75, -10],
+					"cubes": [
+						{"origin": [-24, 0, -12], "size": [48, 13, 24], "uv": [0, 165]},
+						{"origin": [-23, 17.75, -11], "size": [46, 3, 22], "inflate": 0.25, "uv": [0, 231]}
+					]
+				},
+				{
+					"name": "sidefire5",
+					"parent": "fired",
+					"pivot": [19.25, 0.75, -2.75],
+					"rotation": [0, 0, 12.5],
+					"cubes": [
+						{"origin": [12.83579, -1.5049, -7.34108], "size": [16, 16, 0], "inflate": -3, "pivot": [20.83579, 6.75, -7.33579], "rotation": [0, -90, 0], "uv": [224, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "sidefire4",
+					"parent": "fired",
+					"pivot": [19.25, 0.75, 12.25],
+					"rotation": [0, 0, 12.5],
+					"cubes": [
+						{"origin": [12.83579, -1.5049, 7.65892], "size": [16, 16, 0], "inflate": -3, "pivot": [20.83579, 6.75, 7.66421], "rotation": [0, -90, 0], "uv": [224, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "sidefire2",
+					"parent": "fired",
+					"pivot": [-19.25, 0.75, 12.25],
+					"rotation": [0, 0, -12.5],
+					"cubes": [
+						{"origin": [-28.83579, -1.5049, 7.65892], "size": [16, 16, 0], "inflate": -3, "pivot": [-20.83579, 6.75, 7.66421], "rotation": [0, 90, 0], "uv": [224, 0]}
+					]
+				},
+				{
+					"name": "sidefire3",
+					"parent": "fired",
+					"pivot": [-19.25, 0.75, -2.75],
+					"rotation": [0, 0, -12.5],
+					"cubes": [
+						{"origin": [-28.83579, -1.5049, -7.34108], "size": [16, 16, 0], "inflate": -3, "pivot": [-20.83579, 6.75, -7.33579], "rotation": [0, 90, 0], "uv": [224, 0]}
+					]
+				},
+				{
+					"name": "Fire",
+					"parent": "fired",
+					"pivot": [0, 44, -2.5],
+					"cubes": [
+						{"origin": [-16, 14, -0.36309], "size": [32, 32, 0], "pivot": [0, 30, -0.36309], "rotation": [0, -15, 0], "uv": [0, 92], "mirror": true},
+						{"origin": [-16, 14, -0.36309], "size": [32, 32, 0], "pivot": [0, 30, -0.36309], "rotation": [0, 15, 0], "uv": [0, 92], "mirror": true}
+					]
+				},
+				{
+					"name": "Fire2",
+					"pivot": [0, 25.5, -0.36309],
+					"rotation": [0, -90, 0],
+					"cubes": [
+						{"origin": [-14.7059, 9, 6.21654], "size": [32, 32, 0], "inflate": -6, "pivot": [0, 25, 1.38691], "rotation": [0, -40, 0], "uv": [0, 92], "mirror": true},
+						{"origin": [-15.03528, 9, 3.50061], "size": [32, 32, 0], "inflate": -5, "pivot": [2, 25, -0.36309], "rotation": [0, 40, 0], "uv": [0, 92], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}
