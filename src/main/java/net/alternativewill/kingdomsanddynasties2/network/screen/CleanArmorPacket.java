@@ -103,6 +103,14 @@ public class CleanArmorPacket {
                         HoshiKabutoItem.wipeColors(slot, HoshiKabutoItem.SILVER_PART, HoshiKabutoItem.STANDARD_SILVER_COLOR, player);
                         HoshiKabutoItem.wipeColors(slot, HoshiKabutoItem.CRAFTING_TABLE_PART, HoshiKabutoItem.STANDARD_CRAFTING_TABLE_COLOR, player);
                     }
+                    if (slot.getItem() instanceof FootsoldierDomaruItem FootsoldierDomaruItem) {
+                        FootsoldierDomaruItem.clearColor(slot);
+                        FootsoldierDomaruItem.wipeColors(slot, FootsoldierDomaruItem.PRIMARY_PART, FootsoldierDomaruItem.STANDARD_PRIMARY_COLOR, player);
+                        FootsoldierDomaruItem.wipeColors(slot, FootsoldierDomaruItem.SECONDARY_PART, FootsoldierDomaruItem.STANDARD_SECONDARY_COLOR, player);
+                        FootsoldierDomaruItem.wipeColors(slot, FootsoldierDomaruItem.GOLD_PART, FootsoldierDomaruItem.STANDARD_GOLD_COLOR, player);
+                        FootsoldierDomaruItem.wipeColors(slot, FootsoldierDomaruItem.SILVER_PART, FootsoldierDomaruItem.STANDARD_SILVER_COLOR, player);
+                        FootsoldierDomaruItem.wipeColors(slot, FootsoldierDomaruItem.CRAFTING_TABLE_PART, FootsoldierDomaruItem.STANDARD_CRAFTING_TABLE_COLOR, player);
+                    }
                     if (slot.getItem() instanceof KariginuItem KariginuItem) {
                         KariginuItem.clearColor(slot);
                         KariginuItem.wipeColors(slot, KariginuItem.PRIMARY_PART, KariginuItem.STANDARD_PRIMARY_COLOR, player);
@@ -119,6 +127,11 @@ public class CleanArmorPacket {
                         GiNewItem.clearColor(slot);
                         GiNewItem.wipeColors(slot, GiNewItem.PRIMARY_PART, GiNewItem.STANDARD_PRIMARY_COLOR, player);
                         GiNewItem.wipeColors(slot, GiNewItem.SECONDARY_PART, GiNewItem.STANDARD_SECONDARY_COLOR, player);
+                    }
+                    if (slot.getItem() instanceof WarajiItem WarajiItem) {
+                        WarajiItem.clearColor(slot);
+                        WarajiItem.wipeColors(slot, WarajiItem.PRIMARY_PART, WarajiItem.STANDARD_PRIMARY_COLOR, player);
+                        WarajiItem.wipeColors(slot, WarajiItem.SECONDARY_PART, WarajiItem.STANDARD_SECONDARY_COLOR, player);
                     }
 
 

@@ -71,6 +71,12 @@ public class UndoColorPacket {
                     if (armorStack.getItem() instanceof GiNewItem GiNewItem) {
                         GiNewItem.undoColor(armorStack, packet.colorIndex);
                     }
+                    if (armorStack.getItem() instanceof WarajiItem WarajiItem) {
+                        WarajiItem.undoColor(armorStack, packet.colorIndex);
+                    }
+                    if (armorStack.getItem() instanceof FootsoldierDomaruItem FootsoldierDomaruItem) {
+                        FootsoldierDomaruItem.undoColor(armorStack, packet.colorIndex);
+                    }
                 }
             }
         });

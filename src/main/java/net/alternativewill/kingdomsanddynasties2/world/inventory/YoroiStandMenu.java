@@ -409,6 +409,38 @@ public class YoroiStandMenu extends AbstractContainerMenu implements Supplier<Ma
                     System.out.println("Dye stack is now empty.");
                 }
             }
+            if (armorStack.getItem() instanceof FootsoldierDomaruItem FootsoldierDomaruItem) {
+                System.out.println("Found FootsoldierDomaruItem in slot: " + armorSlotIndex);
+                switch (dyeIndex) {
+                    case 0: // Primary color
+                        FootsoldierDomaruItem.setPrimaryColor(armorStack, dyeColor);
+                        System.out.println("Set primary color to: " + dyeColor);
+                        break;
+                    case 2: // Secondary color
+                        FootsoldierDomaruItem.setSecondaryColor(armorStack, dyeColor);
+                        System.out.println("Set secondary color to: " + dyeColor);
+                        break;
+                    case 4: // Gold Part
+                        FootsoldierDomaruItem.setGoldColor(armorStack, dyeColor);
+                        System.out.println("Set gold color to: " + dyeColor);
+                        break;
+                    case 6: // Silver Part
+                        FootsoldierDomaruItem.setSilverColor(armorStack, dyeColor);
+                        System.out.println("Set silver color to: " + dyeColor);
+                        break;
+                    default:
+                        System.out.println("Invalid dye index: " + dyeIndex);
+                        break;
+                }
+
+
+                dyeStack.shrink(1);
+                System.out.println("Dye stack shrunk, new count: " + dyeStack.getCount());
+                if (dyeStack.getCount() == 0) {
+                    dyeStack = ItemStack.EMPTY;
+                    System.out.println("Dye stack is now empty.");
+                }
+            }
             if (armorStack.getItem() instanceof HoshiKabutoItem HoshiKabutoItem) {
                 System.out.println("Found HoshiKabutoItem in slot: " + armorSlotIndex);
                 switch (dyeIndex) {
@@ -520,6 +552,30 @@ public class YoroiStandMenu extends AbstractContainerMenu implements Supplier<Ma
                     dyeStack = ItemStack.EMPTY;
                     System.out.println("Dye stack is now empty.");
                 }
+        }
+        if (armorStack.getItem() instanceof WarajiItem WarajiItem) {
+            System.out.println("Found WarajiItem in slot: " + armorSlotIndex);
+            switch (dyeIndex) {
+                case 0: // Primary color
+                    WarajiItem.setPrimaryColor(armorStack, dyeColor);
+                    System.out.println("Set primary color to: " + dyeColor);
+                    break;
+                case 2: // Secondary color
+                    WarajiItem.setSecondaryColor(armorStack, dyeColor);
+                    System.out.println("Set secondary color to: " + dyeColor);
+                    break;
+                default:
+                    System.out.println("Invalid dye index: " + dyeIndex);
+                    break;
+            }
+
+
+            dyeStack.shrink(1);
+            System.out.println("Dye stack shrunk, new count: " + dyeStack.getCount());
+            if (dyeStack.getCount() == 0) {
+                dyeStack = ItemStack.EMPTY;
+                System.out.println("Dye stack is now empty.");
+            }
         }
 
 

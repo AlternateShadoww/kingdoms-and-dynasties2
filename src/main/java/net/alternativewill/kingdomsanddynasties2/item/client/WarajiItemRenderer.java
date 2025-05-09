@@ -1,7 +1,8 @@
 package net.alternativewill.kingdomsanddynasties2.item.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.alternativewill.kingdomsanddynasties2.item.custom.DomaruArmorItem;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.alternativewill.kingdomsanddynasties2.item.custom.WarajiItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -10,7 +11,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import com.mojang.blaze3d.vertex.VertexConsumer;
 import org.jetbrains.annotations.NotNull;
 import org.joml.Quaternionf;
 import software.bernie.geckolib.cache.object.GeoBone;
@@ -18,18 +18,18 @@ import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.core.object.Color;
 import software.bernie.geckolib.core.object.DataTicket;
 
-public class DomaruItemRenderer extends DyeableGeoItemRenderer<DomaruArmorItem> {
+public class WarajiItemRenderer extends DyeableGeoItemRenderer<WarajiItem> {
 
     protected float partialTick;
 
-    public DomaruItemRenderer() {
-        super(new DomaruArmorModel());
+    public WarajiItemRenderer() {
+        super(new WarajiModel());
     }
 
     @Override
     public void renderByItem(ItemStack stack, ItemDisplayContext displayContext, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, int packedOverlay) {
         this.currentItemStack = stack;
-        this.animatable = (DomaruArmorItem)stack.getItem();
+        this.animatable = (WarajiItem)stack.getItem();
         this.renderPerspective = displayContext;
         this.partialTick = Minecraft.getInstance().getFrameTime();
 
@@ -105,7 +105,7 @@ public class DomaruItemRenderer extends DyeableGeoItemRenderer<DomaruArmorItem> 
     private void applyGuiTransformations(PoseStack poseStack, ArmorItem.Type armorType) {
         switch (armorType) {
             case HELMET:
-                poseStack.translate(0.7F, -1.6F, 0.0F);
+                poseStack.translate(0.7F, -1.5F, 0.0F);
                 poseStack.mulPose(new Quaternionf().rotationXYZ(
                         (float)Math.toRadians(0),
                         (float)Math.toRadians(140),
@@ -129,7 +129,7 @@ public class DomaruItemRenderer extends DyeableGeoItemRenderer<DomaruArmorItem> 
                 ));
                 break;
             case BOOTS:
-                poseStack.translate(0.7F, 0.0F, 0.0F);
+                poseStack.translate(0.6F, 0.0F, 0.0F);
                 poseStack.mulPose(new Quaternionf().rotationXYZ(
                         (float)Math.toRadians(0),
                         (float)Math.toRadians(140),
@@ -260,20 +260,15 @@ public class DomaruItemRenderer extends DyeableGeoItemRenderer<DomaruArmorItem> 
 
     public static final String PRIMARY_PART = "_primary";
     public static final String SECONDARY_PART = "_secondary";
-    public static final String GOLD_PART = "_gold";
-    public static final String SILVER_PART = "_silver";
-    public static final String CRAFTING_TABLE_PART = "_craftingtable";
 
     @Override
     protected @NotNull Color getColorForBone(GeoBone geoBone) {
         ItemStack itemStack = this.currentItemStack;
 
-        if (itemStack.getItem() instanceof DomaruArmorItem armorItem) {
+        if (itemStack.getItem() instanceof WarajiItem armorItem) {
             int primaryColor = armorItem.getPrimaryColor(itemStack);
             int secondaryColor = armorItem.getSecondaryColor(itemStack);
-            int goldColor = armorItem.getGoldColor(itemStack);
-            int silverColor = armorItem.getSilverColor(itemStack);
-            int craftingTableColor = armorItem.getCraftingTableColor(itemStack);
+
 
             String boneName = geoBone.getName();
 
@@ -281,16 +276,10 @@ public class DomaruItemRenderer extends DyeableGeoItemRenderer<DomaruArmorItem> 
                 return applyDyeToBone(geoBone, primaryColor, PRIMARY_PART);
             } else if (boneName.endsWith(SECONDARY_PART)) {
                 return applyDyeToBone(geoBone, secondaryColor, SECONDARY_PART);
-            } else if (boneName.endsWith(GOLD_PART)) {
-                return applyDyeToBone(geoBone, goldColor, GOLD_PART);
-            } else if (boneName.endsWith(SILVER_PART)) {
-                return applyDyeToBone(geoBone, silverColor, SILVER_PART);
-            } else if (boneName.endsWith(CRAFTING_TABLE_PART)) {
-                return applyDyeToBone(geoBone, craftingTableColor, CRAFTING_TABLE_PART);
             }
         }
 
-        return Color.ofOpaque(DomaruArmorItem.STANDARD_COLOR);
+        return Color.ofOpaque(WarajiItem.STANDARD_COLOR);
     }
 
     public Color applyDyeToBone(GeoBone geoBone, int color, String boneEndsWith) {
@@ -298,7 +287,7 @@ public class DomaruItemRenderer extends DyeableGeoItemRenderer<DomaruArmorItem> 
     }
 
     @Override
-    public RenderType getRenderType(DomaruArmorItem animatable, ResourceLocation texture,
+    public RenderType getRenderType(WarajiItem animatable, ResourceLocation texture,
                                     MultiBufferSource renderTypeBuffer, float partialTick) {
         return RenderType.entityTranslucent(texture);
     }

@@ -1,7 +1,8 @@
 package net.alternativewill.kingdomsanddynasties2.item.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.alternativewill.kingdomsanddynasties2.item.custom.DomaruArmorItem;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.alternativewill.kingdomsanddynasties2.item.custom.FootsoldierDomaruItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -10,7 +11,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import com.mojang.blaze3d.vertex.VertexConsumer;
 import org.jetbrains.annotations.NotNull;
 import org.joml.Quaternionf;
 import software.bernie.geckolib.cache.object.GeoBone;
@@ -18,18 +18,18 @@ import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.core.object.Color;
 import software.bernie.geckolib.core.object.DataTicket;
 
-public class DomaruItemRenderer extends DyeableGeoItemRenderer<DomaruArmorItem> {
+public class FootsoldierDomaruItemRenderer extends DyeableGeoItemRenderer<FootsoldierDomaruItem> {
 
     protected float partialTick;
 
-    public DomaruItemRenderer() {
-        super(new DomaruArmorModel());
+    public FootsoldierDomaruItemRenderer() {
+        super(new FootsoldierDomaruModel());
     }
 
     @Override
     public void renderByItem(ItemStack stack, ItemDisplayContext displayContext, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, int packedOverlay) {
         this.currentItemStack = stack;
-        this.animatable = (DomaruArmorItem)stack.getItem();
+        this.animatable = (FootsoldierDomaruItem)stack.getItem();
         this.renderPerspective = displayContext;
         this.partialTick = Minecraft.getInstance().getFrameTime();
 
@@ -105,7 +105,7 @@ public class DomaruItemRenderer extends DyeableGeoItemRenderer<DomaruArmorItem> 
     private void applyGuiTransformations(PoseStack poseStack, ArmorItem.Type armorType) {
         switch (armorType) {
             case HELMET:
-                poseStack.translate(0.7F, -1.6F, 0.0F);
+                poseStack.translate(0.7F, -1.5F, 0.0F);
                 poseStack.mulPose(new Quaternionf().rotationXYZ(
                         (float)Math.toRadians(0),
                         (float)Math.toRadians(140),
@@ -226,26 +226,26 @@ public class DomaruItemRenderer extends DyeableGeoItemRenderer<DomaruArmorItem> 
                     ));
                     break;
                 case CHESTPLATE:
-                    poseStack.translate(1F, -0.8F, 0.7F);
+                    poseStack.translate(1F, -0.8F, -0.5F);
                     poseStack.mulPose(new Quaternionf().rotationXYZ(
                             (float) Math.toRadians(0),
-                            (float) Math.toRadians(120),
+                            (float) Math.toRadians(-60),
                             (float) Math.toRadians(0)
                     ));
                     break;
                 case LEGGINGS:
-                    poseStack.translate(1F, 0.05F, 1F);
+                    poseStack.translate(0.76F, 0.05F, -0.1F);
                     poseStack.mulPose(new Quaternionf().rotationXYZ(
                             (float) Math.toRadians(0),
-                            (float) Math.toRadians(125),
+                            (float) Math.toRadians(-55),
                             (float) Math.toRadians(0)
                     ));
                     break;
                 case BOOTS:
-                    poseStack.translate(1F, 0.4F, 1F);
+                    poseStack.translate(1F, 0.4F, -0.2F);
                     poseStack.mulPose(new Quaternionf().rotationXYZ(
                             (float) Math.toRadians(0),
-                            (float) Math.toRadians(120),
+                            (float) Math.toRadians(-60),
                             (float) Math.toRadians(0)
                     ));
                     break;
@@ -258,17 +258,17 @@ public class DomaruItemRenderer extends DyeableGeoItemRenderer<DomaruArmorItem> 
         return true;
     }
 
-    public static final String PRIMARY_PART = "_primary";
-    public static final String SECONDARY_PART = "_secondary";
-    public static final String GOLD_PART = "_gold";
-    public static final String SILVER_PART = "_silver";
-    public static final String CRAFTING_TABLE_PART = "_craftingtable";
+    public static final String PRIMARY_PART = "primary";
+    public static final String SECONDARY_PART = "secondary";
+    public static final String GOLD_PART = "gold";
+    public static final String SILVER_PART = "silver";
+    public static final String CRAFTING_TABLE_PART = "color";
 
     @Override
     protected @NotNull Color getColorForBone(GeoBone geoBone) {
         ItemStack itemStack = this.currentItemStack;
 
-        if (itemStack.getItem() instanceof DomaruArmorItem armorItem) {
+        if (itemStack.getItem() instanceof FootsoldierDomaruItem armorItem) {
             int primaryColor = armorItem.getPrimaryColor(itemStack);
             int secondaryColor = armorItem.getSecondaryColor(itemStack);
             int goldColor = armorItem.getGoldColor(itemStack);
@@ -277,28 +277,32 @@ public class DomaruItemRenderer extends DyeableGeoItemRenderer<DomaruArmorItem> 
 
             String boneName = geoBone.getName();
 
-            if (boneName.endsWith(PRIMARY_PART)) {
-                return applyDyeToBone(geoBone, primaryColor, PRIMARY_PART);
-            } else if (boneName.endsWith(SECONDARY_PART)) {
-                return applyDyeToBone(geoBone, secondaryColor, SECONDARY_PART);
-            } else if (boneName.endsWith(GOLD_PART)) {
-                return applyDyeToBone(geoBone, goldColor, GOLD_PART);
-            } else if (boneName.endsWith(SILVER_PART)) {
-                return applyDyeToBone(geoBone, silverColor, SILVER_PART);
-            } else if (boneName.endsWith(CRAFTING_TABLE_PART)) {
-                return applyDyeToBone(geoBone, craftingTableColor, CRAFTING_TABLE_PART);
+            if (boneName.endsWith(FootsoldierDomaruRenderer.PRIMARY_PART)) {
+                return applyDyeToBone(geoBone, primaryColor, FootsoldierDomaruRenderer.PRIMARY_PART);
+            } else if (boneName.endsWith(FootsoldierDomaruRenderer.SECONDARY_PART)) {
+                return applyDyeToBone(geoBone, secondaryColor, FootsoldierDomaruRenderer.SECONDARY_PART);
+            } else if (boneName.endsWith(FootsoldierDomaruRenderer.GOLD_PART)) {
+                return applyDyeToBone(geoBone, goldColor, FootsoldierDomaruRenderer.GOLD_PART);
+            } else if (boneName.endsWith(FootsoldierDomaruRenderer.SILVER_PART)) {
+                return applyDyeToBone(geoBone, silverColor, FootsoldierDomaruRenderer.SILVER_PART);
+            } else if (boneName.endsWith(FootsoldierDomaruRenderer.CRAFTING_TABLE_PART)) {
+                return applyDyeToBone(geoBone, craftingTableColor, FootsoldierDomaruRenderer.CRAFTING_TABLE_PART);
             }
         }
 
-        return Color.ofOpaque(DomaruArmorItem.STANDARD_COLOR);
+        return Color.ofOpaque(FootsoldierDomaruItem.STANDARD_COLOR);
     }
 
     public Color applyDyeToBone(GeoBone geoBone, int color, String boneEndsWith) {
-        return Color.ofOpaque(color);
+        GeoBone parentBone = geoBone.getParent();
+        if (parentBone == null || !parentBone.getName().endsWith(boneEndsWith)) {
+            return Color.ofOpaque(color);
+        }
+        return Color.ofOpaque(FootsoldierDomaruItem.STANDARD_COLOR);
     }
 
     @Override
-    public RenderType getRenderType(DomaruArmorItem animatable, ResourceLocation texture,
+    public RenderType getRenderType(FootsoldierDomaruItem animatable, ResourceLocation texture,
                                     MultiBufferSource renderTypeBuffer, float partialTick) {
         return RenderType.entityTranslucent(texture);
     }

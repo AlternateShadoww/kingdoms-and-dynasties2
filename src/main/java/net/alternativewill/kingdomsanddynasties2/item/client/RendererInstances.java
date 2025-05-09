@@ -3,6 +3,7 @@ package net.alternativewill.kingdomsanddynasties2.item.client;
 public class RendererInstances {
     public static final OyoroiItemRenderer OYOROI_ITEM_RENDERER = new OyoroiItemRenderer();
     public static final DomaruItemRenderer DOMARU_ITEM_RENDERER = new DomaruItemRenderer();
+    public static final FootsoldierDomaruItemRenderer FOOTSOLDIERDOMARU_ITEM_RENDERER = new FootsoldierDomaruItemRenderer();
     public static final HoshiKabutoItemRenderer HOSHI_ITEM_RENDERER = new HoshiKabutoItemRenderer();
     public static final EboshiKabutoItemRenderer EBOSHI_ITEM_RENDERER = new EboshiKabutoItemRenderer();
     public static final ZunariKabutoItemRenderer ZUNARI_ITEM_RENDERER = new ZunariKabutoItemRenderer();
@@ -12,6 +13,7 @@ public class RendererInstances {
     public static final GihakamaItemRenderer GIHAKAMA_ITEM_RENDERER = new GihakamaItemRenderer();
     public static final GiNewItemRenderer GINEW_ITEM_RENDERER = new GiNewItemRenderer();
     public static final HakamaItemRenderer HAKAMA_ITEM_RENDERER = new HakamaItemRenderer();
+    public static final WarajiItemRenderer WARAJI_ITEM_RENDERER = new WarajiItemRenderer();
     public static final KariginuItemRenderer KARIGINU_ITEM_RENDERER = new KariginuItemRenderer();
     public static final HaraateItemRenderer HARAATE_ITEM_RENDERER = new HaraateItemRenderer();
     public static final HaraateHakamaItemRenderer HARAATE_HAKAMA_ITEM_RENDERER = new HaraateHakamaItemRenderer();
@@ -22,4 +24,5 @@ public class RendererInstances {
     public static final Jingasa3ItemRenderer JINGASA3_ITEM_RENDERER = new Jingasa3ItemRenderer();
     public static final Jingasa4ItemRenderer JINGASA4_ITEM_RENDERER = new Jingasa4ItemRenderer();
     public static final Jingasa5ItemRenderer JINGASA5_ITEM_RENDERER = new Jingasa5ItemRenderer();
+    public static final KomusoItemRenderer KOMUSO_ITEM_RENDERER = new KomusoItemRenderer();
 }

@@ -54,6 +54,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     }),
     BAMBOO("bamboo", 25, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266655_) -> {
         p_266655_.put(ArmorItem.Type.HELMET, 1);
+        p_266655_.put(ArmorItem.Type.BOOTS, 1);
     }), 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0F, 0F, () -> {
         return Ingredient.of(Items.BAMBOO);
 

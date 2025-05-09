@@ -146,6 +146,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         //ARMOR ITEM
 
         simpleItem(ModItems.MENPO);
+        simpleItem(ModItems.HAPPURI);
+        simpleItem(ModItems.HANBO);
 
 
         //TOOLS & WEAPONS

@@ -123,9 +123,10 @@ public class ModCreativeModeTabs {
                         //ARMORS
                         output.accept(ModItems.JINGASA.get());
                         output.accept(ModItems.JINGASA2.get());
-                        output.accept(ModItems.JINGASA3.get());
                         output.accept(ModItems.JINGASA4.get());
+                        output.accept(ModItems.JINGASA3.get());
                         output.accept(ModItems.JINGASA5.get());
+                        output.accept(ModItems.KOMUSO.get());
 
                         output.accept(ModItems.EBOSHIHAT.get());
                         output.accept(ModItems.EBOSHIHAT2.get());
@@ -137,6 +138,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.KARIGINU.get());
                         output.accept(ModItems.KARIGINU_SASHINUKI.get());
 
+
                         output.accept(ModItems.HOSHI_HELMET.get());
                         output.accept(ModItems.SUJI_HELMET.get());
                         output.accept(ModItems.TOPPAINARI_HELMET.get());
@@ -145,18 +147,24 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.OYOROI_HELMET.get());
                         output.accept(ModItems.OYOROI_CHESTPLATE.get());
                         output.accept(ModItems.OYOROI_LEGGINGS.get());
-                        output.accept(ModItems.OYOROI_BOOTS.get());
 
                         output.accept(ModItems.DOMARU_CHESTPLATE.get());
                         output.accept(ModItems.DOMARU_LEGGINGS.get());
-                        output.accept(ModItems.DOMARU_BOOTS.get());
+                        output.accept(ModItems.FOOTSOLDIERDOMARU_CHESTPLATE.get());
+                        output.accept(ModItems.FOOTSOLDIERDOMARU_LEGGINGS.get());
 
                         output.accept(ModItems.HARAATE_CHESTPLATE.get());
                         output.accept(ModItems.HARAATE_LEGGINGS.get());
                         output.accept(ModItems.HARAATEHAKAMA_CHESTPLATE.get());
                         output.accept(ModItems.HARAATEHAKAMA_LEGGINGS.get());
 
+                        output.accept(ModItems.WARAJI.get());
+                        output.accept(ModItems.OYOROI_BOOTS.get());
+                        output.accept(ModItems.DOMARU_BOOTS.get());
+
+                        output.accept(ModItems.HANBO.get());
                         output.accept(ModItems.MENPO.get());
+                        output.accept(ModItems.HAPPURI.get());
                         output.accept(ModItems.TENGUMASK.get());
 
                         output.accept(ModItems.TANTO.get());
