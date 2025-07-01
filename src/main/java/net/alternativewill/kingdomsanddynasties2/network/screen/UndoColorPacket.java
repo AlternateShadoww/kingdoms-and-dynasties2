@@ -77,6 +77,9 @@ public class UndoColorPacket {
                     if (armorStack.getItem() instanceof FootsoldierDomaruItem FootsoldierDomaruItem) {
                         FootsoldierDomaruItem.undoColor(armorStack, packet.colorIndex);
                     }
+                    if (armorStack.getItem() instanceof TankoArmorItem TankoArmorItem) {
+                        TankoArmorItem.undoColor(armorStack, packet.colorIndex);
+                    }
                 }
             }
         });

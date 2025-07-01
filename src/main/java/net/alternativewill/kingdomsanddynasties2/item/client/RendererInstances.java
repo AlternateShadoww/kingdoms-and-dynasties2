@@ -25,4 +25,5 @@ public class RendererInstances {
     public static final Jingasa4ItemRenderer JINGASA4_ITEM_RENDERER = new Jingasa4ItemRenderer();
     public static final Jingasa5ItemRenderer JINGASA5_ITEM_RENDERER = new Jingasa5ItemRenderer();
     public static final KomusoItemRenderer KOMUSO_ITEM_RENDERER = new KomusoItemRenderer();
+    public static final TankoItemRenderer TANKO_ITEM_RENDERER = new TankoItemRenderer();
 }

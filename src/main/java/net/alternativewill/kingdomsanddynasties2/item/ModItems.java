@@ -92,6 +92,12 @@ public class ModItems {
             () -> new FootsoldierDomaruItem(ModArmorMaterials.DOMARU, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> FOOTSOLDIERDOMARU_LEGGINGS = ITEMS.register("footsoldier_do-maru_haidate",
             () -> new FootsoldierDomaruItem(ModArmorMaterials.DOMARU, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> TANKO_HELMET = ITEMS.register("tanko_kabuto",
+            () -> new TankoArmorItem(ModArmorMaterials.TANKO, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> TANKO_CHESTPLATE = ITEMS.register("tanko_do",
+            () -> new TankoArmorItem(ModArmorMaterials.TANKO, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> TANKO_LEGGINGS = ITEMS.register("tanko_haidate",
+            () -> new TankoArmorItem(ModArmorMaterials.TANKO, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
     public static final RegistryObject<Item> TENGUMASK = ITEMS.register("tengu_mask",
             () -> new TenguMaskItem(ModArmorMaterials.MENYOROI, ArmorItem.Type.HELMET, new Item.Properties()));

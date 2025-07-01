@@ -145,6 +145,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ZUNARI_HELMET.get());
                         output.accept(ModItems.EBOSHI_HELMET.get());
                         output.accept(ModItems.OYOROI_HELMET.get());
+                        output.accept(ModItems.TANKO_HELMET.get());
+                        output.accept(ModItems.TANKO_CHESTPLATE.get());
+                        output.accept(ModItems.TANKO_LEGGINGS.get());
                         output.accept(ModItems.OYOROI_CHESTPLATE.get());
                         output.accept(ModItems.OYOROI_LEGGINGS.get());
 

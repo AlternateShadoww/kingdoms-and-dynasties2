@@ -34,6 +34,14 @@ public class CleanArmorPacket {
                         yoroiArmorItem.wipeColors(slot, OyoroiArmorItem.SILVER_PART, OyoroiArmorItem.STANDARD_SILVER_COLOR, player);
                         yoroiArmorItem.wipeColors(slot, OyoroiArmorItem.CRAFTING_TABLE_PART, OyoroiArmorItem.STANDARD_CRAFTING_TABLE_COLOR, player);
                     }
+                    if (slot.getItem() instanceof TankoArmorItem TankoArmorItem) {
+                        TankoArmorItem.clearColor(slot);
+                        TankoArmorItem.wipeColors(slot, TankoArmorItem.PRIMARY_PART, TankoArmorItem.STANDARD_PRIMARY_COLOR, player);
+                        TankoArmorItem.wipeColors(slot, TankoArmorItem.SECONDARY_PART, TankoArmorItem.STANDARD_SECONDARY_COLOR, player);
+                        TankoArmorItem.wipeColors(slot, TankoArmorItem.GOLD_PART, TankoArmorItem.STANDARD_GOLD_COLOR, player);
+                        TankoArmorItem.wipeColors(slot, TankoArmorItem.SILVER_PART, TankoArmorItem.STANDARD_SILVER_COLOR, player);
+                        TankoArmorItem.wipeColors(slot, TankoArmorItem.CRAFTING_TABLE_PART, TankoArmorItem.STANDARD_CRAFTING_TABLE_COLOR, player);
+                    }
                     if (slot.getItem() instanceof DomaruArmorItem DomaruArmorItem) {
                         DomaruArmorItem.clearColor(slot);
                         DomaruArmorItem.wipeColors(slot, DomaruArmorItem.PRIMARY_PART, DomaruArmorItem.STANDARD_PRIMARY_COLOR, player);
